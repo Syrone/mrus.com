@@ -28,7 +28,7 @@
 	border-radius: var(--_border-radius);
 	padding: var(--_padding-y) var(--_padding-x);
 	cursor: pointer;
-	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type);
+	transition: font var(--_transition-duration) var(--_transition-type), color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type);
 
 	.icon {
 		transition: initial;

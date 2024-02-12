@@ -6,14 +6,15 @@
 
 // подключения компонентов страницы
 @import "./components/typography";
-@import "./components/burger";
-@import "./components/account";
-@import "./components/callback";
 @import "./components/buttons";
 @import "./components/icon";
+@import "./components/field";
+@import "./components/burger";
+@import "./components/accordion";
+@import "./components/account";
+@import "./components/callback";
 @import "./components/dropdown";
 @import "./components/search";
-@import "./components/field";
 @import "./components/sections";
 @import "./components/swipers";
 @import "./components/card";
@@ -25,5 +26,6 @@
 @import "./components/tech";
 @import "./components/news";
 @import "./components/mailing";
+@import "./components/catalog";
 @import "./components/footer";
 @import "./components/media";

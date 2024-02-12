@@ -1,5 +1,6 @@
 .wrapper-slider {
 	--swiper-theme-color: var(--primary-color);
+	width: 100%;
   position: relative;
 
 	&-btn {
@@ -10,6 +11,16 @@
 		--_padding-x: 24px;
 
 		--_background-color-active: var(--background-light);
+	}
+}
+
+.swiper {
+	width: 100%;
+
+	&-slide {
+		display: flex;
+		flex-direction: column;
+		height: auto !important;
 	}
 }
 
@@ -61,10 +72,17 @@
 .swiper-pagination {
 	--swiper-pagination-bullet-inactive-opacity: 1;
 	--swiper-pagination-bullet-inactive-color: #d7d7da;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: static;
-	margin-block-start: 16px;
+	margin-block-start: 20px;
+
+	&.swiper-pagination-horizontal {
+		bottom: 22px;
+	}
 
 	&-bullet {
-		transition: background var(--transition-duration) var(--transition-type);
+		transition: width var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type);
 	}
 }

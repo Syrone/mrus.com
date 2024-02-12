@@ -1,0 +1,55 @@
+.accordion {
+  overflow: hidden;
+	transition: height var(--transition-duration) var(--transition-type);
+
+	&:not(:last-child) {
+		margin-block-end: 24px;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		color: var(--dark-color);
+		list-style: none;
+		user-select: none;
+		cursor: pointer;
+		transition: font var(--transition-duration) var(--transition-type), color var(--transition-duration) var(--transition-type);
+
+		&:is(:hover, :focus-visible, :active) {
+			color: var(--primary-color);
+		}
+	}
+
+	&__content {
+		padding-block-start: 24px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__button {
+		--_font-size: 18px;
+		--_color: var(--dark-color);
+		--_border: 0;
+
+		&.is-active {
+			--_font-weight: 700;
+			--_color-active: var(--dark-color);
+		}
+
+		&:is(:hover, :focus-visible, :active) {
+			--_color-active: var(--primary-color);
+		}
+	}
+
+	&[open] {
+
+		.accordion__title {
+			font-weight: 700;
+		}
+
+	}
+}

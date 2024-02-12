@@ -104,6 +104,17 @@ a {
   max-width: var(--container-width);
 }
 
+.site-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

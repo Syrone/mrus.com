@@ -30,6 +30,38 @@ const swiperCard = new Swiper('.swiper__card', {
   }
 });
 
+const classCardImage = document.querySelectorAll('.swiper__card-image')
+
+if (classCardImage.length > 0) {
+  classCardImage.forEach((swiper) => {
+    const pagination = swiper.getElementsByClassName('swiper__card-image-pagination')[0];
+    new Swiper(swiper, {
+      nested: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+    
+      pagination: {
+        el: pagination,
+        type: 'bullets',
+        clickable: true,
+      },
+    
+      breakpoints: {
+        0: {
+          spaceBetween: 10
+        },
+        768: {
+          spaceBetween: 10
+        },
+        1400: {
+          spaceBetween: 16
+        }
+      }
+    });
+  })
+}
+
 const swiperTech = new Swiper('.swiper__tech', {
   grabCursor: true,
   slidesPerView: 4,

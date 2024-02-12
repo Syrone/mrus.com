@@ -1,3 +1,17 @@
+.swiper__card-image-pagination {
+	--swiper-pagination-bullet-horizontal-gap: 2px;
+	margin-block-start: initial;
+	position: absolute;
+
+	.swiper-pagination-bullet {
+		--swiper-pagination-bullet-size: 4px;
+
+		&-active {
+			--swiper-pagination-bullet-size: 6px;
+		}
+	}
+}
+
 .card {
 	--_background-color: var(--background-gray);
 	--_border: 0;
@@ -6,6 +20,8 @@
 	--_padding-x: 20px;
 	--_box-shadow: var(--box-shadow);
 
+	max-width: 430px;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
