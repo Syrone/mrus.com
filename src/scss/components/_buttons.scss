@@ -1,0 +1,57 @@
+.btn {
+	--_font-size: 16px;
+	--_font-weight: 400;
+	--_line-height: 1;
+	--_color: var(--text-color);
+	--_background-color: transparent;
+	--_border: 1px solid transparent;
+	--_border-radius: 16px;
+	--_padding-y: 0;
+	--_padding-x: 0;
+	--_transition-type: var(--transition-type);
+	--_transition-duration: var(--transition-duration);
+
+	--_color-active: var(--primary-color);
+	--_background-color-active: transparent;
+
+	width: fit-content;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: var(--_font-size);
+	font-weight: var(--_font-weight);
+	line-height: var(--_line-height);
+	color: var(--_color);
+	background-color: var(--_background-color);
+	border: var(--_border);
+	border-radius: var(--_border-radius);
+	padding: var(--_padding-y) var(--_padding-x);
+	cursor: pointer;
+	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type);
+
+	.icon {
+		transition: initial;
+	}
+
+	&:is(:hover, :focus-visible, :active, .is-active) {
+		color: var(--_color-active);
+		background-color: var(--_background-color-active);
+	}
+}
+
+.btn-dark {
+	--_font-weight: 700;
+	--_color: var(--light-color);
+	--_background-color: var(--background-dark);
+	--_border: 1px solid var(--background-dark);
+	--_border-radius: 12px;
+	--_padding-y: 13px;
+	--_padding-x: 10px;
+
+	--_color-active: var(--dark-color);
+
+	&-lg {
+		--_padding-y: 20px;
+	}
+}

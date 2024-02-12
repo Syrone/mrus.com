@@ -1,0 +1,42 @@
+.search {
+	width: 100%;
+	max-width: 590px;
+
+	&__wrapper {
+		position: relative;
+
+		.search__btn {
+			width: 50px;
+			height: 100%;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			z-index: 1;
+			cursor: pointer;
+
+			.icon {
+				--_i-size: 18px;
+				transition: initial;
+			}
+
+			&:is(:hover, :focus-visible, :active, .is-active) {
+				color: var(--primary-color);
+			}
+		}
+
+		.field {
+			--_height: 38px;
+			--_font-size: 16px;
+			--_font-weight: 500;
+			--_padding-y: 8px;
+			--_padding-x: 8px;
+
+			--_placeholder-color: var(--text-color-light);
+
+			width: 100%;
+			padding-inline-start: 50px;
+		}
+	}
+}

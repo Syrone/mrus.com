@@ -1,0 +1,29 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/typography";
+@import "./components/burger";
+@import "./components/account";
+@import "./components/callback";
+@import "./components/buttons";
+@import "./components/icon";
+@import "./components/dropdown";
+@import "./components/search";
+@import "./components/field";
+@import "./components/sections";
+@import "./components/swipers";
+@import "./components/card";
+@import "./components/checkbox";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/category";
+@import "./components/cashback";
+@import "./components/tech";
+@import "./components/news";
+@import "./components/mailing";
+@import "./components/footer";
+@import "./components/media";

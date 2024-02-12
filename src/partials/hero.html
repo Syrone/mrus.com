@@ -1,0 +1,39 @@
+<section class="section">
+	<div class="hero">
+		<style>
+			.hero {
+				background-image: image-set(
+					url('./img/main-bg.webp') type('image/webp'),
+					url('./img/main-bg.jpg') type('image/jpeg')
+				);
+			}
+			@media screen and (max-width: 768px) {
+				.hero {
+					background-image: image-set(
+						url('./img/main-bg--mobile.webp') type('image/webp'),
+						url('./img/main-bg--mobile.jpg') type('image/jpeg')
+					);
+				}
+			}
+		</style>
+		<div data-da="#heroTextMobile,768,first" class="container hero__inner">
+			<h2 class="hero__title h1">
+				ПОВРЕЖДЕННАЯ УПАКОВКА
+			</h2>
+			<p class="hero__text">
+				Выгодные предложения на товары с повреждениями упаковки
+			</p>
+			<a href="#" class="btn hero__btn">
+				ПОДРОБНЕЕ
+				<span class="icon">
+					<svg>
+						<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
+					</svg>
+				</span>
+			</a>
+		</div>
+	</div>
+	<div class="hero__bottom">
+		<div id="heroTextMobile" class="container"></div>
+	</div>
+</section>

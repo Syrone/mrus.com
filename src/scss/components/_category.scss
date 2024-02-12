@@ -1,0 +1,88 @@
+.category {
+
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 16px;
+	}
+
+	&__link {
+		height: 100%;
+		min-height: 200px;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--background-gray);
+		border: 0;
+		border-radius: 16px;
+		padding: 30px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		transition: box-shadow var(--transition-duration) var(--transition-type);
+
+		&-image {
+			width: 240px;
+			height: 396px;
+			object-fit: contain;
+			transform: rotate(18deg);
+			position: absolute;
+			bottom: -150px;
+			right: 20px;
+			z-index: -1;
+		}
+
+		&-title {
+			font-size: 22px;
+		}
+
+		&-text {
+			font-size: var(--font-size-xs);
+			font-weight: 500;
+
+			span {
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+
+		&-btn {
+			--_background-color: var(--background-light);
+			--_background-color-active: var(--background-light);
+			--_border: 0;
+			--_border-radius: 12px;
+			--_padding-y: 12px;
+			--_padding-x: 12px;
+			margin-top: auto;
+
+			.icon {
+				transform: translateX(1px);
+			}
+		}
+
+		&--all {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--primary-color);
+
+			.category__link {
+
+				&-title,
+				&-text {
+					color: var(--light-color);
+				}
+			}
+		}
+
+		&:is(:hover, :focus-visible, :active, .is-active) {
+			box-shadow: var(--box-shadow-2);
+
+			.category__link-btn {
+				--_color: var(--primary-color);
+			}
+
+		}
+	}
+}
