@@ -1,6 +1,24 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
-const swiperCard = new Swiper('.swiper__card', {
+new Swiper('.swiper__hero', {
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '.swiper__hero-next',
+    prevEl: '.swiper__hero-prev',
+  },
+
+  pagination: {
+    el: '.swiper__hero-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+});
+
+new Swiper('.swiper__card', {
   grabCursor: true,
   slidesPerView: 4,
   spaceBetween: 16,
@@ -62,7 +80,7 @@ if (classCardImage.length > 0) {
   })
 }
 
-const swiperTech = new Swiper('.swiper__tech', {
+new Swiper('.swiper__tech', {
   grabCursor: true,
   slidesPerView: 4,
   spaceBetween: 16,

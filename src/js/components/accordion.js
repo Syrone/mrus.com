@@ -8,6 +8,13 @@ if ( accordion.length > 0 ) {
 
 		e.style.height = `${summaryHeight}px`;
 
+		if ( e.open ) {
+			let contentHeight = parseInt( detailsContent.offsetHeight );
+			let fullHeight = ( summaryHeight + contentHeight );
+
+			e.style.height = `${fullHeight}px`;
+		}
+
 		e.addEventListener('toggle', (event) => {
 
 			if ( e.open ) {

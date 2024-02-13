@@ -19,7 +19,7 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-		transition: box-shadow var(--transition-duration) var(--transition-type);
+		transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), box-shadow var(--transition-duration) var(--transition-type);
 
 		&-image {
 			width: 240px;
@@ -30,6 +30,11 @@
 			bottom: -150px;
 			right: 20px;
 			z-index: -1;
+		}
+
+		&-title,
+		&-text {
+			transition: color var(--transition-duration) var(--transition-type);
 		}
 
 		&-title {
@@ -74,15 +79,30 @@
 					color: var(--light-color);
 				}
 			}
+
+			&:is(:hover, :focus-visible, :active, .is-active) {
+				background-color: var(--background-gray);
+
+				.category__link {
+
+					&-title {
+						color: var(--dark-color);
+					}
+
+					&-text {
+						color: var(--text-color);
+					}
+				}
+			}
 		}
 
 		&:is(:hover, :focus-visible, :active, .is-active) {
 			box-shadow: var(--box-shadow-2);
 
 			.category__link-btn {
-				--_color: var(--primary-color);
+				--_color: var(--light-color);
+				--_background-color: var(--primary-color);
 			}
-
 		}
 	}
 }

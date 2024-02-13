@@ -1,39 +1,113 @@
-<section class="section">
-	<div class="hero">
-		<style>
-			.hero {
-				background-image: image-set(
-					url('./img/main-bg.webp') type('image/webp'),
-					url('./img/main-bg.jpg') type('image/jpeg')
-				);
-			}
-			@media screen and (max-width: 768px) {
-				.hero {
-					background-image: image-set(
-						url('./img/main-bg--mobile.webp') type('image/webp'),
-						url('./img/main-bg--mobile.jpg') type('image/jpeg')
-					);
-				}
-			}
-		</style>
-		<div data-da="#heroTextMobile,768,first" class="container hero__inner">
-			<h2 class="hero__title h1">
-				ПОВРЕЖДЕННАЯ УПАКОВКА
-			</h2>
-			<p class="hero__text">
-				Выгодные предложения на товары с повреждениями упаковки
-			</p>
-			<a href="#" class="btn hero__btn">
-				ПОДРОБНЕЕ
-				<span class="icon">
-					<svg>
-						<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
-					</svg>
-				</span>
-			</a>
+<section class="section-hero section">
+	<div class="wrapper-slider">
+		<div class="swiper swiper__hero">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="hero" style="background-image: image-set( url('./img/main-bg.webp') type('image/webp'), url('./img/main-bg.jpg') type('image/jpeg') );">
+						<div class="hero__inner">
+							<h2 class="hero__title h1">
+								НОВАЯ КОЛЛЕКЦИЯ
+							</h2>
+							<p class="hero__text">
+								Выгодные предложения на товары новой коллекции Sate
+							</p>
+							<a href="#" class="btn hero__btn">
+								ПОДРОБНЕЕ
+								<span class="icon">
+									<svg>
+										<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hero" style="background-image: image-set( url('./img/main-bg-2.webp') type('image/webp'), url('./img/main-bg-2.jpg') type('image/jpeg') );">
+						<div class="hero__inner">
+							<h2 class="hero__title h1">
+								НОВАЯ КОЛЛЕКЦИЯ
+							</h2>
+							<p class="hero__text">
+								Выгодные предложения на товары новой коллекции Sate
+							</p>
+							<a href="#" class="btn hero__btn">
+								ПОДРОБНЕЕ
+								<span class="icon">
+									<svg>
+										<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hero" style="background-image: image-set( url('./img/main-bg-3.webp') type('image/webp'), url('./img/main-bg-3.jpg') type('image/jpeg') );">
+						<div class="hero__inner">
+							<h2 class="hero__title h1">
+								НОВАЯ КОЛЛЕКЦИЯ
+							</h2>
+							<p class="hero__text">
+								Выгодные предложения на товары новой коллекции Sate
+							</p>
+							<a href="#" class="btn hero__btn">
+								ПОДРОБНЕЕ
+								<span class="icon">
+									<svg>
+										<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="hero" style="background-image: image-set( url('./img/main-bg-4.webp') type('image/webp'), url('./img/main-bg-4.jpg') type('image/jpeg') );">
+						<div class="hero__inner">
+							<h2 class="hero__title h1">
+								НОВАЯ КОЛЛЕКЦИЯ
+							</h2>
+							<p class="hero__text">
+								Выгодные предложения на товары новой коллекции Sate
+							</p>
+							<a href="#" class="btn hero__btn">
+								ПОДРОБНЕЕ
+								<span class="icon">
+									<svg>
+										<use xlink:href="img/arrow-top-right.svg#svg-arrow-top-right"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="hero__bottom">
-		<div id="heroTextMobile" class="container"></div>
+
+		<div class="hero__container container">
+			<div class="swiper__hero-button">
+				<div class="swiper-button-prev swiper__hero-prev">
+					<button type="button" class="btn wrapper-slider-btn">
+						<span class="icon">
+							<svg>
+								<use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+							</svg>
+						</span>
+					</button>
+				</div>
+				<div class="swiper-button-next swiper__hero-next">
+					<button type="button" class="btn wrapper-slider-btn">
+						<span class="icon">
+							<svg>
+								<use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper-pagination swiper__hero-pagination"></div>
 	</div>
 </section>

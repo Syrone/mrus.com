@@ -44,12 +44,13 @@
 	--_font-weight: 700;
 	--_color: var(--light-color);
 	--_background-color: var(--background-dark);
-	--_border: 1px solid var(--background-dark);
+	--_border: 1px solid transparent;
 	--_border-radius: 12px;
 	--_padding-y: 13px;
 	--_padding-x: 10px;
 
-	--_color-active: var(--dark-color);
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--primary-color);
 
 	&-lg {
 		--_padding-y: 20px;

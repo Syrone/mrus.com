@@ -1,25 +1,3 @@
-.catalog-banner {
-	margin-block-end: 80px;
-
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-
-	&__inner {
-		min-height: 350px;
-		display: flex;
-		align-items: center;
-		padding-block: 60px;
-	}
-
-	&__title {
-		max-width: 600px;
-		font-family: var(--third-family);
-		font-weight: 300;
-		color: var(--light-color);
-	}
-}
-
 .catalog {
 
 	&__inner {

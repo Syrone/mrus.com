@@ -1,4 +1,41 @@
+@media screen and (max-width: 1840px) {
+
+	//** (Start) General **//
+	.swiper-button-next, .swiper-rtl .swiper-button-prev {
+		right: -20px;
+	}
+	
+	.swiper-button-prev, .swiper-rtl .swiper-button-next {
+		left: -20px;
+	}
+	//** (End) General **//
+
+}
+
 @media screen and (max-width: 1400px) {
+
+	//** (Start) General **//
+	.account {
+		gap: 14px;
+
+		&__name {
+			display: none;
+		}
+
+	}
+	//** (End) General **//
+
+	//** (Start) Blocks **//
+	.header {
+
+		&__bottom {
+			gap: 30px;
+
+			&-menu {
+				gap: 30px;
+			}
+		}
+	}
 
 	.category {
 
@@ -12,11 +49,10 @@
 
 
 		&__header {
-			gap: 20px;
-			padding-inline: 24px;
+			grid-template-columns: .1fr .5fr;
 
-			&-info {
-				padding-inline: 40px;
+			&-image {
+				width: 60%;
 			}
 		}
 	}
@@ -32,10 +68,23 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }
 
 @media screen and (max-width: 1200px) {
+
+	//** (Start) Blocks **//
+	.header {
+
+		&__bottom {
+			gap: 20px;
+
+			&-menu {
+				gap: 20px;
+			}
+		}
+	}
 
 	.category {
 
@@ -49,10 +98,20 @@
 
 
 		&__header {
-			padding-inline: 14px;
+			grid-template-columns: 1fr;
+			gap: 30px;
+			padding: 0;
+
+			&-image {
+				width: 100%;
+				display: block;
+				position: static;
+			}
 
 			&-info {
-				padding-inline: 20px;
+				padding: 40px 40px 0;
+				text-align: center;
+				order: -1;
 			}
 		}
 	}
@@ -75,12 +134,18 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }
 
 @include tablet {
 
+	//** (Start) Blocks **//
 	.header {
+
+		&-fixed {
+			top: 0;
+		}
 
 		.burger {
 			display: block;
@@ -112,7 +177,11 @@
 			&-menu {
 				flex-direction: column;
 				align-items: flex-start;
-				gap: 12px;
+				gap: 20px;
+
+				&-link {
+					--_padding-y: 0;
+				}
 			}
 		}
 
@@ -130,12 +199,11 @@
 			align-items: flex-start;
 			background-color: var(--background-light);
 			padding: 20px;
-			box-shadow: var(--box-shadow-2);
 			position: fixed;
 			top: 0;
 			right: 0;
 			transform: translateX(100%);
-			z-index: 10;
+			z-index: 20;
 
 			transition: transform var(--transition-duration) var(--transition-type);
 
@@ -168,23 +236,29 @@
 		&__dropdown {
 			
 			&-btn {
-				--_color: var(--text-color);
+				--_color: var(--dark-color);
 				padding: 0;
 			}
 
 			&-menu {
 				display: none;
-				padding: 12px 0 0;
+				padding: 20px 0 0;
 				box-shadow: initial;
 				opacity: 1;
 				visibility: visible;
 				position: static;
 			}
 
+			&-list {
+				gap: 20px;
+				border: 0;
+				padding: 0;
+			}
+
 			&-link {
-				font-weight: 700;
-				color: var(--text-color);
-				text-transform: uppercase;
+				--_font-weight: 700;
+				--_color: var(--dark-color);
+				white-space: unset;
 			}
 
 			&:is(:hover, :focus-visible, :active, .is-active) {
@@ -196,39 +270,26 @@
 			}
 		}
 
-		&__nav {
-
-			&-list {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 12px;
-			}
-
-		}
-
 		&__search {
 
-			.search {
+			&-wrapper {
 
-				&__wrapper {
-					display: none;
-				}
+				&.is-show {
+					width: 20px;
+					height: 20px;
+					margin-block: -6px;
+					position: relative;
 
-				&__btn[type="button"] {
-					display: inline-flex;
-					padding: 0;
-
-					.icon {
-						--_i-size: 20px;
-						transition: initial;
-					}
-
-					&:is(:hover, :focus-visible, :active, .is-active) {
-						color: var(--primary-color);
+					.header__search {
+						min-width: 360px;
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translateY(-50%);
+						z-index: 16;
 					}
 				}
 			}
-
 		}
 
 		&__callback {
@@ -239,27 +300,15 @@
 
 	}
 
-	.account {
+	.search {
 
-		&__name {
-			display: none;
+		&__dropdown {
+			height: 70vh;
+			height: 70dvh;
 		}
-
 	}
 
 	.cashback {
-
-
-		&__header {
-			grid-template-columns: 1fr;
-			padding-inline: 8px;
-
-			&-info {
-				justify-self: center;
-				padding-inline: initial;
-				order: -1;
-			}
-		}
 
 		&__advantages {
 			grid-template-columns: repeat(2, 1fr);
@@ -275,10 +324,6 @@
 	}
 
 	.catalog {
-
-		&-banner {
-			margin-block-end: initial;
-		}
 
 		&__filter {
 			width: calc(100% + var(--container-offset) * 2);
@@ -305,7 +350,7 @@
 				display: flex;
 				align-items: center;
 				gap: 20px;
-				padding: 16px var(--container-offset) 2px;
+				padding: 0 var(--container-offset) 2px;
 				overflow-x: scroll;
 
 				&::-webkit-scrollbar {
@@ -370,11 +415,13 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }
 
 @include small-tablet {
 
+	//** (Start) General **//
 	h1,
 	.h1 {
 		font-size: 36px;
@@ -449,32 +496,85 @@
 		display: none;
 	}
 
-	.hero {
-		min-height: 85vw;
+	.swiper-pagination {
+		--swiper-pagination-bullet-size: 8px;
+		--swiper-pagination-bullet-horizontal-gap: 4px;
+	}
 
-		&__bottom {
-			margin-block-start: -130px;
-			background: linear-gradient(180deg, rgba(4, 26, 103, 0) 0%, #041a67 32.5%);
-		}
+	.section-banner {
+		margin-block-end: 0;
+	}
+
+	.banner {
+		min-height: 320px;
+		display: flex;
+		align-items: flex-end;
+		margin: 20px 20px 0 20px;
+		border-radius: 16px;
+		overflow: hidden;
 
 		&__inner {
-			min-height: 390px;
+			width: 100%;
+			min-height: 200px;
+			padding: 30px 16px;
+		}
+	}
+
+	.price {
+		flex-wrap: wrap;
+		gap: 8px;
+
+		&-main {
+			width: 100%;
+			order: 1;
+			font-size: 18px;
+		}
+
+		&-sale {
+			font-size: 14px;
+		}
+	}
+	//** (End) General **//
+
+	//** (Start) Blocks **//
+	.swiper__hero {
+
+		&-prev,
+		&-next {
+			display: none;
+		}
+	}
+
+
+	.hero {
+		min-height: 520px;
+		display: flex;
+		align-items: flex-end;
+		margin: var(--container-offset) var(--container-offset) 0 var(--container-offset);
+		border-radius: 16px;
+		overflow: hidden;
+
+		&__inner {
+			width: 100%;
+			min-height: 270px;
 			align-items: center;
-			padding-block: 30px;
+			padding-block: 40px;
 		}
 
 		&__title,
 		&__text  {
 			text-align: center;
-			margin-bottom: 20px;
 		}
 
 		&__title {
 			max-width: 360px;
+			margin-block-end: 30px;
 		}
 
 		&__text {
+			max-width: 280px;
 			font-size: 16px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -501,6 +601,10 @@
 
 	.swiper__card {
 		overflow: visible;
+
+		&-image-pagination {
+			display: none;
+		}
 	}
 
 	.swiper__card-next,
@@ -535,19 +639,7 @@
 		}
 
 		&__price {
-			flex-wrap: wrap;
-			gap: 8px;
 			margin-block-end: 12px;
-
-			&-main {
-				width: 100%;
-				order: 1;
-				font-size: 18px;
-			}
-
-			&-sale {
-				font-size: 14px;
-			}
 		}
 
 		&__split,
@@ -555,7 +647,6 @@
 			font-size: 12px;
 
 			&-badge {
-				font-size: 12px;
 
 				.icon {
 					--_i-size: 10px;
@@ -568,19 +659,35 @@
 		}
 	}
 
+	.card-search {
+
+		&__price {
+			flex-wrap: nowrap;
+
+			.price-main {
+				width: auto;
+				order: -1;
+			}
+		}
+	}
+
 	.cashback {
 
 
 		&__header {
-			gap: 10px;
-			padding: 30px 8px 0;
+			gap: 30px;
 
-			&--desktop {
-				display: none;
+			&-info {
+				padding: 40px 16px 0;
 			}
 
-			&--mobile {
-				display: grid;
+			&-title {
+				font-size: 24px;
+				margin-block-end: 20px;
+			}
+
+			&-text {
+				font-size: 16px;
 			}
 		}
 
@@ -624,7 +731,7 @@
 
 			&-title {
 				font-size: 22px;
-				margin-block-end: 16px;
+				margin-block-end: 12px;
 			}
 
 			&-btn {
@@ -708,19 +815,6 @@
 	}
 
 	.catalog {
-
-		&-banner {
-			margin-block-end: initial;
-
-			&__inner {
-				min-height: 50vw;
-				padding-block: 40px;
-			}
-
-			&__title {
-				max-width: 320px;
-			}
-		}
 
 		&__filter {
 
@@ -845,14 +939,47 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }
 
 
 @media screen and (max-width: 576px) {
-	
-	.hero {
-		min-height: 340px;
+
+	//** (Start) Blocks **//
+	.header {
+
+		&__search {
+			
+			&-wrapper {
+
+				&.is-show {
+					
+					.header__search {
+						min-width: initial;
+						width: calc(100% - var(--container-offset) * 2);
+						position: fixed;
+						top: 14px;
+						left: var(--container-offset);
+						right: var(--container-offset);
+						z-index: 16;
+						transform: initial;
+					}
+				}
+			}
+		}
+	}
+
+	.search {
+
+		&__dropdown {
+			width: auto;
+			height: calc(100% - 100px);
+			position: fixed;
+			top: 80px;
+			left: var(--container-offset);
+			right: var(--container-offset);
+		}
 	}
 
 	.category {
@@ -918,11 +1045,13 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }
 
 @media screen and (max-width: 389px) {
 
+	//** (Start) Blocks **//
 	.catalog {
 
 
@@ -934,5 +1063,6 @@
 			}
 		}
 	}
+	//** (End) Blocks **//
 
 }

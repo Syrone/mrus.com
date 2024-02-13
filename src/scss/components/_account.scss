@@ -26,15 +26,11 @@
 		pointer-events: none;
 	}
 
-	.btn {
+	&__button {
+		--_color: var(--text-color-brighter);
+		--_color-active: var(--primary-color);
 		gap: 12px;
-		padding: 0;
-		color: var(--text-color-brighter);
 		position: relative;
-
-		&:is(:hover, :focus-visible, :active, .is-active) {
-			color: var(--primary-color);
-		}
 	}
 
 	.icon {

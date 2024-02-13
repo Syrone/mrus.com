@@ -1,24 +1,20 @@
-<section class="section catalog-banner">
-	<style>
-		.catalog-banner {
-			background-image: image-set(
-				url('./img/catalog-banner.webp') type('image/webp'),
-				url('./img/catalog-banner.jpg') type('image/jpeg')
-			);
-		}
-		@media screen and (max-width: 768px) {
-			.catalog-banner {
-				background-image: image-set(
-					url('./img/catalog-banner--mobile.webp') type('image/webp'),
-					url('./img/catalog-banner--mobile.jpg') type('image/jpeg')
-				);
+<section class="section section-banner">
+	<div class="banner">
+		<style>
+			.banner {
+				background-image: image-set( url('./img/catalog-banner.webp') type('image/webp'), url('./img/catalog-banner.jpg') type('image/jpeg') );
 			}
-		}
-	</style>
-	<div class="container catalog-banner__inner">
-		<h2 class="catalog-banner__title h1">
-			Суперскидки до 50%
-		</h2>
+			@media screen and (max-width: 768px) {
+				.banner {
+					background-image: image-set( url('./img/catalog-banner--mobile.webp') type('image/webp'), url('./img/catalog-banner--mobile.jpg') type('image/jpeg') );
+				}
+			}
+		</style>
+		<div class="banner__inner">
+			<h2 class="banner__title h1">
+				Суперскидки до 50%
+			</h2>
+		</div>
 	</div>
 </section>
 
@@ -29,7 +25,7 @@
 				Каталог
 			</h3>
 			<div class="catalog__filter-content">
-				<details class="catalog__filter-accordion accordion">
+				<details class="catalog__filter-accordion accordion" open>
 					<summary class="accordion__title">Кофемашины</summary>
 					<div class="accordion__content">
 						<ul class="accordion__list list-reset">
@@ -187,10 +183,10 @@
 		</aside>
 
 		<div class="catalog__content">
-			<h3 class="catalog__content-title">
-				КОФЕМАШИНЫ
-			</h3>
 			<div class="catalog__content-inner">
+				<h3 class="catalog__content-title">
+					КОФЕМАШИНЫ
+				</h3>
 				<div class="catalog__content-header">
 					<picture>
 						<img loading="lazy" src="./img/sate.svg" class="catalog__content-brand image" width="100" height="36" alt="Бренд">
@@ -233,14 +229,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -319,14 +315,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -405,14 +401,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -491,14 +487,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -552,6 +548,9 @@
 			</div>
 
 			<div class="catalog__content-inner">
+				<h3 class="catalog__content-title">
+					ПЫЛЕСОСЫ
+				</h3>
 				<div class="catalog__content-header">
 					<picture>
 						<source srcset="./img/melitta.webp" type="image/webp">
@@ -595,14 +594,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -681,14 +680,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>
@@ -767,14 +766,14 @@
 									</h4>
 								</div>
 								<div class="card__detail">
-									<div class="card__price">
-										<span class="card__price-main">
+									<div class="card__price price">
+										<span class="price-main">
 											46 990 ₽
 										</span>
-										<span class="card__price-sale">
+										<span class="price-sale">
 											69 990 ₽
 										</span>
-										<span class="card__price-percentage">
+										<span class="price-percentage">
 											-30%
 										</span>
 									</div>

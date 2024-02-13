@@ -45,8 +45,8 @@
 		&-btn {
 			--_font-size: 14px;
 			--_font-weight: 500;
-			--_color: var(--primary-color);
-			--_color-active: var(--dark-color);
+			--_color: var(--dark-color);
+			--_color-active: var(--primary-color);
 			--_border: 0;
 			--_border-radius: initial;
 			margin-block-start: auto;
@@ -67,7 +67,7 @@
 			}
 
 			&-btn {
-				--_color-active: var(--light-color);
+				--_color: var(--light-color);
 			}
 		}
 	}
