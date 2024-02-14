@@ -61,6 +61,15 @@
 			font-weight: 500;
 			line-height: 1.2;
 			margin-block-end: 0;
+			color: var(--dark-color);
+			transition: color var(--transition-duration) var(--transition-type);
+		}
+
+		&:is(:hover, :focus-visible, :active) {
+
+			.card__header-title {
+				color: var(--primary-color);
+			}
 		}
 	}
 

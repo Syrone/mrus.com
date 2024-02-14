@@ -701,6 +701,23 @@
 			font-size: 16px;
 		}
 	}
+
+	.breadcrumbs {
+		margin-block: 20px;
+
+		&__list {
+			display: none;
+		}
+
+		&__link {
+			--_color: var(--text-color);
+			gap: 8px;
+
+			&--mobile {
+				display: inline-flex;
+			}
+		}
+	}
 	//** (End) General **//
 
 	//** (Start) Blocks **//
