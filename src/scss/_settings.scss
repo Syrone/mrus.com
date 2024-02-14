@@ -31,7 +31,6 @@ html {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
 }
 
 .page__body {
@@ -53,7 +52,11 @@ a {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
 }
 
 .is-hidden {

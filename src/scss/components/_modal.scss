@@ -1,0 +1,62 @@
+.graph-modal {
+	--_modal-padding-y: 30px;
+	--_modal-padding-x: 60px;
+	background-color: rgba(0, 0, 0, 0.32);
+
+	&::before {
+		all: unset;
+	}
+
+	&__close {
+		--_border: 0;
+		--_border-radius: 0;
+
+		height: auto;
+		top: var(--_modal-padding-y);
+		right: var(--_modal-padding-x);
+		background-image: initial;
+
+		&-icon {
+			--_i-size: 18px;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 1120px;
+		padding: var(--_modal-padding-y) var(--_modal-padding-x);
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		text-align: center;
+		margin-block-end: 30px;
+	}
+
+	&__list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-block-end: 30px;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
+		gap: 20px;
+
+		> * {
+			width: 100%;
+			max-width: 244px;
+		}
+	}
+
+	&__interested {
+		margin-block-start: 30px;
+	}
+	
+}

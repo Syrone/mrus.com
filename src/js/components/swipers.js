@@ -48,6 +48,32 @@ new Swiper('.swiper__card', {
   }
 });
 
+new Swiper('.swiper__interested', {
+  grabCursor: true,
+  slidesPerView: 3,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '.swiper__interested-next',
+    prevEl: '.swiper__interested-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    389: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 16
+    },
+  }
+});
+
 const classCardImage = document.querySelectorAll('.swiper__card-image')
 
 if (classCardImage.length > 0) {

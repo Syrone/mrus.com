@@ -115,7 +115,7 @@
 	&__buttons {
 		display: flex;
 		align-items: stretch;
-		gap: 8px;
+		gap: 12px 8px;
 	}
 
 	&__button {
@@ -138,6 +138,63 @@
 		.icon {
 			--_i-size: 22px
 		}
+	}
+}
+
+.card--mini {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	background-color: #F5F7F9;
+	border-radius: 16px;
+	padding: 20px;
+
+	&__picture {
+		width: 90px;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		background-color: #fff;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	&__image {
+		display: block;
+		width: auto;
+		height: 80px;
+		object-fit: contain;
+	}
+
+	&__info {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__title {
+		width: 100%;
+		max-width: 320px;
+		font-size: 18px;
+		font-weight: 500;
+		margin-block-end: 0;
+	}
+
+	&__counter,
+	&__price {
+		flex-shrink: 0;
+		margin-inline-start: auto;
+	}
+
+	&__price {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		gap: 12px;
+		text-align: left;
 	}
 }
 
