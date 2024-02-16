@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([Navigation, Pagination, Thumbs]);
 new Swiper('.swiper__hero', {
   grabCursor: true,
   slidesPerView: 1,
@@ -74,38 +74,6 @@ new Swiper('.swiper__interested', {
   }
 });
 
-const classCardImage = document.querySelectorAll('.swiper__card-image')
-
-if (classCardImage.length > 0) {
-  classCardImage.forEach((swiper) => {
-    const pagination = swiper.getElementsByClassName('swiper__card-image-pagination')[0];
-    new Swiper(swiper, {
-      nested: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-    
-      pagination: {
-        el: pagination,
-        type: 'bullets',
-        clickable: true,
-      },
-    
-      breakpoints: {
-        0: {
-          spaceBetween: 10
-        },
-        768: {
-          spaceBetween: 10
-        },
-        1400: {
-          spaceBetween: 16
-        }
-      }
-    });
-  })
-}
-
 new Swiper('.swiper__tech', {
   grabCursor: true,
   slidesPerView: 4,
@@ -140,4 +108,87 @@ new Swiper('.swiper__tech', {
       spaceBetween: 16
     }
   }
+});
+
+const classCardImage = document.querySelectorAll('.swiper__card-image')
+
+if (classCardImage.length > 0) {
+  classCardImage.forEach((swiper) => {
+    const pagination = swiper.getElementsByClassName('swiper__card-image-pagination')[0];
+    new Swiper(swiper, {
+      nested: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+    
+      pagination: {
+        el: pagination,
+        type: 'bullets',
+        clickable: true,
+      },
+    
+      breakpoints: {
+        0: {
+          spaceBetween: 10
+        },
+        768: {
+          spaceBetween: 10
+        },
+        1400: {
+          spaceBetween: 16
+        }
+      }
+    });
+  })
+}
+
+const productThumb = new Swiper('.swiper__product-thumb', {
+  direction: 'vertical',
+  grabCursor: true,
+  slidesPerView: 6,
+  spaceBetween: 12,
+  freeMode: true,
+  watchSlidesProgress: true,
+
+  // navigation: {
+  //   nextEl: '.swiper__product-thumb-next',
+  //   prevEl: '.swiper__product-thumb-prev',
+  // },
+
+  breakpoints: {
+    0: {
+      direction: 'horizontal',
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    389: {
+      direction: 'horizontal',
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    768: {
+      direction: 'vertical',
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    1024: {
+      direction: 'vertical',
+      slidesPerView: 5,
+      spaceBetween: 12
+    },
+    1200: {
+      direction: 'vertical',
+      slidesPerView: 6,
+      spaceBetween: 12
+    },
+  }
+});
+
+const productMain = new Swiper('.swiper__product', {
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  thumbs: {
+    swiper: productThumb,
+  },
 });

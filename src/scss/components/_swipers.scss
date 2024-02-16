@@ -3,6 +3,12 @@
 	width: 100%;
   position: relative;
 
+	&:not(.wrapper-slider--vertical) {
+		.swiper-slide {
+			height: auto !important;
+		}
+	}
+
 	&-btn {
 		--_background-color: var(--background-light);
 		--_border: 0;
@@ -50,7 +56,6 @@
 	&-slide {
 		display: flex;
 		flex-direction: column;
-		height: auto !important;
 	}
 }
 
