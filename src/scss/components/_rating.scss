@@ -6,6 +6,13 @@
 	align-items: center;
 	gap: 12px;
 
+	&--readonly {
+
+		.rating__stars {
+			pointer-events: none;
+		}
+	}
+
 	&__stars {
 		display: flex;
 		flex-direction: row-reverse;

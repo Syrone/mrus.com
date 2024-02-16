@@ -150,10 +150,10 @@ const productThumb = new Swiper('.swiper__product-thumb', {
   freeMode: true,
   watchSlidesProgress: true,
 
-  // navigation: {
-  //   nextEl: '.swiper__product-thumb-next',
-  //   prevEl: '.swiper__product-thumb-prev',
-  // },
+  navigation: {
+    nextEl: '.swiper__product-thumb-next',
+    prevEl: '.swiper__product-thumb-prev',
+  },
 
   breakpoints: {
     0: {

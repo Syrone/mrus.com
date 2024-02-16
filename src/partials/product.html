@@ -1,11 +1,30 @@
-<div class="product">
+<section class="product section">
 	<div class="container">
 		<div data-da="#productMain,1024,1" class="product__header">
 			<h2 class="product__header-title">
 				Вертикальный Пылесос Sate CT-200
 			</h2>
 			<div class="product__header-reviews">
-				@include('rating.html')
+				<div class="rating rating--readonly">
+					<div class="rating__stars">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1" checked>
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+						<input type="radio" name="star" class="rating__stars-input" tabindex="-1">
+					</div>
+					<span class="rating__text">
+						Отзывов (10)
+					</span>
+					<span class="rating__current">
+						(10)
+					</span>
+				</div>
 			</div>
 			<button type="button" class="btn product__favorite product__header-favorite">
 				<span class="icon product__favorite-icon">
@@ -81,6 +100,25 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="swiper-button-prev swiper__product-thumb-prev">
+						<button type="button" class="btn wrapper-slider-btn">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="swiper-button-next swiper__product-thumb-next">
+						<button type="button" class="btn wrapper-slider-btn">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+								</svg>
+							</span>
+						</button>
 					</div>
 				</div>
 
@@ -386,4 +424,218 @@
 			</aside>
 		</div>
 	</div>
-</div>
+
+	<div class="product__bottom">
+		<div class="tabs product__bottom-tabs" data-tabs="productTabs">
+			<div class="tabs__container">
+				<ul class="list-reset tabs__nav">
+					<li class="tabs__nav-item">
+						<button class="btn tabs__nav-btn" type="button">
+							Подробнее о модели
+						</button>
+					</li>
+					<li class="tabs__nav-item">
+						<button class="btn tabs__nav-btn" type="button">
+							Характеристики
+						</button>
+					</li>
+					<li class="tabs__nav-item">
+						<button class="btn tabs__nav-btn" type="button">
+							Отзывы (10)
+						</button>
+					</li>
+					<li class="tabs__nav-item">
+						<button class="btn tabs__nav-btn" type="button">
+							Статьи
+						</button>
+					</li>
+					<li class="tabs__nav-item">
+						<button class="btn tabs__nav-btn" type="button">
+							Рекомендуемые товары
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="tabs__content">
+				<div class="tabs__panel">
+					<div class="product-model">
+						<style>
+							.product-model {
+								background-image: image-set( url('./img/product-detail-1.webp') type('image/webp'), url('./img/product-detail-1.jpg') type('image/jpeg') );
+							}
+							@media screen and (max-width: 768px) {
+								.product-model {
+									background-image: image-set( url('./img/product-detail--mobile-1.webp') type('image/webp'), url('./img/product-detail--mobile-1.jpg') type('image/jpeg') );
+								}
+							}
+						</style>
+						<div class="product-model__container container">
+							<div data-da="#productModelMobile,768,first">
+								<h3 class="product-model__title">
+									Lorem ipsum
+								</h3>
+								<p class="product-model__text">
+									Lorem ipsum dolor sit amet consectetur. Mauris et sagittis et condimentum urna suspendisse quisque. Sagittis etiam massa egestas posuere risus etiam ut. Proin etiam hac orci urna condimentum vitae urna sed tellus. Aenean tempus odio sed morbi
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div id="productModelMobile" class="product-model--mobile"></div>
+					</div>
+					<div class="product-model__benefits-container container">
+						<ul class="product-model__benefits list-reset">
+							<li class="product-model__benefits-item">
+								<div class="product-model__benefits-picture">
+									<picture>
+										<source srcset="./img/product-benefits-1.webp" type="image/webp">
+										<img loading="lazy" src="./img/product-benefits-1.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+									</picture>
+								</div>
+								<div>
+									<h4 class="product-model__benefits-title">
+										Экспресс доставка
+									</h4>
+									<p class="product-model__benefits-text">
+										Надеженый помощник для дома
+									</p>
+								</div>
+							</li>
+							<li class="product-model__benefits-item">
+								<div class="product-model__benefits-picture">
+									<picture>
+										<source srcset="./img/product-benefits-2.webp" type="image/webp">
+										<img loading="lazy" src="./img/product-benefits-2.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+									</picture>
+								</div>
+								<div>
+									<h4 class="product-model__benefits-title">
+										Экспресс доставка
+									</h4>
+									<p class="product-model__benefits-text">
+										Надеженый помощник для дома
+									</p>
+								</div>
+							</li>
+							<li class="product-model__benefits-item">
+								<div class="product-model__benefits-picture">
+									<picture>
+										<source srcset="./img/product-benefits-3.webp" type="image/webp">
+										<img loading="lazy" src="./img/product-benefits-3.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+									</picture>
+								</div>
+								<div>
+									<h4 class="product-model__benefits-title">
+										Экспресс доставка
+									</h4>
+									<p class="product-model__benefits-text">
+										Надеженый помощник для дома
+									</p>
+								</div>
+							</li>
+							<li class="product-model__benefits-item">
+								<div class="product-model__benefits-picture">
+									<picture>
+										<source srcset="./img/product-benefits-4.webp" type="image/webp">
+										<img loading="lazy" src="./img/product-benefits-4.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+									</picture>
+								</div>
+								<div>
+									<h4 class="product-model__benefits-title">
+										Экспресс доставка
+									</h4>
+									<p class="product-model__benefits-text">
+										Надеженый помощник для дома
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="product-model__detail-container container">
+						<ul class="product-model__detail list-reset">
+							<li class="product-model__detail-item">
+								<picture>
+									<source srcset="./img/product-detail-2.webp" type="image/webp">
+									<img loading="lazy" src="./img/product-detail-2.jpg" class="product-model__detail-image image" width="785" height="474" alt="Фото">
+								</picture>
+								<div>
+									<h4 class="product-model__detail-title">
+										Сенсорное управление
+									</h4>
+									<p class="product-model__detail-text">
+										Современный утюг с сенсорным управлением оснащен 3 автоматическими режимами работы, что делает его управление интуитивно простым
+									</p>
+								</div>
+							</li>
+							<li class="product-model__detail-item">
+								<picture>
+									<source srcset="./img/product-detail-3.webp" type="image/webp">
+									<img loading="lazy" src="./img/product-detail-3.jpg" class="product-model__detail-image image" width="785" height="474" alt="Фото">
+								</picture>
+								<div>
+									<h4 class="product-model__detail-title">
+										Паровой удар
+									</h4>
+									<p class="product-model__detail-text">
+										Мощная одномоментная подача пара для эффективной и быстрой глажки.
+									</p>
+								</div>
+							</li>
+							<li class="product-model__detail-item">
+								<picture>
+									<source srcset="./img/product-detail-4.webp" type="image/webp">
+									<img loading="lazy" src="./img/product-detail-4.jpg" class="product-model__detail-image image" width="785" height="474" alt="Фото">
+								</picture>
+								<div>
+									<h4 class="product-model__detail-title">
+										Подошва с керамическим покрытием
+									</h4>
+									<p class="product-model__detail-text">
+										Керамическое покрытие алюминиевой подошвы создает превосходное скольжение и глажку, а пар равномерно распределяется по ткани через многочисленные отверстия.
+									</p>
+								</div>
+							</li>
+							<li class="product-model__detail-item">
+								<picture>
+									<source srcset="./img/product-detail-5.webp" type="image/webp">
+									<img loading="lazy" src="./img/product-detail-5.jpg" class="product-model__detail-image image" width="785" height="474" alt="Фото">
+								</picture>
+								<div>
+									<h4 class="product-model__detail-title">
+										Автоотключение в трех положениях
+									</h4>
+									<p class="product-model__detail-text">
+										Для безопасности утюг оснащен автоматической системой перехода в режим паузы, при котором отключается нагрев подошвы:
+									</p>
+									<ul class="product-model__detail-list list-reset">
+										<li class="product-model__detail-list-item">
+											В вертикальном положении через 8 минут.
+										</li>
+										<li class="product-model__detail-list-item">
+											В горизонтальном положении через 30 секунд.
+										</li>
+										<li class="product-model__detail-list-item">
+											В положении на боку через 30 секунд.
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabs__panel">
+
+				</div>
+				<div class="tabs__panel">
+
+				</div>
+				<div class="tabs__panel">
+
+				</div>
+				<div class="tabs__panel">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

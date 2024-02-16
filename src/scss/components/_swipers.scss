@@ -22,29 +22,29 @@
 	&--full {
 
 		.swiper {
-			padding-left: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
-			padding-right: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+			padding-inline: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
 		}
 
 		.swiper-button-prev, .swiper-rtl .swiper-button-next {
-			left: 0;
+			left: max(var(--container-offset), calc((100% - var(--content-width)) / 2) - 30px);
 		}
 
 		.swiper-button-next, .swiper-rtl .swiper-button-prev {
-			right: 0;
+			right: max(var(--container-offset), calc((100% - var(--content-width)) / 2) - 30px);
 		}
 
 		&-md-down {
 			width: 100%;
 			max-width: var(--container-width);
+			margin-inline: auto;
 			padding-inline: var(--container-offset);
 
 			.swiper-button-prev, .swiper-rtl .swiper-button-next {
-				left: 0;
+				left: -10px;
 			}
 	
 			.swiper-button-next, .swiper-rtl .swiper-button-prev {
-				right: 0;
+				right: -10px;
 			}
 		}
 	}
