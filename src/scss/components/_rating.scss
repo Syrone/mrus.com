@@ -91,6 +91,14 @@
 		color: var(--text-color);
 	}
 
+	&__text {
+
+		&-accent {
+			font-weight: 700;
+			color: var(--dark-color);
+		}
+	}
+
 	&__current {
 		display: none;
 	}

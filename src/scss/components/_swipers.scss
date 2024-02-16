@@ -21,7 +21,7 @@
 
 	&--full {
 
-		.swiper {
+		& > .swiper {
 			padding-inline: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
 		}
 
