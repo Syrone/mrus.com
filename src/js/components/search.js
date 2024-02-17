@@ -1,7 +1,8 @@
 import { disableScroll } from '../functions/disable-scroll'
 import { enableScroll } from '../functions/enable-scroll'
 
-const headerSearch = document?.querySelector('.header__search-wrapper'),
+const buttonsShow = document?.querySelectorAll('.btn-search'),
+			headerSearch = document?.querySelector('.header__search-wrapper'),
 			searchField = headerSearch?.querySelector('.search__field'),
 			searchLast = headerSearch?.querySelector('.search__last'),
 			searchCard = headerSearch?.querySelector('.search__card'),
@@ -32,6 +33,12 @@ function handleSearchField() {
     searchLast.classList.add('is-hidden')
     searchNews.classList.remove('is-hidden')
   }
+}
+
+if (buttonsShow.length > 0) {
+	buttonsShow.forEach((btn) => {
+		btn.addEventListener('click', showSearch)
+	})
 }
 
 buttonShow?.addEventListener('click', showSearch)

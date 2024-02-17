@@ -1,2 +1,4 @@
 import GraphTabs from 'graph-tabs';
-const tabs = new GraphTabs('productTabs');
+if (document.querySelector('[data-tabs="productTabs"]')) {
+	const tabs = new GraphTabs('productTabs');
+}
