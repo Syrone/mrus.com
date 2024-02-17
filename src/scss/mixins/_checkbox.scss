@@ -21,7 +21,7 @@
     border: 1px solid var(--background-light);
     border-radius: 12px;
     cursor: pointer;
-    transition: border var(--transition-duration) var(--transition-type);
+    transition: background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
     &:checked {
 

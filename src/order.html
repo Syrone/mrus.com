@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main background-gray">
+      <h1 class="visually-hidden">Оформление заказа</h1>
+      
+      <div class="page-header">
+        <div class="container">
+          <h2 class="page-header__h2">
+            Оформление заказа
+          </h2>
+        </div>
+      </div>
+
+      <section class="section order">
+        <div class="container">
+          <div class="order__header">
+            <ul class="order__header-card list-reset">
+              <li class="order__header-card-item">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="order__header-card-image image" width="86" height="120" alt="Фото">
+                </picture>
+              </li>
+              <li class="order__header-card-item">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="order__header-card-image image" width="86" height="120" alt="Фото">
+                </picture>
+              </li>
+              <li class="order__header-card-item">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="order__header-card-image image" width="86" height="120" alt="Фото">
+                </picture>
+              </li>
+              <li class="order__header-card-item">
+                <picture>
+                  <source srcset="./img/card-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/card-1.png" class="order__header-card-image image" width="86" height="120" alt="Фото">
+                </picture>
+              </li>
+            </ul>
+
+            <ul class="order__header-info list-reset">
+              <li class="order__header-info-item">
+                <span class="order__header-info-name">
+                  Товара: 
+                </span>
+                <span>
+                  2
+                </span>
+              </li>
+              <li class="order__header-info-item">
+                <span class="order__header-info-name">
+                  Итого: 
+                </span>
+                <span>
+                  59 990 ₽
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="order__inner">
+            <div class="order__main">
+              <ul class="order__choice list-reset">
+                <li class="order__choice-item">
+                  <label class="order__choice-checkbox custom-checkbox custom-checkbox--radio">
+                    <div class="custom-checkbox__wrapper">
+                      <input type="radio" class="custom-checkbox__field" name="entity" checked>
+                      <span class="custom-checkbox__checked"></span>
+                    </div>
+                    <span class="custom-checkbox__content">
+                      Физическое лицо
+                    </span>
+                  </label>
+                </li>
+                <li class="order__choice-item">
+                  <label class="order__choice-checkbox custom-checkbox custom-checkbox--radio">
+                    <div class="custom-checkbox__wrapper">
+                      <input type="radio" class="custom-checkbox__field" name="entity">
+                      <span class="custom-checkbox__checked"></span>
+                    </div>
+                    <span class="custom-checkbox__content">
+                      Юридическое лицо
+                    </span>
+                  </label>
+                </li>
+              </ul>
+
+              <div class="order__step" data-step-collapse="true" data-step-complete="false">
+                <div class="order__step-header">
+                  <h3 class="order__step-title">
+                    <span class="order__step-title-current">1/3</span> Контактные данные
+                  </h3>
+                </div>
+                <div class="order__step-content">
+                  <form class="order__step-form">
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        Имя<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" placeholder="Имя" required>
+                        <span class="field__placeholder">
+                          Имя<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        Фамилия<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" placeholder="Фамилия" required>
+                        <span class="field__placeholder">
+                          Фамилия<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        E-mail<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="email" class="field" placeholder="E-mail" required>
+                        <span class="field__placeholder">
+                          E-mail<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        Номер телефона<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="tel" class="field" placeholder="Номер телефона" required>
+                        <span class="field__placeholder">
+                          Номер телефона<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-dark-lg order__step-form-btn">
+                      Продолжить
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="order__step" data-step-collapse="true" data-step-complete="false">
+                <div class="order__step-header">
+                  <h3 class="order__step-title">
+                    <span class="order__step-title-current">2/3</span> Адрес доставки
+                  </h3>
+                </div>
+                <div class="order__step-content">
+                  <form class="order__step-form">
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        Город<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" placeholder="Город" required>
+                        <span class="field__placeholder">
+                          Город<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="wrapper-field">
+                      <h4 class="field__title">
+                        Улица<span class="field__title-required">*</span>
+                      </h4>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" placeholder="Улица" required>
+                        <span class="field__placeholder">
+                          Улица<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="order__step-fields-full order__step-fields-full--5">
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Дом<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <input type="text" class="field" placeholder="Дом" required>
+                          <span class="field__placeholder">
+                            Дом<span class="field__placeholder-required">*</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Кв/Офис<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <input type="text" class="field" placeholder="Кв/Офис" required>
+                          <span class="field__placeholder">
+                            Кв/Офис<span class="field__placeholder-required">*</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Подъезд<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <input type="text" class="field" placeholder="Подъезд" required>
+                          <span class="field__placeholder">
+                            Подъезд<span class="field__placeholder-required">*</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Этаж<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <input type="text" class="field" placeholder="Этаж" required>
+                          <span class="field__placeholder">
+                            Этаж<span class="field__placeholder-required">*</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Домофон<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <input type="text" class="field" placeholder="Домофон" required>
+                          <span class="field__placeholder">
+                            Домофон<span class="field__placeholder-required">*</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order__step-fields-full">
+                      <div class="wrapper-field">
+                        <h4 class="field__title">
+                          Комментрии к заказу<span class="field__title-required">*</span>
+                        </h4>
+                        <div class="wrapper-field__inner">
+                          <textarea class="field field-textarea" placeholder="Комментрии к заказу"></textarea>
+                          <span class="field__placeholder">
+                            Комментрии к заказу
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-dark-lg order__step-form-btn">
+                      Продолжить
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="order__step" data-step-collapse="true" data-step-complete="false">
+                <div class="order__step-header">
+                  <h3 class="order__step-title">
+                    <span class="order__step-title-current">3/3</span> Оплата
+                  </h3>
+                </div>
+                <div class="order__step-content">
+                  <form class="order__step-form">
+                    <label class="order__choice-method custom-checkbox custom-checkbox--radio">
+                      <div class="custom-checkbox__wrapper">
+                        <input type="radio" class="custom-checkbox__field" name="method" checked>
+                        <span class="custom-checkbox__checked"></span>
+                      </div>
+                      <span class="custom-checkbox__content order__choice-method-content">
+                        Системой быстрых платежей
+                      </span>
+                      <p class="order__choice-method-text">
+                        Оплата по QR-коду через мобильное приложение банка.
+                      </p>
+                      <img loading="lazy" src="./img/spb.svg" class="order__choice-method-image image" width="54" height="29" alt="Фото">
+                    </label>
+                    <label class="order__choice-method custom-checkbox custom-checkbox--radio">
+                      <div class="custom-checkbox__wrapper">
+                        <input type="radio" class="custom-checkbox__field" name="method">
+                        <span class="custom-checkbox__checked"></span>
+                      </div>
+                      <span class="custom-checkbox__content order__choice-method-content">
+                        Системой быстрых платежей
+                      </span>
+                      <p class="order__choice-method-text">
+                        Доступна для карт, зарегистрированных в РФ и странах СНГ.
+                      </p>
+                      <img loading="lazy" src="./img/visa.svg" class="order__choice-method-image image" width="52" height="16" alt="VISA">
+                      <img loading="lazy" src="./img/mir.svg" class="order__choice-method-image image" width="53" height="16" alt="MIR">
+                      <img loading="lazy" src="./img/mastercard.svg" class="order__choice-method-image image" width="27" height="16" alt="MASTERCARD">
+                    </label>
+                    <label class="order__choice-method custom-checkbox custom-checkbox--radio">
+                      <div class="custom-checkbox__wrapper">
+                        <input type="radio" class="custom-checkbox__field" name="method">
+                        <span class="custom-checkbox__checked"></span>
+                      </div>
+                      <span class="custom-checkbox__content order__choice-method-content">
+                        Яндекс пэй: оплата с кэшбеком
+                      </span>
+                      <p class="order__choice-method-text">
+                        Доступна для карт, зарегистрированных в РФ и странах СНГ.
+                      </p>
+                      <img loading="lazy" src="./img/yandex-pay.svg" class="order__choice-method-image image" width="50" height="20" alt="Yandex Pay">
+                    </label>
+                    <label class="order__choice-method custom-checkbox custom-checkbox--radio">
+                      <div class="custom-checkbox__wrapper">
+                        <input type="radio" class="custom-checkbox__field" name="method">
+                        <span class="custom-checkbox__checked"></span>
+                      </div>
+                      <span class="custom-checkbox__content order__choice-method-content">
+                        Яндекс сплит: оплата частями
+                      </span>
+                      <p class="order__choice-method-text">
+                        Доступна для карт, зарегистрированных в РФ и странах СНГ.
+                      </p>
+                      <img loading="lazy" src="./img/split-text.svg" class="order__choice-method-image image" width="70" height="19" alt="SPLIT">
+                    </label>
+                    <label class="order__choice-method custom-checkbox custom-checkbox--radio">
+                      <div class="custom-checkbox__wrapper">
+                        <input type="radio" class="custom-checkbox__field" name="method">
+                        <span class="custom-checkbox__checked"></span>
+                      </div>
+                      <span class="custom-checkbox__content order__choice-method-content">
+                        Курьеру
+                      </span>
+                      <p class="order__choice-method-text">
+                        Работает по всей России
+                      </p>
+                      <div class="order__choice-method-buttons">
+                        <button type="button" class="btn btn-outline btn-outline-lg order__choice-method-btn is-active">
+                          Наличными
+                        </button>
+                        <button type="button" class="btn btn-outline btn-outline-lg order__choice-method-btn">
+                          Картой
+                        </button>
+                      </div>
+                    </label>
+
+                    <button type="submit" class="btn btn-dark btn-dark-lg order__step-form-btn">
+                      Оплатить заказ
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <aside class="order__aside">
+              <div class="order__detail">
+                <h3 class="order__detail-title">
+                  Ваш заказ
+                </h3>
+                <ul class="order__detail-list list-reset">
+                  <li class="order__detail-list-item">
+                    <span>
+                      2 товара
+                    </span>
+                    <span>
+                      69 990 ₽
+                    </span>
+                  </li>
+                  <li class="order__detail-list-item">
+                    <span>
+                      Скидка
+                    </span>
+                    <span>
+                      &#8722; 10 000 ₽
+                    </span>
+                  </li>
+                  <li class="order__detail-list-item">
+                    <span>
+                      Доставка
+                    </span>
+                    <span>
+                      Бесплатно
+                    </span>
+                  </li>
+                </ul>
+                <div class="order__detail-total">
+                  <span>
+                    Итого
+                  </span>
+                  <span>
+                    59 990 ₽
+                  </span>
+                </div>
+                <div class="order__detail-cashback">
+                  <a href="#" class="card__split btn">
+                    <span class="card__split-badge">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/split.svg#svg-split"></use>
+                        </svg>
+                      </span>
+                      <span>
+                        3500 ₽
+                      </span>
+                    </span>
+                    <p class="card__split-text">
+                      <span class="md-hidden">x 4 платежа</span> в Сплит
+                    </p>
+                    <span class="card__split-icon icon">
+                      <svg>
+                        <use xlink:href="img/arrow-right-3.svg#svg-arrow-right-3"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#" class="card__yandex btn">
+                    <span class="card__yandex-badge">
+                      <picture>
+                        <img loading="lazy" src="./img/yandex-plus-2.svg" class="card__yandex-image image" width="14" height="14" alt="Иконка">
+                      </picture>
+                      <span>
+                        210
+                      </span>
+                    </span>
+                    <p class="card__yandex-text">
+                      баллов плюса
+                    </p>
+                    <span class="card__yandex-icon icon">
+                      <svg>
+                        <use xlink:href="img/arrow-right-3.svg#svg-arrow-right-3"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="card__ypay">
+                    <span class="card__ypay-text">
+                      Оплатите частями или с кешбэком от
+                      <picture>
+                        <img loading="lazy" src="./img/yandex-pay.svg" class="card__ypay-image image" width="45" height="16" alt="Иконка">
+                      </picture>
+                    </span>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="order__promocode">
+                <h4 class="order__promocode-title">
+                  Промокод
+                </h4>
+  
+                <input type="text" name="promocode" class="order__promocode-field field" placeholder="Введите промокод" maxlength="36">
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,3 +1,82 @@
+.wrapper-field {
+
+	&__inner {
+		position: relative;
+
+		&.is-valid {
+
+			.field {
+
+				&__placeholder {
+
+					&-required {
+						opacity: 1;
+					}
+				}
+
+				&:focus {
+
+					& ~ .field__placeholder {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	
+	.field {
+		width: 100%;
+
+		&::placeholder {
+			opacity: 0;
+		}
+
+		&:not(:placeholder-shown) {
+
+			& ~ .field__placeholder {
+				opacity: 0;
+			}
+		}
+
+		&__title {
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 1;
+			color: var(--dark-color);
+			margin-block-end: 12px;
+			padding-inline: 20px;
+
+			&-required {
+				color: var(--primary-color);
+			}
+		}
+
+		&__placeholder {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1;
+			color: var(--text-color-brighter);
+			padding: 20px;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			&-required {
+				color: var(--primary-color);
+				opacity: 0;
+			}
+		}
+
+		&:focus {
+
+			& ~ .field__placeholder {
+				opacity: 0;
+			}
+		}
+	}
+}
+
 .field {
 	--_height: 58px;
 	--_font-size: 18px;
@@ -27,8 +106,12 @@
 	outline: none;
 
 	&:focus {
-		--_placeholder-color: var(--_color);
 		background-color: var(--_background-color-active);
+
+		&::placeholder {
+			visibility: hidden;
+			opacity: 0;
+		}
 	}
 
 	&::placeholder {
@@ -37,5 +120,14 @@
 		font-weight: var(--_font-weight);
 		color: var(--_placeholder-color);
 		transition: color var(--transition-duration) var(--transition-type);
+	}
+
+	&-textarea {
+		--_height: 120px;
+		--_padding-y: 16px;
+		--_padding-x: 20px;
+
+		max-height: 360px;
+		resize: vertical;
 	}
 }
