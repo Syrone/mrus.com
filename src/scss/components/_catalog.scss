@@ -4,9 +4,16 @@
 		display: grid;
 		grid-template-columns: 220px 1fr;
 		gap: clamp(20px, 10%, 240px);
+		position: relative;
 	}
 
 	&__filter {
+		height: max-content;
+		background-color: var(--background-light);
+		top: calc(var(--header-height) / 2);
+		left: 0;
+		position: sticky;
+		z-index: 10;
 
 		&-title {
 			font-size: 32px;

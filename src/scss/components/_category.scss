@@ -53,11 +53,13 @@
 
 		&-btn {
 			--_background-color: var(--background-light);
-			--_background-color-active: var(--background-light);
 			--_border: 0;
 			--_border-radius: 12px;
 			--_padding-y: 12px;
 			--_padding-x: 12px;
+			
+			--_color-active: var(--light-color);
+			--_background-color-active: var(--primary-color);
 			margin-top: auto;
 
 			.icon {

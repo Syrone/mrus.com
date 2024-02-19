@@ -528,7 +528,8 @@
 			width: calc(100% + var(--container-offset) * 2);
 			margin-inline: calc(var(--container-offset) * -1);
 			overflow: hidden;
-			position: relative;
+			position: sticky;
+			top: var(--header-height);
 
 			&::before {
 				content: '';
