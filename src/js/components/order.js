@@ -125,13 +125,14 @@ if (radioIDSubmits.length > 0) {
 	});
 }
 
-const formPromocode = document.querySelector('#formPromocode'),
-	formPromocodeField = formPromocode.querySelector('.field'),
-	iconSuccess = formPromocode.querySelector('.field-success')
+const formPromocode = document.querySelector('#formPromocode');
 
 let isSubmit = false;
 
 if (formPromocode) {
+	const formPromocodeField = formPromocode.querySelector('.field'),
+		iconSuccess = formPromocode.querySelector('.field-success')
+
 	formPromocode.onsubmit = function (event) {
 		event.preventDefault();
 

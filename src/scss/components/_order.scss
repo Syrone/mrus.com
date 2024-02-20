@@ -237,11 +237,6 @@
 				grid-column: -1 / 1;
 				width: 100%;
 				max-width: 320px;
-				display: none;
-
-				&.is-show {
-					display: inline-flex;
-				}
 			}
 		}
 
@@ -480,5 +475,13 @@
 				}
 			}
 		}
+	}
+}
+
+[data-id-submit-target] {
+	display: none;
+
+	&.is-show {
+		display: inline-flex;
 	}
 }

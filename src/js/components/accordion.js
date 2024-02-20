@@ -1,26 +1,45 @@
 const accordion = document.querySelectorAll('.accordion');
 
 if ( accordion.length > 0 ) {
-	accordion.forEach( (e) => {
+	accordion.forEach((e) => {
 		const detailsSummary = e.querySelector('.accordion__title');
+		const anchorLink = e.querySelector('.accordion__title-anchor');
 		const detailsContent = e.querySelector('.accordion__content');
-		let summaryHeight = parseInt( detailsSummary.offsetHeight );
-
+		let summaryHeight = parseInt(detailsSummary.offsetHeight);
+	
 		e.style.height = `${summaryHeight}px`;
-
-		if ( e.open ) {
-			let contentHeight = parseInt( detailsContent.offsetHeight );
-			let fullHeight = ( summaryHeight + contentHeight );
-
+	
+		if (e.open) {
+			let contentHeight = parseInt(detailsContent.offsetHeight);
+			let fullHeight = summaryHeight + contentHeight;
+	
 			e.style.height = `${fullHeight}px`;
 		}
-
+	
+		if (anchorLink) {
+			anchorLink.addEventListener('click', function(event) {
+				event.preventDefault();
+		
+				const targetElementId = this.getAttribute('href').substring(1);
+				const targetElement = document.getElementById(targetElementId);
+		
+				if (targetElement) {
+					targetElement.scrollIntoView({ behavior: 'smooth' });
+				}
+		
+				if (e.open) {
+					e.open = false;
+				} else {
+					e.open = true;
+				}
+			});
+		}
+	
 		e.addEventListener('toggle', (event) => {
-
-			if ( e.open ) {
-				let contentHeight = parseInt( detailsContent.offsetHeight );
-				let fullHeight = ( summaryHeight + contentHeight );
-
+			if (e.open) {
+				let contentHeight = parseInt(detailsContent.offsetHeight);
+				let fullHeight = summaryHeight + contentHeight;
+	
 				e.style.height = `${fullHeight}px`;
 			} else {
 				e.style.height = `${summaryHeight}px`;

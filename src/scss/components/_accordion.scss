@@ -18,6 +18,16 @@
 		&:is(:hover, :focus-visible, :active) {
 			color: var(--primary-color);
 		}
+
+		&-anchor {
+			--_font-size: inherit;
+			--_font-weight: inherit;
+			--_color: inherit;
+			--_border: 0;
+
+			width: 100%;
+			justify-content: flex-start;
+		}
 	}
 
 	&__content {
