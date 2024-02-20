@@ -41,11 +41,13 @@ function editOrderStep(button) {
 
 const editButtons = document.querySelectorAll('.order__step-header-edit')
 
-editButtons.forEach((button) => {
-	button.addEventListener('click', () => {
-		editOrderStep(button);
+if (editButtons.length > 0) {
+	editButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			editOrderStep(button);
+		});
 	});
-});
+}
 
 const orderValidateForms = document.querySelectorAll('.order-validate');
 
@@ -113,17 +115,20 @@ function toggleIsShow() {
   }
 }
 
-radioIDSubmits.forEach(function(input) {
-  input.addEventListener('change', toggleIsShow);
-
-	if (input.checked) {
-    toggleIsShow.call(input);
-  }
-});
+if (radioIDSubmits.length > 0) {
+	radioIDSubmits.forEach(function(input) {
+		input.addEventListener('change', toggleIsShow);
+	
+		if (input.checked) {
+			toggleIsShow.call(input);
+		}
+	});
+}
 
 const formPromocode = document.querySelector('#formPromocode'),
 	formPromocodeField = formPromocode.querySelector('.field'),
 	iconSuccess = formPromocode.querySelector('.field-success')
+
 let isSubmit = false;
 
 if (formPromocode) {
