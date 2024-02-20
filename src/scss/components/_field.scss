@@ -14,10 +14,10 @@
 					}
 				}
 
-				&:focus {
+				&:not(:placeholder-shown) {
 
 					& ~ .field__placeholder {
-						opacity: 1;
+						opacity: 0;
 					}
 				}
 			}

@@ -144,6 +144,16 @@
 				}
 			}
 		}
+
+		&__choice {
+
+			&-method {
+
+				&-label {
+					flex-basis: 100%;
+				}
+			}
+		}
 	}
 	//** (End) Blocks **//
 
@@ -851,6 +861,13 @@
 		--_padding-y: 13px;
 	}
 
+	.btn-y-pay,
+	.btn-spb {
+		--_padding-y: 4px;
+
+		min-height: 44px;
+	}
+
 	.custom-checkbox {
 		gap: 6px;
 
@@ -955,6 +972,23 @@
 	.swiper-pagination {
 		--swiper-pagination-bullet-size: 8px;
 		--swiper-pagination-bullet-horizontal-gap: 4px;
+	}
+
+	.alert {
+
+		&__modal {
+			padding: 20px;
+
+			&-title {
+				padding-inline: 30px;
+			}
+
+			&-close {
+				top: 20px;
+				right: 20px;
+				transform: initial;
+			}
+		}
 	}
 
 	.cookie {
@@ -2066,6 +2100,15 @@
 		&__step {
 			padding: 20px 16px;
 
+			&-header {
+				grid-template-columns: 1fr;
+				gap: 30px;
+
+				&-edit {
+					max-width: 100%;
+				}
+			}
+
 			&-content {
 				padding-block-start: 30px;
 			}
@@ -2142,6 +2185,15 @@
 		&__promocode {
 			margin-block-start: 20px;
 			padding: 20px 16px;
+
+			.field {
+
+				&-success {
+					--_i-size: 12px;
+					top: 16px;
+					right: 12px;
+				}
+			}
 		}
 	}
 

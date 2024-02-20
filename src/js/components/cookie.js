@@ -30,7 +30,7 @@ function showCookieModal() {
 
 function hideCookieModal() {
   const cookieModal = document.querySelector('.cookie');
-  cookieModal.style.display = 'none';
+  cookieModal.style = '';
   setCookie('cookieClosed', 'true', 30);
 }
 

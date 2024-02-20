@@ -364,16 +364,40 @@
               </div>
             </div>
 
-            <div class="order__promocode">
+            <form id="formPromocode" class="order__promocode">
               <h4 class="order__promocode-title">
                 Промокод
               </h4>
 
-              <input type="text" name="promocode" class="order__promocode-field field" placeholder="Введите промокод" maxlength="36">
-            </div>
+              <div class="wrapper-field__inner">
+                <input type="text" name="promocode" class="order__promocode-field field" placeholder="Введите промокод" maxlength="36" required>
+                <span class="icon field-success">
+                  <svg>
+                    <use xlink:href="img/check.svg#svg-check"></use>
+                  </svg>
+                </span>
+              </div>
+            </form>
           </aside>
         </div>
       </section>
+
+      <div class="alert">
+        <div class="alert__container container">
+          <div id="alertSuccessPromocode" class="alert__modal">
+            <h3 class="alert__modal-title">
+              Промокод успешно применен!
+            </h3>
+            <button type="button" class="btn alert__modal-close">
+              <span class="icon alert__modal-close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
 
       @include('partials/cookie.html')
     </main>

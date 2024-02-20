@@ -9,3 +9,4 @@ import './components/modal.js';
 import './components/tabs.js';
 import './components/add-card.js';
 import './components/radio.js';
+import './components/order.js';
