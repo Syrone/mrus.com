@@ -32,6 +32,30 @@
 	padding: var(--_padding-y) var(--_padding-x);
 	box-shadow: var(--_box-shadow);
 
+	&-reviews {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--background-light);
+		border-radius: 12px;
+		padding: 16px;
+		box-shadow: var(--box-shadow-alt);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+
+		&__btn {
+			--_font-size: 14px;
+			--_font-weight: 500;
+			--_line-height: 1.2;
+			--_color: var(--dark-color);
+			--_border: 0;
+			--_border-radius: 4px;
+		}
+	}
+
 	&__image {
 		display: block;
 		min-height: 250px;

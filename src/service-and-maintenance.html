@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Сервис и обслуживание</h1>
+
+      <section class="section customer">
+        <div class="container-xxl">
+          <div class="breadcrumbs customer-breadcrumbs">
+            <ul class="breadcrumbs__list list-reset">
+              <li>
+                <a href="./index.html" class="btn breadcrumbs__link">
+                  Главная
+                  <span class="icon breadcrumbs__link-icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right-2.svg#svg-arrow-right-2"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="./catalog.html" class="btn breadcrumbs__link">
+                  Покупателям
+                  <span class="icon breadcrumbs__link-icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right-2.svg#svg-arrow-right-2"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <span class="breadcrumbs__text">
+                  Сервис и обслуживание
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="customer-header">
+            <h2 class="page-header__h2 customer-header__title">
+              Сервис и обслуживание
+            </h2>
+          </div>
+          
+          <div class="maintenance">
+            <picture class="maintenance__picture">
+              <source srcset="./img/maintenance-1.webp" type="image/webp">
+              <img loading="lazy" src="./img/maintenance-1.jpg" class="maintenance__image image" width="655" height="655" alt="Фото">
+            </picture>
+
+            <div class="maintenance__info">
+              <h3 class="maintenance__title">
+                Бесплатный выезд мастера по Санкт-Петербургу.
+              </h3>
+
+              <ul class="maintenance__list list-reset">
+                <li class="maintenance__item">
+                  <span class="icon maintenance__item-icon">
+                    <svg>
+                      <use xlink:href="img/truck.svg#svg-truck"></use>
+                    </svg>
+                  </span>
+
+                  <div class="maintenance__item-info">
+                    <h4 class="maintenance__item-title">
+                      Бесплатная диагностика
+                    </h4>
+                    <p class="maintenance__item-text">
+                      даже если вы откажитесь от работы
+                    </p>
+                  </div>
+                </li>
+                <li class="maintenance__item">
+                  <span class="icon maintenance__item-icon">
+                    <svg>
+                      <use xlink:href="img/truck.svg#svg-truck"></use>
+                    </svg>
+                  </span>
+
+                  <div class="maintenance__item-info">
+                    <h4 class="maintenance__item-title">
+                      Надежный ремонт
+                    </h4>
+                    <p class="maintenance__item-text">
+                      Проведение качественного ремонта квалифицированными мастерами
+                    </p>
+                  </div>
+                </li>
+                <li class="maintenance__item">
+                  <span class="icon maintenance__item-icon">
+                    <svg>
+                      <use xlink:href="img/truck.svg#svg-truck"></use>
+                    </svg>
+                  </span>
+
+                  <div class="maintenance__item-info">
+                    <h4 class="maintenance__item-title">
+                      Современная мастерская
+                    </h4>
+                    <p class="maintenance__item-text">
+                      Полностью оборудованная мастерская с современным инструментами
+                    </p>
+                  </div>
+                </li>
+                <li class="maintenance__item">
+                  <span class="icon maintenance__item-icon">
+                    <svg>
+                      <use xlink:href="img/truck.svg#svg-truck"></use>
+                    </svg>
+                  </span>
+
+                  <div class="maintenance__item-info">
+                    <h4 class="maintenance__item-title">
+                      Собственный склад
+                    </h4>
+                    <p class="maintenance__item-text">
+                      Склад с качественными запчастями любой модели
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section product-model__benefits-container">
+        <div class="container-xxl">
+          <ul class="product-model__benefits list-reset">
+            <li class="product-model__benefits-item">
+              <div class="product-model__benefits-picture">
+                <picture>
+                  <source srcset="./img/product-benefits-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/product-benefits-1.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+                </picture>
+              </div>
+              <div>
+                <h4 class="product-model__benefits-title">
+                  Экспресс доставка
+                </h4>
+                <p class="product-model__benefits-text">
+                  Надеженый помощник для дома
+                </p>
+              </div>
+            </li>
+            <li class="product-model__benefits-item">
+              <div class="product-model__benefits-picture">
+                <picture>
+                  <source srcset="./img/product-benefits-2.webp" type="image/webp">
+                  <img loading="lazy" src="./img/product-benefits-2.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+                </picture>
+              </div>
+              <div>
+                <h4 class="product-model__benefits-title">
+                  Экспресс доставка
+                </h4>
+                <p class="product-model__benefits-text">
+                  Надеженый помощник для дома
+                </p>
+              </div>
+            </li>
+            <li class="product-model__benefits-item">
+              <div class="product-model__benefits-picture">
+                <picture>
+                  <source srcset="./img/product-benefits-3.webp" type="image/webp">
+                  <img loading="lazy" src="./img/product-benefits-3.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+                </picture>
+              </div>
+              <div>
+                <h4 class="product-model__benefits-title">
+                  Экспресс доставка
+                </h4>
+                <p class="product-model__benefits-text">
+                  Надеженый помощник для дома
+                </p>
+              </div>
+            </li>
+            <li class="product-model__benefits-item">
+              <div class="product-model__benefits-picture">
+                <picture>
+                  <source srcset="./img/product-benefits-4.webp" type="image/webp">
+                  <img loading="lazy" src="./img/product-benefits-4.png" class="product-model__benefits-image image" width="38" height="38" alt="Иконка">
+                </picture>
+              </div>
+              <div>
+                <h4 class="product-model__benefits-title">
+                  Экспресс доставка
+                </h4>
+                <p class="product-model__benefits-text">
+                  Надеженый помощник для дома
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-mailing">
+        <div class="container-xxl">
+          <article class="mailing background-light">
+            <div class="mailing__info">
+              <h2 class="mailing__info-title">
+                Промокод на 10% скидку
+              </h2>
+              <p class="mailing__info-text">
+                Подпишитесь на рассылку и узнавайте первым о новинках и новостях. Так же получите промокод с 10% скидкой
+                на любую покупку
+              </p>
+            </div>
+            <form action="#" class="mailing__form">
+              <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36"
+                required>
+              <label class="mailing__form-checkbox custom-checkbox">
+                <div class="custom-checkbox__wrapper">
+                  <input type="checkbox" class="custom-checkbox__field" checked required>
+                  <span class="custom-checkbox__checked"></span>
+                </div>
+                <span class="custom-checkbox__content">Я ознакомился с политикой конфиденциальности</span>
+              </label>
+              <button type="submit" class="btn btn-dark btn-dark-lg mailing__form-button">
+                Подписаться
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

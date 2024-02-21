@@ -49,4 +49,16 @@
 			order: 1;
 		}
 	}
+
+	&.background-light {
+
+		.mailing__form-field {
+			--_background-color: var(--background-gray);
+			--_background-color-active: var(--background-gray);
+		}
+
+		.custom-checkbox__field {
+			background-color: var(--background-gray);
+		}
+	}
 }

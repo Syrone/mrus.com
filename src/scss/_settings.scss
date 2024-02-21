@@ -57,6 +57,10 @@ html {
   }
 }
 
+.background-light {
+  background-color: var(--background-light) !important;
+}
+
 .background-gray {
   background-color: var(--background-gray) !important;
 }
@@ -126,6 +130,13 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.container-xxl {
+  width: 100%;
+  max-width: calc(1340px + (var(--container-offset) * 2));
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
 }
 
 .site-container {

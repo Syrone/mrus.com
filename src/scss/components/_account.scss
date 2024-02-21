@@ -37,4 +37,142 @@
 		--_i-size: 20px;
 		transition: initial;
 	}
+
+	&__title {
+		line-height: 1;
+		margin-block-end: 60px;
+	}
+
+	&__block {
+		background-color: var(--background-light);
+		border-radius: 16px;
+		padding: 30px 16px;
+	}
+
+	&-info {
+
+		&__form {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px 12px;
+		}
+	}
+
+	&-delivery {
+
+		&__form {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px 12px;
+		}
+	}
+
+	&-password {
+
+		&__form {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px 12px;
+
+			.wrapper-field {
+
+				&:first-child {
+					grid-column: -1 / 1;
+				}
+			}
+		}
+	}
+
+	&-order {
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(280px, 430px));
+			gap: 16px;
+		}
+
+		&__card {
+			position: relative;
+
+			.card {
+
+				picture {
+					display: contents;
+				}
+
+				&__image {
+					width: auto;
+					min-height: initial;
+					height: 180px;
+				}
+			}
+		}
+	}
+}
+
+.account-page {
+	margin-block-start: 60px;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 280px;
+		gap: 0 70px;
+		position: relative;
+	}
+
+	&__header {
+		grid-column: -1 / 1;
+		margin-block-end: 60px;
+	}
+
+	&__title {
+		margin-block-end: 0;
+	}
+
+	&__start {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+}
+
+.account-aside {
+	height: max-content;
+	position: sticky;
+	top: calc(var(--header-height) / 2);
+	left: 0;
+	z-index: 10;
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		margin-block-end: 40px;
+		text-align: right;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 16px;
+	}
+
+	&__link {
+		--_font-size: 24px;
+		--_font-weight: 500;
+		--_color: var(--text-color-brighter);
+		--_border: 0;
+		--_border-radius: 0;
+
+		--_color-active: var(--dark-color);
+
+		border-bottom: 2px solid transparent;
+		padding-block-end: 6px;
+		text-align: right;
+
+		&:is(:hover, :focus-visible, :active, .is-active) {
+			--_font-weight: 700;
+			border-bottom-color: var(--primary-color);
+		}
+	}
 }

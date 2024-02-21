@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main background-gray">
+      <h1 class="visually-hidden">Личный кабинет</h1>
+      
+      <section class="section account-page">
+        <div class="container-xxl account-page__container">
+          <div class="account-page__header">
+            <h2 class="page-header__h2 account-page__title">
+              Личные данные
+            </h2>
+          </div>
+
+          <div class="account-page__start">
+            <div class="account-info">
+  
+              <div class="account__block">
+                <form class="account-info__form order-validate">
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Имя<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="text" class="field" name="name" placeholder="Имя" required>
+                      <span class="field__placeholder">
+                        Имя<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Фамилия<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="text" class="field" name="fullname" placeholder="Фамилия" required>
+                      <span class="field__placeholder">
+                        Фамилия<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Пол<span class="field__title-required">*</span>
+                    </h3>
+                    <select class="field field-select" name="gender" required>
+                      <option value="">Пол</option>
+                      <option value="1">М</option>
+                      <option value="2">Ж</option>
+                    </select>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      E-mail<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="email" class="field" name="email" placeholder="E-mail" required>
+                      <span class="field__placeholder">
+                        E-mail<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Телефон<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="tel" class="field" name="email" placeholder="Телефон" required>
+                      <span class="field__placeholder">
+                        Телефон<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Дата рождения<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__selects">
+                      <select class="field field-select" name="day" required>
+                        <option value="">дд</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                      </select>
+                      <select class="field field-select" name="month" required>
+                        <option value="">мм</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                      </select>
+                      <select class="field field-select" name="year" required>
+                        <option value="">гг</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                      </select>
+                    </div>
+                  </div>
+  
+                  <div class="wrapper-buttons">
+                    <button type="submit" class="btn btn-dark btn-dark-lg wrapper-buttons__btn">
+                      Сохранить изменения
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="account-delivery">
+              <h3 class="h2 account__title">
+                Адресс доставки
+              </h3>
+
+              <div class="account__block">
+                <form class="account-delivery__form order-validate">
+                  <div class="wrapper-field--2">
+                    <div class="wrapper-field">
+                      <h3 class="field__title">
+                        Город<span class="field__title-required">*</span>
+                      </h3>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" name="town" placeholder="Город" required>
+                        <span class="field__placeholder">
+                          Город<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="wrapper-field">
+                      <h3 class="field__title">
+                        Улица<span class="field__title-required">*</span>
+                      </h3>
+                      <div class="wrapper-field__inner">
+                        <input type="text" class="field" name="street" placeholder="Улица" required>
+                        <span class="field__placeholder">
+                          Улица<span class="field__placeholder-required">*</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Дом<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="text" class="field" name="house" placeholder="Дом" required>
+                      <span class="field__placeholder">
+                        Дом<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Кв/Офис<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="text" class="field" name="office" placeholder="Кв/Офис" required>
+                      <span class="field__placeholder">
+                        Кв/Офис<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Этаж<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="text" class="field" name="floor" placeholder="Этаж" required>
+                      <span class="field__placeholder">
+                        Этаж<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="wrapper-buttons">
+                    <button type="submit" class="btn btn-dark btn-dark-lg wrapper-buttons__btn">
+                      Сохранить изменения
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="account-password">
+              <h3 class="h2 account__title">
+                Изменить пароль
+              </h3>
+
+              <div class="account__block">
+                <form class="account-password__form order-validate">
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Старый пароль<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="password" class="field" name="old-password" placeholder="Старый пароль" required>
+                      <span class="field__placeholder">
+                        Старый пароль<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Новый пароль<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="password" class="field" name="new-password" placeholder="Новый пароль" required>
+                      <span class="field__placeholder">
+                        Новый пароль<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="wrapper-field">
+                    <h3 class="field__title">
+                      Повторите пароль<span class="field__title-required">*</span>
+                    </h3>
+                    <div class="wrapper-field__inner">
+                      <input type="password" class="field" name="repeat-password" placeholder="Повторите пароль" required>
+                      <span class="field__placeholder">
+                        Повторите пароль<span class="field__placeholder-required">*</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="wrapper-buttons">
+                    <button type="submit" class="btn btn-dark btn-dark-lg wrapper-buttons__btn">
+                      Сохранить изменения
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <aside class="account-page__end account-aside">
+            <h3 class="account-aside__title">
+              Личный кабинет
+            </h3>
+
+            <ul class="account-aside__list list-reset">
+              <li>
+                <a href="./account.html" class="btn account-aside__link is-active">
+                  Личные данные
+                </a>
+              </li>
+              <li>
+                <a href="./account-order.html" class="btn account-aside__link">
+                  Мои заказы
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn account-aside__link">
+                  Помощь
+                </a>
+              </li>
+              <li>
+                <a href="#" class="btn account-aside__link">
+                  Выйти
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <div class="alert">
+        <div class="alert__container container">
+          <div id="alertFormValid" class="alert__modal">
+            <h3 class="alert__modal-title">
+              Ошибка
+            </h3>
+            <p class="alert__modal-text">
+              Вы забыли ввсети данные: <span class="alert__modal-text-accent">Номер телефона / Город доставки</span> 
+            </p>
+            <button type="button" class="btn alert__modal-close">
+              <span class="icon alert__modal-close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      @include('partials/cookie.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

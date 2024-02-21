@@ -242,7 +242,8 @@ const htmlInclude = () => {
       basepath: '@file'
     }))
     .pipe(typograf({
-      locale: ['ru', 'en-US']
+      locale: ['ru', 'en-US'],
+      safeTags: [['<no-typograf>', '</no-typograf>']]
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
