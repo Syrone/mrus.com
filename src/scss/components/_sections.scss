@@ -25,6 +25,20 @@
       --_i-size: 10px;
     }
   }
+
+  &-p {
+    padding-block-start: 80px;
+
+    &:last-child {
+      padding-block-end: 80px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 1;
+      margin-block-end: 32px;
+    }
+  }
 }
 
 .border-top {
