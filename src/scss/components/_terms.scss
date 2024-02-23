@@ -42,5 +42,15 @@
 			line-height: 1.2;
 			color: var(--dark-color);
 		}
+
+		&-link {
+			--_font-size: inherit;
+			--_font-weight: inherit;
+			--_color: inherit;
+			--_border: 0;
+			--_border-radius: 0;
+
+			font-family: inherit;
+		}
 	}
 }
