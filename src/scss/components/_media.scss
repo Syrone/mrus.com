@@ -42,6 +42,20 @@
 
 }
 
+@media screen and (max-width: 1680px) {
+	
+	.about {
+
+		&__way {
+
+			&-aside {
+				display: none;
+			}
+		}
+	}
+
+}
+
 @media screen and (max-width: 1400px) {
 
 	//** (Start) General **//
@@ -380,6 +394,13 @@
 		}
 	}
 
+	.requisite {
+
+		&__container {
+			grid-template-columns: 220px 1fr;
+		}
+	}
+
 	.footer {
 
 
@@ -404,8 +425,6 @@
 			justify-content: flex-start;
 		}
 	}
-
-
 	//** (End) General **//
 
 	//** (Start) Blocks **//
@@ -923,6 +942,13 @@
 
 		&__info {
 			max-width: 100%;
+		}
+	}
+
+	.requisite {
+
+		&__container {
+			grid-template-columns: 1fr;
 		}
 	}
 
@@ -2789,6 +2815,70 @@
 			}
 		}
 
+	}
+
+	.requisite {
+
+		&__title {
+			font-size: 22px;
+		}
+
+		&__content {
+			font-size: 14px;
+			padding: 20px 16px;
+		}
+
+		&__item {
+			grid-template-columns: 120px 1fr;
+		}
+	}
+
+	.about {
+
+		&__hero {
+
+			&-container {
+				min-height: 520px;
+				padding-block: 30px;
+			}
+
+			&-title {
+				font-size: 36px;
+			}
+
+			&-text {
+				font-size: 18px;
+			}
+		}
+
+		&__way {
+
+			&-list {
+				gap: 60px;
+			}
+
+			&-header {
+				margin-block-end: 20px;
+			}
+
+			&-year {
+				font-size: 34px;
+			}
+
+			&-title {
+				font-size: 20px;
+			}
+
+			&-content {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+
+			&-text {
+				font-size: 18px;
+				line-height: 1.2;
+			}
+		}
 	}
 
 	.footer {
