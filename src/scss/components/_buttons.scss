@@ -189,3 +189,18 @@
 		--_font-size: 18px;
 	}
 }
+
+.btn-back {
+	--_color: var(--primary-color);
+	--_border: 0;
+	--_border-radius: 0;
+
+	--_color-active: var(--dark-color);
+
+	align-items: baseline;
+	gap: 12px;
+
+	.icon {
+		--_i-size: 12px;
+	}
+}

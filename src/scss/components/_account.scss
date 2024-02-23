@@ -111,12 +111,12 @@
 }
 
 .account-page {
-	margin-block-start: 60px;
+	margin-block: 60px 80px;
 
 	&__container {
 		display: grid;
-		grid-template-columns: 1fr 280px;
-		gap: 0 70px;
+		grid-template-columns: 1fr 300px;
+		gap: 0 40px;
 		position: relative;
 	}
 

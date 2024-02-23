@@ -50,6 +50,10 @@
 			}
 		}
 	}
+
+	&--xxl {
+		max-width: calc(1340px + (var(--container-offset) * 2));
+	}
 }
 
 .swiper {
