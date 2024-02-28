@@ -1,3 +1,20 @@
+@media screen and (min-width: 2560px) {
+
+	//** (Start) General **//
+	.wrapper-slider {
+
+		&--full {
+			
+			.swiper {
+				max-width: var(--container-width);
+				padding-inline: var(--container-offset);
+			}
+		}
+	}
+	//** (End) General **//
+
+}
+
 @media screen and (max-width: 1840px) {
 
 	//** (Start) General **//
@@ -1112,7 +1129,6 @@
 
 	.btn-dark {
 		--_font-size: 14px;
-		--_padding-y: 14px;
 	}
 
 	.btn-outline {
@@ -1390,6 +1406,10 @@
 					order: 2;
 				}
 			}
+		}
+
+		&__counter {
+			display: none;
 		}
 	}
 

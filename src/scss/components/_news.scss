@@ -19,6 +19,29 @@
 		border-radius: var(--_border-radius);
 		box-shadow: var(--_box-shadow);
 
+		position: relative;
+
+		&-link {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+
+			&:is(:hover, :focus-visible, :active) {
+
+				~ .news__item-content {
+
+					.news__item-button {
+						--_color: var(--primary-color);
+					}
+				}
+			}
+		}
+
 		&-image {
 			width: 100%;
 			display: block;

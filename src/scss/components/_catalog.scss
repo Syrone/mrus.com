@@ -10,7 +10,7 @@
 	&__filter {
 		height: max-content;
 		background-color: var(--background-light);
-		top: calc(var(--header-height) / 2);
+		top: calc((var(--header-height) / 2) + 80px);
 		left: 0;
 		position: sticky;
 		z-index: 10;

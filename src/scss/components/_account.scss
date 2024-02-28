@@ -139,7 +139,7 @@
 .account-aside {
 	height: max-content;
 	position: sticky;
-	top: calc(var(--header-height) / 2);
+	top: calc((var(--header-height) / 2) + 80px);
 	left: 0;
 	z-index: 10;
 

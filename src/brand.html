@@ -213,7 +213,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -321,7 +321,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -429,7 +429,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -537,7 +537,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -645,7 +645,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -753,7 +753,7 @@
                     <a href="#" class="btn btn-outline-primary btn--goto">
                       Перейти в корзину
                     </a>
-                    <div class="counter">
+                    <div class="card__counter counter">
                       <button class="btn counter__minus">
                         <span class="icon counter__icon">
                           <svg>
@@ -806,7 +806,8 @@
           <div class="product__bottom-info">
             <p class="product__bottom-text">
               Мы тщательно подбирали все материалы, используемые для создания продуктов. Наша техника производится на
-              лучших заводах по стандартам европейского качества и представляет не только продукт, но и высококачественный
+              лучших заводах по стандартам европейского качества и представляет не только продукт, но и
+              высококачественный
               сервис с индивидуальным подходом к каждому клиенту.
             </p>
           </div>
@@ -821,109 +822,125 @@
           <ul class="news__list list-reset">
             <li>
               <article class="news__item">
-                <picture>
-                  <source srcset="./img/news-1.webp" type="image/webp">
-                  <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
-                    alt="Фото">
-                </picture>
-                <div class="news__item-detail">
-                  <time datetime="2024-01-22" class="news__item-time">
-                    22 янв 2024
-                  </time>
-                  <h4 class="news__item-title">
-                    Лучшая кофемашина для подарка в новый год 2023
-                  </h4>
-                </div>
-                <div class="news__item-buttons">
-                  <a href="./article.html" class="btn news__item-button">
-                    Подробнее
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </article>
-            </li>
-            <li>
-              <article class="news__item">
-                <picture>
-                  <source srcset="./img/news-1.webp" type="image/webp">
-                  <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
-                    alt="Фото">
-                </picture>
-                <div class="news__item-detail">
-                  <time datetime="2024-01-22" class="news__item-time">
-                    22 янв 2024
-                  </time>
-                  <h4 class="news__item-title">
-                    Лучшая кофемашина для подарка в новый год 2023
-                  </h4>
-                </div>
-                <div class="news__item-buttons">
-                  <a href="./article.html" class="btn news__item-button">
-                    Подробнее
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
-                      </svg>
-                    </span>
-                  </a>
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
             <li>
               <article class="news__item">
-                <picture>
-                  <source srcset="./img/news-1.webp" type="image/webp">
-                  <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
-                    alt="Фото">
-                </picture>
-                <div class="news__item-detail">
-                  <time datetime="2024-01-22" class="news__item-time">
-                    22 янв 2024
-                  </time>
-                  <h4 class="news__item-title">
-                    Лучшая кофемашина для подарка в новый год 2023
-                  </h4>
-                </div>
-                <div class="news__item-buttons">
-                  <a href="./article.html" class="btn news__item-button">
-                    Подробнее
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
-                      </svg>
-                    </span>
-                  </a>
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
             <li>
               <article class="news__item">
-                <picture>
-                  <source srcset="./img/news-1.webp" type="image/webp">
-                  <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
-                    alt="Фото">
-                </picture>
-                <div class="news__item-detail">
-                  <time datetime="2024-01-22" class="news__item-time">
-                    22 янв 2024
-                  </time>
-                  <h4 class="news__item-title">
-                    Лучшая кофемашина для подарка в новый год 2023
-                  </h4>
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
                 </div>
-                <div class="news__item-buttons">
-                  <a href="./article.html" class="btn news__item-button">
-                    Подробнее
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
-                      </svg>
-                    </span>
-                  </a>
+              </article>
+            </li>
+            <li>
+              <article class="news__item">
+                <a href="./article.html" class="news__item-link"></a>
+
+                <div class="news__item-content">
+                  <picture>
+                    <source srcset="./img/news-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/news-1.jpg" class="news__item-image image" width="428" height="284"
+                      alt="Фото">
+                  </picture>
+                  <div class="news__item-detail">
+                    <time datetime="2024-01-22" class="news__item-time">
+                      22 янв 2024
+                    </time>
+                    <h4 class="news__item-title">
+                      Лучшая кофемашина для подарка в новый год 2023
+                    </h4>
+                  </div>
+                  <div class="news__item-buttons">
+                    <button type="button" class="btn news__item-button">
+                      Подробнее
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/arrow-top-right-2.svg#svg-arrow-top-right-2"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
@@ -939,11 +956,13 @@
                 Промокод на 10% скидку
               </h2>
               <p class="mailing__info-text">
-                Подпишитесь на рассылку и узнавайте первым о новинках и новостях. Так же получите промокод с 10% скидкой на любую покупку
+                Подпишитесь на рассылку и узнавайте первым о новинках и новостях. Так же получите промокод с 10% скидкой
+                на любую покупку
               </p>
             </div>
             <form action="#" class="mailing__form">
-              <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36" required>
+              <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36"
+                required>
               <label class="mailing__form-checkbox custom-checkbox">
                 <div class="custom-checkbox__wrapper">
                   <input type="checkbox" class="custom-checkbox__field" checked required>

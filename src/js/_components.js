@@ -10,4 +10,6 @@ import './components/tabs.js';
 import './components/add-card.js';
 import './components/radio.js';
 import './components/order.js';
+import './components/counter.js';
+import './components/favorite.js';
 import './components/btn-back.js';

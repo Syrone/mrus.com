@@ -32,6 +32,14 @@ if ( accordion.length > 0 ) {
 				} else {
 					e.open = true;
 				}
+
+				if (e.classList.contains('accordion--solo')) {
+					accordion.forEach((accordion) => {
+						if (accordion !== e) {
+							accordion.open = false;
+						}
+					});
+				}
 			});
 		}
 	
@@ -43,6 +51,14 @@ if ( accordion.length > 0 ) {
 				e.style.height = `${fullHeight}px`;
 			} else {
 				e.style.height = `${summaryHeight}px`;
+			}
+
+			if (e.classList.contains('accordion--solo') && e.open) {
+				accordion.forEach((accordion) => {
+					if (accordion !== e) {
+						accordion.open = false;
+					}
+				});
 			}
 		});
 	});

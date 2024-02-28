@@ -16,6 +16,7 @@
 		transition: font var(--transition-duration) var(--transition-type), color var(--transition-duration) var(--transition-type);
 
 		&:is(:hover, :focus-visible, :active) {
+			font-weight: 700;
 			color: var(--primary-color);
 		}
 

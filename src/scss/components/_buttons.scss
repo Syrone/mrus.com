@@ -28,6 +28,7 @@
 	border-radius: var(--_border-radius);
 	padding: var(--_padding-y) var(--_padding-x);
 	cursor: pointer;
+	box-sizing: border-box;
 	transition: font var(--_transition-duration) var(--_transition-type), color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type);
 
 	.icon {
@@ -46,14 +47,16 @@
 	--_background-color: var(--background-dark);
 	--_border: 1px solid transparent;
 	--_border-radius: 12px;
-	--_padding-y: 13px;
+	--_padding-y: 4px;
 	--_padding-x: 10px;
 
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--primary-color);
 
+	min-height: 44px;
+
 	&-lg {
-		--_padding-y: 20px;
+		min-height: 58px;
 	}
 }
 
@@ -96,11 +99,13 @@
 	--_color: var(--primary-color);
 	--_border: 1px solid var(--primary-color);
 	--_border-radius: 12px;
-	--_padding-y: 13px;
+	--_padding-y: 4px;
 	--_padding-x: 10px;
 
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--primary-color);
+
+	min-height: 44px;
 	text-align: center;
 }
 

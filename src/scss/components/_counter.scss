@@ -7,7 +7,9 @@
 	gap: 4px;
 
 	&__input {
-		width: 1ch;
+		max-width: 3.25ch;
+		min-width: 1.25ch;
+		width: 1.25ch;
 		flex-shrink: 0;
 		font-size: var(--font-size);
 		font-weight: 700;

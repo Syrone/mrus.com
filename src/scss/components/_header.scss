@@ -10,6 +10,11 @@
 		z-index: 20;
 	}
 
+	&--full {
+		top: 0;
+		transition: top var(--transition-duration) var(--transition-type);
+	}
+
 	.burger {
 		display: none;
 	}

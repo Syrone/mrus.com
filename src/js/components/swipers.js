@@ -1,9 +1,14 @@
-import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
-Swiper.use([Navigation, Pagination, Thumbs]);
+import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
+Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
 new Swiper('.swiper__hero', {
   grabCursor: true,
+  loop: true,
   slidesPerView: 1,
   spaceBetween: 16,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   navigation: {
     nextEl: '.swiper__hero-next',
@@ -76,7 +81,7 @@ new Swiper('.swiper__interested', {
 
 new Swiper('.swiper__tech', {
   grabCursor: true,
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 16,
 
   navigation: {
@@ -106,7 +111,10 @@ new Swiper('.swiper__tech', {
     1200: {
       slidesPerView: 3,
       spaceBetween: 16
-    }
+    },
+    2560: {
+      spaceBetween: 24
+    },
   }
 });
 
