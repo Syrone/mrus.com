@@ -19,6 +19,14 @@
 			color: var(--primary-color);
 		}
 
+		&::marker {
+			display: none;
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
 		&-anchor {
 			--_font-size: inherit;
 			--_font-weight: inherit;
