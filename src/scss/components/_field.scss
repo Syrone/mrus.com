@@ -16,7 +16,7 @@
 
 				&:not(:placeholder-shown) {
 
-					& ~ .field__placeholder {
+					~ .field__placeholder {
 						display: none;
 					}
 				}
@@ -46,7 +46,7 @@
 
 		&:not(:placeholder-shown) {
 
-			& ~ .field__placeholder {
+			~ .field__placeholder {
 				display: none;
 			}
 		}
@@ -83,7 +83,7 @@
 
 		&:focus {
 
-			& ~ .field__placeholder {
+			~ .field__placeholder {
 				opacity: 0;
 			}
 		}
@@ -164,16 +164,4 @@
 	background-size: 12px 7px;
 	background-position: calc(100% - 10px) 55%;
 	cursor: pointer;
-}
-
-.test-field {
-
-	&::placeholder {
-		opacity: 1 !important;
-	}
-
-	&::after {
-		content: attr(placeholder);
-		color: red;
-	}
 }
