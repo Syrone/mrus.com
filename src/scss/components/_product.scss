@@ -101,8 +101,8 @@
 
 		&-image {
 			display: block;
-			width: 100%;
-			height: 15px;
+			width: auto;
+			height: 32px;
 			object-fit: contain;
 		}
 
@@ -122,6 +122,13 @@
 
 			&-icon {
 				--_i-size: 10px;
+			}
+		}
+
+		&:is(:hover, :focus-visible, :active) {
+
+			.product__brand-btn {
+				--_color: var(--primary-color);
 			}
 		}
 	}
@@ -294,7 +301,15 @@
 			}
 
 			.price-text {
-				font-size: 14px;
+				--_font-size: 14px;
+				--_font-weight: 500;
+				--_color: var(--primary-color);
+				--_border: 0;
+
+				--_color-active: var(--dark-color);
+
+				display: flex;
+				justify-content: flex-start;
 			}
 		}
 
@@ -408,8 +423,22 @@
 
 		&-tabs {
 
+			.tabs__container {
+				height: max-content;
+				background-color: var(--background-light);
+				margin-block-start: -30px;
+				top: calc(var(--header-height) / 2.5);
+				left: 0;
+				position: sticky;
+				z-index: 11;
+			}
+
 			.tabs__content {
 				margin-block-start: -2px;
+			}
+
+			.tabs__nav-btn {
+				padding-block: 30px;
 			}
 		}
 	}

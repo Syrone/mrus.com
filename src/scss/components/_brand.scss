@@ -59,6 +59,21 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 30px;
+			position: relative;
+		}
+
+		&-start {
+			height: max-content;
+			position: sticky;
+			top: calc(var(--header-height) / 2 + 50px);
+			left: 0;
+
+			&.dependent-element {
+
+				&--full {
+					top: calc(var(--header-height) + 50px) !important;
+				}
+			}
 		}
 
 		&-title {

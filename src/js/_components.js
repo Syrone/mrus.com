@@ -12,4 +12,6 @@ import './components/radio.js';
 import './components/order.js';
 import './components/counter.js';
 import './components/favorite.js';
+import './components/card.js';
+import './components/about.js';
 import './components/btn-back.js';

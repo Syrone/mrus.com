@@ -170,8 +170,13 @@
 		padding-block-end: 6px;
 		text-align: right;
 
-		&:is(:hover, :focus-visible, :active, .is-active) {
+		&:is(:hover, :focus-visible, :active) {
 			--_font-weight: 700;
+		}
+
+		&.is-active {
+			--_font-weight: 700;
+			
 			border-bottom-color: var(--primary-color);
 		}
 	}

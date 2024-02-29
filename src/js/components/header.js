@@ -1,9 +1,10 @@
 import { getHeaderHeight } from '../functions/header-height';
 
+const header = document?.querySelector('.header');
+const dependentElements = document.querySelectorAll('.dependent-element')
 let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
 window.addEventListener('scroll', function() {
-  const header = document?.querySelector('.header');
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollPosition > 80) {
@@ -11,8 +12,20 @@ window.addEventListener('scroll', function() {
 
     if (scrollPosition < prevScrollPosition) {
       header?.classList.add('header--full');
+
+      if (dependentElements.length > 0) {
+        dependentElements.forEach((item) => {
+          item.classList.add('dependent-element--full')
+        })
+      }
     } else {
       header?.classList.remove('header--full');
+
+      if (dependentElements.length > 0) {
+        dependentElements.forEach((item) => {
+          item.classList.remove('dependent-element--full')
+        })
+      }
     }
   
     prevScrollPosition = scrollPosition;

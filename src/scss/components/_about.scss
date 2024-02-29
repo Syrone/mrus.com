@@ -55,9 +55,16 @@
 				gap: 24px;
 				height: max-content;
 				position: sticky;
-				top: calc(var(--header-height) / 2);
+				top: var(--header-height);
 				right: 0;
 				z-index: 5;
+
+				&.dependent-element {
+
+					&--full {
+						top: calc(var(--header-height) + 60px) !important;
+					}
+				}
 			}
 
 			&-anchor {
@@ -73,7 +80,11 @@
 				gap: initial;
 				margin-inline-start: auto;
 
-				&:is(:hover, :focus-visible, :active, .is-active) {
+				&:is(:hover, :focus-visible, :active) {
+					--_font-weight: 700;
+				}
+
+				&.is-active {
 					--_font-weight: 700;
 
 					.about__way-aside-decor {
@@ -100,8 +111,16 @@
 		}
 
 		&-item {
-			padding-block-start: calc(var(--header-height) / 2);
-			margin-block-start: calc((var(--header-height) * -1) / 2);
+			padding-block-start: calc(var(--header-height) / 2 + 140px);
+			margin-block-start: calc(((var(--header-height) + 280px) * -1) / 2);
+
+			&.dependent-element {
+
+				&--full {
+					padding-block-start: var(--header-height);
+					margin-block-start: calc(var(--header-height) * -1);
+				}
+			}
 
 			&:nth-child(2n) {
 

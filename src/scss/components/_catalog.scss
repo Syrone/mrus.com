@@ -19,6 +19,13 @@
 			font-size: 32px;
 			margin-block-end: 40px;
 		}
+
+		&.dependent-element {
+
+			&--full {
+				top: calc(var(--header-height) + 80px) !important;
+			}
+		}
 	}
 
 	&__content {

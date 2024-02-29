@@ -61,5 +61,16 @@ if ( accordion.length > 0 ) {
 				});
 			}
 		});
+
+		window.addEventListener('resize', function() {
+			if (e.open) {
+				let contentHeight = parseInt(detailsContent.offsetHeight);
+				let fullHeight = summaryHeight + contentHeight;
+		
+				e.style.height = `${fullHeight}px`;
+			} else {
+				e.style.height = `${summaryHeight}px`;
+			}
+		});
 	});
 }

@@ -210,3 +210,11 @@
 	}
 
 }
+
+.dependent-element {
+
+	&--full {
+		top: var(--header-height) !important;
+		transition: top var(--transition-duration) var(--transition-type), margin var(--transition-duration) var(--transition-type), padding var(--transition-duration) var(--transition-type);
+	}
+}

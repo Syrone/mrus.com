@@ -99,6 +99,11 @@
 			padding: 20px;
 			transition: background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
+			&:is(:hover, :focus-visible, :active) {
+				background-color: var(--background-gray);
+				border-color: var(--background-gray);
+			}
+
 			&.is-active {
 				background-color: var(--background-gray);
 				border-color: var(--background-gray);
@@ -164,6 +169,11 @@
 
 				width: 100%;
 				pointer-events: none;
+			}
+
+			&:is(:hover, :focus-visible, :active) {
+				background-color: var(--background-gray);
+				border-color: var(--background-gray);
 			}
 
 			&.is-active {
@@ -432,7 +442,7 @@
 			&-header {
 
 				&-info,
-				&-edit {
+				&-end {
 					display: none;
 				}
 			}
