@@ -12,6 +12,167 @@
       @include('partials/breadcrumbs.html')
       @include('partials/product.html')
       @include('partials/mailing.html')
+
+      <div class="graph-modal graph-modal--image">
+        <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-image-zoom">
+          <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+            <span class="icon graph-modal__close-icon">
+              <svg>
+                <use xlink:href="img/close.svg#svg-close"></use>
+              </svg>
+            </span>
+          </button>
+          <div class="graph-modal__content">
+            <div class="wrapper-slider wrapper-slider--vertical">
+              <div thumbsSlider class="swiper swiper-picture-thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-thumb__slide">
+                    <div class="swiper-picture-thumb__picture">
+                      <picture>
+                        <source srcset="./img/product-1-thumb.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1-thumb.png" class="swiper-picture-thumb__image image" width="16" height="66" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev swiper-picture-thumb-prev">
+                <button type="button" class="btn wrapper-slider-btn">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="swiper-button-next swiper-picture-thumb-next">
+                <button type="button" class="btn wrapper-slider-btn">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/arrow-right.svg#svg-arrow-right"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div class="wrapper-slider">
+              <div class="swiper swiper-picture-zoom">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-picture-zoom__slide">
+                    <div class="swiper-picture-zoom__picture">
+                      <picture class="swiper-zoom-container">
+                        <source srcset="./img/product-1.webp" type="image/webp">
+                        <img loading="lazy" src="./img/product-1.png" class="swiper-picture-zoom__image image" width="100" height="460" alt="Фото">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination swiper-picture-zoom__pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       @include('partials/modal.html')
       @include('partials/cookie.html')
     </main>

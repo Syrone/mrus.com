@@ -861,8 +861,12 @@
 	}
 
 	&-picture {
+		margin: 0;
+		border: 0;
 		border-radius: 10px;
 		padding: 20px;
+		outline: none;
+		cursor: pointer;
 	}
 
 	&-image {
@@ -894,24 +898,111 @@
 .swiper-rtl .swiper__product-thumb,
 .swiper__product-thumb {
 
-		&-next,
-		&-prev {
-			width: 100%;
-			height: auto;
-			top: 10px;
-			right: initial;
-			left: 50%;
-			transform: translateX(-50%) rotate(90deg);
+	&-next,
+	&-prev {
+		width: 100%;
+		height: auto;
+		top: 10px;
+		right: initial;
+		left: 50%;
+		transform: translateX(-50%) rotate(90deg);
 
-			.wrapper-slider-btn {
-				--_padding-y: 16px;
-				--_padding-x: 16px;
-				box-shadow: var(--box-shadow);
-			}
-		}
-
-		&-next {
-			top: initial;
-			bottom: 10px;
+		.wrapper-slider-btn {
+			--_padding-y: 16px;
+			--_padding-x: 16px;
+			box-shadow: var(--box-shadow);
 		}
 	}
+
+	&-next {
+		top: initial;
+		bottom: 10px;
+	}
+}
+
+.swiper-picture-thumb,
+.swiper-picture-zoom {
+	height: 100vh;
+	height: 100dvh;
+	padding: 40px 60px;
+}
+
+.swiper-picture-thumb {
+
+	&__slide {
+		height: auto;
+	}
+
+	&__picture {
+		min-height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--background-gray);
+		border: 1px solid var(--background-gray);
+    border-radius: 6px;
+    padding: 6px;
+		box-sizing: border-box;
+    transition: border var(--transition-duration) var(--transition-type);
+	}
+
+	.swiper-slide-thumb-active {
+
+		.swiper-picture-thumb__picture {
+			border-color: var(--dark-color);
+		}
+	}
+
+	&-prev,
+	&-next {
+		width: 100%;
+		height: auto;
+		padding-block: 16px;
+		top: initial;
+		right: initial;
+		left: 0;
+
+		.btn {
+			transform: rotate(90deg);
+		}
+	}
+
+	&-prev {
+		top: 0;
+	}
+
+	&-next {
+		bottom: 0;
+	}
+
+}
+
+.swiper-picture-zoom {
+	padding-inline-start: 0;
+
+	&__slide {
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+
+	&__picture {
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: var(--background-gray);
+		border-radius: 12px;
+		padding: 30px;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	&__pagination {
+		display: none;
+	}
+}

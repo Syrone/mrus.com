@@ -15,6 +15,7 @@
 		top: var(--_modal-padding-y);
 		right: var(--_modal-padding-x);
 		background-image: initial;
+		z-index: 11;
 
 		&-icon {
 			--_i-size: 18px;
@@ -59,4 +60,33 @@
 		margin-block-start: 30px;
 	}
 	
+}
+
+.graph-modal--image {
+	--_modal-padding-y: 0;
+	--_modal-padding-x: 0;
+
+	.graph-modal__close {
+		--_background-color: var(--background-light);
+		--_border-radius: 50%;
+		--_padding-y: 12px;
+		--_padding-x: 12px;
+
+		--_background-color-active: var(--background-light);
+		
+		top: 50px;
+    right: 70px;
+	}
+
+	.graph-modal__container {
+		max-width: 100%;
+		height: 100%;
+		margin: 0;
+		border-radius: initial;
+	}
+
+	.graph-modal__content {
+		display: grid;
+		grid-template-columns: 220px calc(100vw - 220px);
+	}
 }

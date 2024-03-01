@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
-Swiper.use([Navigation, Pagination, Thumbs, Autoplay]);
+import Swiper, { Navigation, Pagination, Thumbs, Autoplay, Zoom } from 'swiper';
+Swiper.use([Navigation, Pagination, Thumbs, Autoplay, Zoom]);
 new Swiper('.swiper__hero', {
   grabCursor: true,
   loop: true,
@@ -200,3 +200,34 @@ const productMain = new Swiper('.swiper__product', {
     swiper: productThumb,
   },
 });
+
+const modalPictureTumb = new Swiper('.swiper-picture-thumb', {
+  direction: 'vertical',
+  grabCursor: true,
+  slidesPerView: 'auto',
+  spaceBetween: 12,
+  freeMode: true,
+  watchSlidesProgress: true,
+
+  navigation: {
+    nextEl: '.swiper-picture-thumb-next',
+    prevEl: '.swiper-picture-thumb-prev',
+  },
+})
+
+const modalPictureZoom = new Swiper('.swiper-picture-zoom', {
+  zoom: {
+    limitToOriginalSize: true,
+    maxRatio: 2,
+  },
+  maxRatio: 1,
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  thumbs: {
+    swiper: modalPictureTumb,
+  },
+  pagination: {
+    el: '.swiper-picture-zoom__pagination',
+  },
+})
