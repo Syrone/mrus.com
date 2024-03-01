@@ -427,7 +427,7 @@
 				height: max-content;
 				background-color: var(--background-light);
 				margin-block-start: -30px;
-				top: calc(var(--header-height) / 2.5);
+				top: calc(var(--header-height) / 2.55);
 				left: 0;
 				position: sticky;
 				z-index: 11;
@@ -737,11 +737,18 @@
 			margin-block-start: 30px;
 		}
 
+		&__btn {
+			--_border: 0;
+			--_border-radius: 12px;
+
+			margin: 0;
+		}
+
 		&__image {
 			display: block;
 			width: 80px;
 			height: 80px;
-			border-radius: 12px;
+			border-radius: var(--_border-radius);
 		}
 	}
 
@@ -981,7 +988,6 @@
 	padding-inline-start: 0;
 
 	&__slide {
-		overflow: hidden;
 		box-sizing: border-box;
 	}
 
@@ -992,6 +998,7 @@
 		background-color: var(--background-gray);
 		border-radius: 12px;
 		padding: 30px;
+		overflow: hidden;
 	}
 
 	&__image {

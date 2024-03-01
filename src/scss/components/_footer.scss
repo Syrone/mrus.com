@@ -91,6 +91,10 @@
 			line-height: 1.2;
 			color: var(--light-color);
 			margin-block-end: 20px;
+
+			&-item {
+				color: var(--light-color);
+			}
 		}
 
 		&__copy {

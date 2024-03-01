@@ -208,10 +208,10 @@
 
       <section class="section article-block">
         <div class="container-xxl article-block__container">
-          <div class="article-block__info">
-            <h3 class="article-block__title">
-              Проффесианалы своего дела с многолетним стажем
-            </h3>
+          <h3 class="article-block__title">
+            Проффесианалы своего дела с многолетним стажем
+          </h3>
+          <div class="article-block__descr">
             <p class="article-block__text">
               Каждый мастер обладает достаточным опытом, чтобы провести качественный ремонт в короткие сроки.
             </p>
@@ -240,10 +240,10 @@
           </picture>
         </div>
         <div class="container-xxl article-block__container article-block__container--reverse">
-          <div class="article-block__info">
-            <h3 class="article-block__title">
-              Немного о нас
-            </h3>
+          <h3 class="article-block__title">
+            Немного о нас
+          </h3>
+          <div class="article-block__descr">
             <p class="article-block__text">
               Мы это- инициативная группа мастеров. Карьера каждого из нас началась не один год назад. Несколько лет
               назад , нам удалось сплотиться, организовать свой цех, мастерскую в пром зоне и начать сотрудничество, с
@@ -267,8 +267,18 @@
 
       <section class="section banner-block">
         <div class="container-xxl banner-block__container">
-          <div class="banner-block__inner"
-            style="background-image: image-set( url('./img/banner-block.webp') type('image/webp'), url('./img/banner-block.jpg') type('image/jpeg') );">
+          <div class="banner-block__inner">
+            <style>
+              .banner-block__inner {
+                background-image: image-set( url('./img/banner-block.webp') type('image/webp'), url('./img/banner-block.jpg') type('image/jpeg') );
+              }
+
+              @media screen and (max-width: 768px) {
+                .banner-block__inner {
+                  background-image: image-set( url('./img/banner-block--mobile.webp') type('image/webp'), url('./img/banner-block--mobile.jpg') type('image/jpeg') );
+                }
+              }
+            </style>
             <div class="banner-block__info">
               <h3 class="banner-block__title">
                 Скидка 10% на первое обслуживание

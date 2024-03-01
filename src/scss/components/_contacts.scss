@@ -44,6 +44,7 @@
 			display: grid;
 			grid-template-columns: 135px 1fr;
 			gap: 40px;
+			color: var(--text-color);
 
 			&-value {
 				color: var(--dark-color);
@@ -102,6 +103,7 @@
 		gap: 16px;
 		border-bottom: 1px solid #D7DDE3;
 		padding-block: 20px;
+		color: var(--dark-color);
 
 		&:first-child {
 			padding-block-start: 0;
@@ -115,6 +117,7 @@
 		&-value {
 			font-weight: 500;
 			text-align: right;
+			color: var(--dark-color);
 		}
 	}
 }

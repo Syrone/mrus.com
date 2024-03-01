@@ -201,7 +201,7 @@ const productMain = new Swiper('.swiper__product', {
   },
 });
 
-const modalPictureTumb = new Swiper('.swiper-picture-thumb', {
+const modalPictureTumb = new Swiper('#swiperPictureThumb', {
   direction: 'vertical',
   grabCursor: true,
   slidesPerView: 'auto',
@@ -210,12 +210,12 @@ const modalPictureTumb = new Swiper('.swiper-picture-thumb', {
   watchSlidesProgress: true,
 
   navigation: {
-    nextEl: '.swiper-picture-thumb-next',
-    prevEl: '.swiper-picture-thumb-prev',
+    nextEl: '#swiperPictureThumbNext',
+    prevEl: '#swiperPictureThumbPrev',
   },
 })
 
-const modalPictureZoom = new Swiper('.swiper-picture-zoom', {
+const modalPictureZoom = new Swiper('#swiperPictureZoom', {
   zoom: {
     limitToOriginalSize: true,
     maxRatio: 2,
@@ -228,6 +228,37 @@ const modalPictureZoom = new Swiper('.swiper-picture-zoom', {
     swiper: modalPictureTumb,
   },
   pagination: {
-    el: '.swiper-picture-zoom__pagination',
+    el: '#swiperPictureZoomPagination',
+  },
+})
+
+const modalReviewPictureTumb = new Swiper('#swiperPictureThumb2', {
+  direction: 'vertical',
+  grabCursor: true,
+  slidesPerView: 'auto',
+  spaceBetween: 12,
+  freeMode: true,
+  watchSlidesProgress: true,
+
+  navigation: {
+    nextEl: '#swiperPictureThumbNext2',
+    prevEl: '#swiperPictureThumbPrev2',
+  },
+})
+
+const modalReviewPictureZoom = new Swiper('#swiperPictureZoom2', {
+  zoom: {
+    limitToOriginalSize: true,
+    maxRatio: 2,
+  },
+  maxRatio: 1,
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  thumbs: {
+    swiper: modalReviewPictureTumb,
+  },
+  pagination: {
+    el: '#swiperPictureZoomPagintion2',
   },
 })
