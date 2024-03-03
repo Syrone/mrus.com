@@ -114,10 +114,14 @@
 			padding-block-end: 0;
 		}
 
+		&-span,
+		&-value {
+			color: var(--dark-color, #000);
+		}
+
 		&-value {
 			font-weight: 500;
 			text-align: right;
-			color: var(--dark-color);
 		}
 	}
 }

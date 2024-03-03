@@ -86,21 +86,21 @@
 		}
 
 		&__detail {
-			font-size: var(--font-size-xs);
+			font-size: var(--font-size-xs, 14px);
 			font-weight: 500;
 			line-height: 1.2;
-			color: var(--light-color);
+			color: var(--light-color, #fff);
 			margin-block-end: 20px;
 
-			&-item {
-				color: var(--light-color);
+			&-span {
+				color: var(--light-color, #fff);
 			}
 		}
 
 		&__copy {
 			font-size: 14px;
 			font-weight: 500;
-			color: var(--light-color);
+			color: var(--light-color, #fff);
 		}
 
 		&__list {
@@ -111,9 +111,9 @@
 		}
 
 		&__link {
-			--_font-size: var(--font-size-xs);
+			--_font-size: var(--font-size-xs, 14px);
 			--_font-weight: 500;
-			--_color: var(--light-color);
+			--_color: var(--light-color, #fff);
 			--_border: 0;
 		}
 	}
