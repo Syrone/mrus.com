@@ -775,15 +775,18 @@
 					padding-block: 14px;
 					position: relative;
 
-					&::before {
-						content: '';
-						width: 100%;
-						height: 2px;
-						background-color: transparent;
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						z-index: 1;
+					&-anchor {
+						
+						&::before {
+							content: '';
+							width: 100%;
+							height: 2px;
+							background-color: transparent;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							z-index: 1;
+						}
 					}
 				}
 
@@ -793,10 +796,13 @@
 
 				&[open] {
 
-
 					.accordion__title {
-						&::before {
-							background-color: var(--primary-color);
+
+						&-anchor {
+	
+							&::before {
+								background-color: var(--primary-color);
+							}
 						}
 					}
 				}
