@@ -150,115 +150,112 @@ if (classCardImage.length > 0) {
   })
 }
 
-const productThumb = new Swiper('.swiper__product-thumb', {
-  direction: 'vertical',
-  grabCursor: true,
-  slidesPerView: 6,
-  spaceBetween: 12,
-  freeMode: true,
-  watchSlidesProgress: true,
+const swiperProducts = document.querySelectorAll('.swiper-wrapper-product')
 
-  navigation: {
-    nextEl: '.swiper__product-thumb-next',
-    prevEl: '.swiper__product-thumb-prev',
-  },
+if (swiperProducts.length > 0) {
+  swiperProducts.forEach((wrapper) => {
+    const thumbClass = wrapper.querySelector('.swiper__product-thumb'),
+          mainClass = wrapper.querySelector('.swiper__product')
 
-  breakpoints: {
-    0: {
-      direction: 'horizontal',
-      slidesPerView: 4,
-      spaceBetween: 10
-    },
-    389: {
-      direction: 'horizontal',
-      slidesPerView: 4,
-      spaceBetween: 10
-    },
-    768: {
+    const thumbNextClass = wrapper.querySelector('.swiper__product-thumb-next'),
+          thumbPrevClass = wrapper.querySelector('.swiper__product-thumb-prev')
+
+    const thumbSwiper = new Swiper(thumbClass, {
       direction: 'vertical',
-      slidesPerView: 4,
-      spaceBetween: 10
-    },
-    1024: {
-      direction: 'vertical',
-      slidesPerView: 5,
-      spaceBetween: 12
-    },
-    1200: {
-      direction: 'vertical',
+      grabCursor: true,
       slidesPerView: 6,
-      spaceBetween: 12
-    },
-  }
-});
+      spaceBetween: 12,
+      freeMode: true,
+      watchSlidesProgress: true,
+    
+      navigation: {
+        nextEl: thumbNextClass,
+        prevEl: thumbPrevClass,
+      },
+    
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        389: {
+          direction: 'horizontal',
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        768: {
+          direction: 'vertical',
+          slidesPerView: 4,
+          spaceBetween: 10
+        },
+        1024: {
+          direction: 'vertical',
+          slidesPerView: 5,
+          spaceBetween: 12
+        },
+        1200: {
+          direction: 'vertical',
+          slidesPerView: 6,
+          spaceBetween: 12
+        },
+      }
+    });
+    
+    const mainSwiper = new Swiper(mainClass, {
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      thumbs: {
+        swiper: thumbSwiper,
+      },
+    });
+  })
 
-const productMain = new Swiper('.swiper__product', {
-  grabCursor: true,
-  slidesPerView: 1,
-  spaceBetween: 16,
-  thumbs: {
-    swiper: productThumb,
-  },
-});
+}
 
-const modalPictureTumb = new Swiper('#swiperPictureThumb', {
-  direction: 'vertical',
-  grabCursor: true,
-  slidesPerView: 'auto',
-  spaceBetween: 12,
-  freeMode: true,
-  watchSlidesProgress: true,
+const swiperPictures = document.querySelectorAll('.swiper-wrapper-picture')
 
-  navigation: {
-    nextEl: '#swiperPictureThumbNext',
-    prevEl: '#swiperPictureThumbPrev',
-  },
-})
+if (swiperPictures.length > 0) {
+  swiperPictures.forEach((wrapper) => {
+    const thumbClass = wrapper.querySelector('.swiper-picture-thumb'),
+          mainClass = wrapper.querySelector('.swiper-picture-zoom')
 
-const modalPictureZoom = new Swiper('#swiperPictureZoom', {
-  zoom: {
-    limitToOriginalSize: true,
-    maxRatio: 2,
-  },
-  maxRatio: 1,
-  grabCursor: true,
-  slidesPerView: 1,
-  spaceBetween: 16,
-  thumbs: {
-    swiper: modalPictureTumb,
-  },
-  pagination: {
-    el: '#swiperPictureZoomPagination',
-  },
-})
+    const thumbNextClass = wrapper.querySelector('.swiper-picture-thumb-next'),
+          thumbPrevClass = wrapper.querySelector('.swiper-picture-thumb-prev')
 
-const modalReviewPictureTumb = new Swiper('#swiperPictureThumb2', {
-  direction: 'vertical',
-  grabCursor: true,
-  slidesPerView: 'auto',
-  spaceBetween: 12,
-  freeMode: true,
-  watchSlidesProgress: true,
+    const mainPaginationClass = wrapper.querySelector('.swiper-picture-zoom__pagination')
 
-  navigation: {
-    nextEl: '#swiperPictureThumbNext2',
-    prevEl: '#swiperPictureThumbPrev2',
-  },
-})
-
-const modalReviewPictureZoom = new Swiper('#swiperPictureZoom2', {
-  zoom: {
-    limitToOriginalSize: true,
-    maxRatio: 2,
-  },
-  maxRatio: 1,
-  grabCursor: true,
-  slidesPerView: 1,
-  spaceBetween: 16,
-  thumbs: {
-    swiper: modalReviewPictureTumb,
-  },
-  pagination: {
-    el: '#swiperPictureZoomPagintion2',
-  },
-})
+    
+    const thumbSwiper = new Swiper(thumbClass, {
+      direction: 'vertical',
+      grabCursor: true,
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      freeMode: true,
+      watchSlidesProgress: true,
+    
+      navigation: {
+        nextEl: thumbNextClass,
+        prevEl: thumbPrevClass,
+      },
+    })
+    
+    const mainSwiper = new Swiper(mainClass, {
+      zoom: {
+        limitToOriginalSize: true,
+        maxRatio: 2,
+      },
+      maxRatio: 1,
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      thumbs: {
+        swiper: thumbSwiper,
+      },
+      pagination: {
+        el: mainPaginationClass,
+      },
+    })
+  })
+}
