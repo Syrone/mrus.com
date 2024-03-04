@@ -102,12 +102,12 @@
 
 			&.is-active {
 
-				~ .rating__stars-input::before,
+				~ .rating__stars-label::before,
 				&::before {
 					opacity: 0;
 				}
 
-				~ .rating__stars-input::after,
+				~ .rating__stars-label::after,
 				&::after {
 					opacity: 1;
 				}

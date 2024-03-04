@@ -226,6 +226,9 @@ if (swiperPictures.length > 0) {
     const thumbNextClass = wrapper.querySelector('.swiper-picture-thumb-next'),
           thumbPrevClass = wrapper.querySelector('.swiper-picture-thumb-prev')
 
+    const mainNextClass = wrapper.querySelector('.swiper-picture-zoom-next'),
+          mainPrevClass = wrapper.querySelector('.swiper-picture-zoom-prev')
+
     const mainPaginationClass = wrapper.querySelector('.swiper-picture-zoom__pagination')
 
     
@@ -251,10 +254,17 @@ if (swiperPictures.length > 0) {
       maxRatio: 1,
       grabCursor: true,
       slidesPerView: 1,
-      spaceBetween: 16,
+      spaceBetween: 40,
+
       thumbs: {
         swiper: thumbSwiper,
       },
+
+      navigation: {
+        nextEl: mainNextClass,
+        prevEl: mainPrevClass,
+      },
+
       pagination: {
         el: mainPaginationClass,
       },
