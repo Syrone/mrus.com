@@ -251,6 +251,7 @@ if (swiperPictures.length > 0) {
         limitToOriginalSize: true,
         maxRatio: 2,
       },
+      loop: true,
       maxRatio: 1,
       grabCursor: true,
       slidesPerView: 1,
