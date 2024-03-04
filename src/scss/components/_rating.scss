@@ -47,10 +47,12 @@
 		position: relative;
 		box-sizing: border-box;
 
-		&-input {
+		&-label {
 			width: calc((var(--_stars-size) / 2) + (var(--_stars-gap) / 2));
 			height: var(--_stars-size);
-			appearance: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			flex-shrink: 0;
 			padding: 0;
 			margin: 0;
@@ -98,7 +100,7 @@
 				}
 			}
 
-			&:checked {
+			&.is-active {
 
 				~ .rating__stars-input::before,
 				&::before {
@@ -110,7 +112,22 @@
 					opacity: 1;
 				}
 			}
+		}
 
+		&-input {
+			width: 1px;
+			height: 1px;
+			appearance: none;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			outline: none;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
 		}
 	}
 
