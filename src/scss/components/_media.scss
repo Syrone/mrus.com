@@ -526,7 +526,7 @@
 
 }
 
-@include tablet {
+@media screen and (max-width: 1024px) {
 
 	//** (Start) General **//
 	.tabs {
@@ -621,7 +621,7 @@
 					color: var(--text-color-brighter);
 					position: relative;
 
-					&:is(:hover, :focus-visible, :active, .is-active) {
+					&:is(:focus-visible, :active, .is-active) {
 						color: var(--primary-color);
 					}
 				}
@@ -665,7 +665,7 @@
 				white-space: unset;
 			}
 
-			&:is(:hover, :focus-visible, :active, .is-active) {
+			&:is(:focus-visible, :active, .is-active) {
 
 				.header__dropdown-menu {
 					display: flex;
@@ -1152,7 +1152,37 @@
 
 }
 
-@include small-tablet {
+@media (max-width: 1024px) and (hover: hover) {
+		
+	.header {
+
+		&__menu {
+
+			&-list {
+
+				a {
+
+					&:hover {
+						color: var(--primary-color);
+					}
+				}
+			}
+		}
+
+		&__dropdown {
+
+			&:hover {
+
+				.header__dropdown-menu {
+					display: flex;
+				}
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 768px) {
 
 	//** (Start) General **//
 	h1,

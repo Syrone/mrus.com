@@ -34,6 +34,8 @@
 
 		&-title,
 		&-text {
+			max-width: 47%;
+
 			transition: color var(--transition-duration) var(--transition-type);
 		}
 
@@ -82,7 +84,7 @@
 				}
 			}
 
-			&:is(:hover, :focus-visible, :active, .is-active) {
+			&:is(:focus-visible, :active, .is-active) {
 				background-color: var(--background-gray);
 
 				.category__link {
@@ -98,7 +100,7 @@
 			}
 		}
 
-		&:is(:hover, :focus-visible, :active, .is-active) {
+		&:is(:focus-visible, :active, .is-active) {
 			box-shadow: var(--box-shadow-2);
 
 			.category__link-btn {
@@ -107,4 +109,41 @@
 			}
 		}
 	}
+}
+
+@media (hover: hover) {
+
+	.category {
+
+		&__link {
+
+			&--all {
+
+				&:hover {
+					background-color: var(--background-gray);
+
+					.category__link {
+
+						&-title {
+							color: var(--dark-color);
+						}
+
+						&-text {
+							color: var(--text-color);
+						}
+					}
+				}
+			}
+
+			&:hover {
+				box-shadow: var(--box-shadow-2);
+
+				.category__link-btn {
+					--_color: var(--light-color);
+					--_background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+
 }

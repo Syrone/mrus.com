@@ -13,9 +13,8 @@
 		list-style: none;
 		user-select: none;
 		cursor: pointer;
-		transition: font var(--transition-duration) var(--transition-type), color var(--transition-duration) var(--transition-type);
 
-		&:is(:hover, :focus-visible, :active) {
+		&:is(:focus-visible, :active) {
 			font-weight: 700;
 			color: var(--primary-color);
 		}
@@ -36,6 +35,7 @@
 
 			width: 100%;
 			justify-content: flex-start;
+			transition: color var(--_transition-duration) var(--_transition-type);
 		}
 	}
 
@@ -59,7 +59,7 @@
 			--_color-active: var(--dark-color);
 		}
 
-		&:is(:hover, :focus-visible, :active) {
+		&:is(:focus-visible, :active) {
 			--_color-active: var(--primary-color);
 		}
 	}
@@ -71,4 +71,26 @@
 		}
 
 	}
+}
+
+@media (hover: hover) {
+
+	.accordion {
+
+		&__title {
+
+			&:hover {
+				font-weight: 700;
+				color: var(--primary-color);
+			}
+		}
+
+		&__button {
+
+			&:hover {
+				--_color-active: var(--primary-color);
+			}
+		}
+	}
+
 }

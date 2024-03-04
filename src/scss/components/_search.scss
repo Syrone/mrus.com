@@ -21,7 +21,7 @@
 				transition: initial;
 			}
 
-			&:is(:hover, :focus-visible, :active, .is-active) {
+			&:is(:focus-visible, :active, .is-active) {
 				color: var(--primary-color);
 			}
 		}
@@ -96,4 +96,21 @@
 			--_padding-y: 4px;
 		}
 	}
+}
+
+@media (hover: hover) {
+
+	.search {
+
+		&__wrapper {
+
+			.search__btn {
+
+				&:hover {
+					color: var(--primary-color);
+				}
+			}
+		}
+	}
+
 }

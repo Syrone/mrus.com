@@ -5,8 +5,9 @@ new Swiper('.swiper__hero', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 16,
+
   autoplay: {
-    delay: 5000,
+    delay: 7500,
     disableOnInteraction: false,
   },
 
@@ -113,6 +114,7 @@ new Swiper('.swiper__tech', {
       spaceBetween: 16
     },
     2560: {
+      slidesPerView: 3,
       spaceBetween: 24
     },
   }

@@ -31,7 +31,7 @@
 			left: 0;
 			z-index: 1;
 
-			&:is(:hover, :focus-visible, :active) {
+			&:is(:focus-visible, :active) {
 
 				~ .news__item-content {
 
@@ -99,4 +99,26 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 16px;
 	}
+}
+@media (hover: hover) {
+		
+	.news {
+
+		&__item {
+
+			&-link {
+
+				&:hover {
+
+					~ .news__item-content {
+
+						.news__item-button {
+							--_color: var(--primary-color);
+						}
+					}
+				}
+			}
+		}
+	}
+
 }

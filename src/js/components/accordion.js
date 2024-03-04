@@ -63,6 +63,8 @@ if ( accordion.length > 0 ) {
 		});
 
 		window.addEventListener('resize', function() {
+			summaryHeight = parseInt(detailsSummary.offsetHeight)
+
 			if (e.open) {
 				let contentHeight = parseInt(detailsContent.offsetHeight);
 				let fullHeight = summaryHeight + contentHeight;

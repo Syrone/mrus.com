@@ -1,4 +1,4 @@
-const btnFavorites = document.querySelectorAll('.card__favorite')
+const btnFavorites = document.querySelectorAll('.btn-add-favorite')
 
 if (btnFavorites.length > 0) {
 	btnFavorites.forEach((btn) => {

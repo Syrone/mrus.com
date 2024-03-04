@@ -10,8 +10,6 @@ if (productTabs) {
 	const tabs = new GraphTabs('productTabs');
 	
 	function handleClick(target, offset) {
-		const parentElement = target.closest('.tabs__container');
-
 		target.click();
 		window.scrollTo({
 			top: target.getBoundingClientRect().top + window.pageYOffset - offset,

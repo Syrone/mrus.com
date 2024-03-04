@@ -170,7 +170,9 @@
 		padding-block-end: 6px;
 		text-align: right;
 
-		&:is(:hover, :focus-visible, :active) {
+		transition: color var(--_transition-duration) var(--_transition-type);
+
+		&:is(:focus-visible, :active) {
 			--_font-weight: 700;
 		}
 
@@ -180,4 +182,18 @@
 			border-bottom-color: var(--primary-color);
 		}
 	}
+}
+
+@media (hover: hover) {
+
+	.account-aside {
+
+		&__link {
+
+			&:hover {
+				--_font-weight: 700;
+			}
+		}
+	}
+
 }

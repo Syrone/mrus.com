@@ -94,7 +94,7 @@
 		transition: initial;
 	}
 
-	&:is(:hover, :focus-visible, :active) {
+	&:is(:focus-visible, :active) {
 
 		.wrapper-slider-btn {
 			--_color: var(--primary-color);
@@ -133,4 +133,19 @@
 			border-color: var(--swiper-theme-color);
 		}
 	}
+}
+
+@media (hover: hover) {
+
+	.swiper-button-next,
+	.swiper-button-prev {
+
+		&:hover {
+
+			.wrapper-slider-btn {
+				--_color: var(--primary-color);
+			}
+		}
+	}
+
 }

@@ -26,7 +26,7 @@
 					</span>
 				</button>
 			</div>
-			<button type="button" class="btn product__favorite product__header-favorite">
+			<button type="button" class="btn btn-add-favorite product__favorite product__header-favorite">
 				<span class="icon product__favorite-icon">
 					<svg>
 						<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -34,6 +34,9 @@
 				</span>
 				<span class="product__favorite-text">
 					В избранное
+				</span>
+				<span class="product__favorite-text--replace">
+					В избранном
 				</span>
 			</button>
 		</div>
@@ -348,7 +351,7 @@
 						</span>
 						Доставим 18 февраля
 					</div>
-					<button type="button" class="btn btn-dark btn-dark-lg product__detail-btn">
+					<button type="button" class="btn btn-dark btn-dark-lg product__detail-btn" data-graph-path="modal-add-card">
 						Добавить в корзину
 					</button>
 					<div class="product__detail-cashback">
@@ -459,11 +462,11 @@
 					<div class="product-model">
 						<style>
 							.product-model {
-								background-image: image-set( url('./img/product-detail-1.webp') type('image/webp'), url('./img/product-detail-1.jpg') type('image/jpeg') );
+								background-image: url('./img/product-detail-1.jpg');
 							}
 							@media screen and (max-width: 768px) {
 								.product-model {
-									background-image: image-set( url('./img/product-detail--mobile-1.webp') type('image/webp'), url('./img/product-detail--mobile-1.jpg') type('image/jpeg') );
+									background-image: url('./img/product-detail--mobile-1.jpg');
 								}
 							}
 						</style>
@@ -1137,7 +1140,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -1243,7 +1246,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -1349,7 +1352,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -1455,7 +1458,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -1561,7 +1564,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -1667,7 +1670,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -2474,7 +2477,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -2580,7 +2583,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -2686,7 +2689,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -2792,7 +2795,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -2898,7 +2901,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3004,7 +3007,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3554,7 +3557,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3660,7 +3663,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3766,7 +3769,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3872,7 +3875,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -3978,7 +3981,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
@@ -4084,7 +4087,7 @@
 														</span>
 													</button>
 												</div>
-												<button type="button" class="btn card__favorite">
+												<button type="button" class="btn btn-add-favorite card__favorite">
 													<span class="icon">
 														<svg>
 															<use xlink:href="img/favorite.svg#svg-favorite"></use>
