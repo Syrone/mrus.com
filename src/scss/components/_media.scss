@@ -671,7 +671,7 @@
 				white-space: unset;
 			}
 
-			&:is(:focus-visible, :active, .is-active) {
+			&:is(:hover, :focus-visible, :active, .is-active) {
 
 				.header__dropdown-menu {
 					display: flex;
@@ -1187,16 +1187,6 @@
 					&:hover {
 						color: var(--primary-color);
 					}
-				}
-			}
-		}
-
-		&__dropdown {
-
-			&:hover {
-
-				.header__dropdown-menu {
-					display: flex;
 				}
 			}
 		}
