@@ -27,13 +27,15 @@ if (counters.length > 0) {
 		input.addEventListener('input', function() {
 			validateInput()
 			updateInputWidth();
+		});
 
+		input.addEventListener('blur', function() {
 			if (input.value === '') {
 				input.value = '1';
 			}
 		});
 
-		input.addEventListener('keydown', function(event) {
+		input.addEventListener('keydown', function() {
 			if (input.value === '0') {
 				removeCardMini();
 			}
