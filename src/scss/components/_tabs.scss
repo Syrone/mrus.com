@@ -46,7 +46,6 @@
 			border-bottom: 2px solid transparent;
 			padding-block-end: 30px;
 			outline: none;
-			transition: border var(--_transition-duration) var(--_transition-type), color var(--transition-duration) var(--transition-type);
 
 			&:is(:focus, :active) {
 				color: var(--_color-active);
@@ -90,6 +89,7 @@
 		&__nav {
 
 			&-btn {
+				transition: border var(--_transition-duration) var(--_transition-type), color var(--transition-duration) var(--transition-type);
 
 				&:hover {
 					color: var(--_color-active);

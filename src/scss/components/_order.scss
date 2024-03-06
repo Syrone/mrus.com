@@ -97,7 +97,6 @@
 			border: 1px solid #D7DDE3;
 			border-radius: 16px;
 			padding: 20px;
-			transition: background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
 			&:is(:focus-visible, :active) {
 				background-color: var(--background-gray);
@@ -510,6 +509,7 @@
 		&__choice {
 
 			&-checkbox {
+				transition: background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
 				&:hover {
 					background-color: var(--background-gray);
@@ -533,6 +533,15 @@
 							--_border: 1px solid var(--primary-color);
 							--_background-color: var(--background-light);
 						}
+					}
+				}
+
+				&-input {
+	
+					&:checked ~ .order__choice-method-btn {
+						--_color: var(--light-color);
+						--_border: 1px solid var(--primary-color);
+						--_background-color: var(--primary-color);
 					}
 				}
 			}

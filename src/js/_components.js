@@ -1,5 +1,6 @@
 import './components/cookie.js';
 import './components/header.js';
+import './components/location.js';
 import './components/search.js';
 import './components/transferBlocks.js';
 import './components/burger.js';

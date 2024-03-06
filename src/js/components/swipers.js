@@ -7,7 +7,7 @@ new Swiper('.swiper__hero', {
   spaceBetween: 16,
 
   autoplay: {
-    delay: 7500,
+    delay: 3000,
     disableOnInteraction: false,
   },
 

@@ -8,7 +8,6 @@
 		font-weight: 500;
 		line-height: normal;
 		color: var(--dark-color);
-		transition: color var(--transition-duration) var(--transition-type);
 
 		&:is(:focus-visible, :active, .is-active) {
 			color: var(--primary-color);
@@ -28,6 +27,7 @@
 	.callback {
 
 		&__number {
+			transition: color var(--transition-duration) var(--transition-type);
 
 			&:hover {
 				color: var(--primary-color);

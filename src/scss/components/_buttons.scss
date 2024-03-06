@@ -29,7 +29,6 @@
 	padding: var(--_padding-y) var(--_padding-x);
 	cursor: pointer;
 	box-sizing: border-box;
-	transition: font var(--_transition-duration) var(--_transition-type), color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type);
 
 	.icon {
 		transition: initial;
@@ -218,6 +217,7 @@
 @media (hover: hover) {
 	
 	.btn {
+		transition: font var(--_transition-duration) var(--_transition-type), color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type);
 
 		&:hover {
 			color: var(--_color-active);

@@ -28,8 +28,14 @@ if (counters.length > 0) {
 			validateInput()
 			updateInputWidth();
 
-			if (input.value === '' || input.value === '0') {
+			if (input.value === '') {
 				input.value = '1';
+			}
+		});
+
+		input.addEventListener('keydown', function(event) {
+			if (input.value === '0') {
+				removeCardMini();
 			}
 		});
 
@@ -44,6 +50,9 @@ if (counters.length > 0) {
 				input.value = 1;
 			} else if (currentValue > 1) {
 				input.value = currentValue - 1;
+			} else if (currentValue === 1) {
+				input.value = 0;
+				removeCardMini();
 			}
 		}
 
@@ -59,6 +68,10 @@ if (counters.length > 0) {
 			} else if (currentValue >= value) {
 				input.value = currentValue - value;
 			}
+
+			if (parseInt(input.value) <= 0) {
+				removeCardMini();
+			}
 		}
 
 		function validateInput() {
@@ -68,6 +81,13 @@ if (counters.length > 0) {
 		function updateInputWidth() {
 			const valueLength = input.value.length;
 			input.style.width = `${valueLength + 0.25}ch`;
+		}
+
+		function removeCardMini() {
+			const cardMini = input.closest('.card--mini');
+			if (cardMini) {
+				cardMini.remove();
+			}
 		}
 	})
 }

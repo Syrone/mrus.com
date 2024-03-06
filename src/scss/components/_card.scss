@@ -33,26 +33,22 @@
 	box-shadow: var(--_box-shadow);
 
 	&-reviews {
-		width: 100%;
+		width: max-content;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		background-color: var(--background-light);
 		border-radius: 12px;
-		padding: 16px;
+		padding: 12px;
 		box-shadow: var(--box-shadow-alt);
 		position: absolute;
-		top: 0;
+		bottom: 32px;
 		left: 0;
 		z-index: 5;
 
-		&__btn {
-			--_font-size: 14px;
-			--_font-weight: 500;
-			--_line-height: 1.2;
-			--_color: var(--dark-color);
-			--_border: 0;
-			--_border-radius: 4px;
+		&__rating {
+			--_stars-size: 18px;
+			--_stars-gap: 12px;
 		}
 	}
 
@@ -86,7 +82,6 @@
 			line-height: 1.2;
 			margin-block-end: 0;
 			color: var(--dark-color);
-			transition: color var(--transition-duration) var(--transition-type);
 		}
 
 		&:is(:focus-visible, :active) {
@@ -388,7 +383,6 @@
 		font-size: var(--font-size);
 		font-weight: 500;
 		margin-block-end: 12px;
-		transition: color var(--transition-duration) var(--transition-type);
 	}
 
 	&__price {
@@ -457,6 +451,10 @@
 
 		&__header {
 
+			&-title {
+				transition: color var(--transition-duration) var(--transition-type);
+			}
+
 			&:hover {
 
 				.card__header-title {
@@ -467,6 +465,10 @@
 	}
 
 	.card-search {
+
+		&__title {
+			transition: color var(--transition-duration) var(--transition-type);
+		}
 
 		&:hover {
 

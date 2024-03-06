@@ -17,8 +17,6 @@
 
 		cursor: pointer;
 
-		transition: color var(--transition-duration) var(--transition-type);
-
 		&:is(:focus-visible, :active) {
 
 			.rating {
@@ -74,7 +72,6 @@
 				box-sizing: border-box;
 				position: absolute;
 				top: 0;
-				transition: opacity var(--transition-duration) var(--transition-type);
 			}
 
 			&::before {
@@ -157,6 +154,7 @@
 	.rating {
 
 		&--btn {
+			transition: color var(--transition-duration) var(--transition-type);
 
 			&:hover {
 
@@ -171,6 +169,14 @@
 		}
 
 		&__stars {
+
+			&-label {
+
+				&::after,
+				&::before {
+					transition: opacity var(--transition-duration) var(--transition-type);
+				}
+			}
 
 			&-input {
 

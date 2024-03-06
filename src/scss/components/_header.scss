@@ -32,10 +32,7 @@
 
 		&-btn {
 			--_font-size: 12px;
-			--_color: var(--primary-color);
-			--_border: 0;
-
-			--_color-active: var(--dark-color);
+			--_font-weight: 400;
 		}
 
 		&-icon {
@@ -107,7 +104,6 @@
 
 			.icon {
 				--_i-size: 8px;
-				transition: transform var(--transition-duration) var(--transition-type);
 			}
 		}
 
@@ -121,7 +117,6 @@
 			opacity: 0;
 			z-index: 10;
 			visibility: hidden;
-			transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
 		}
 
 		&-list {
@@ -145,27 +140,20 @@
 			text-transform: uppercase;
 		}
 
-		&:is(:focus-visible, :active, .is-active) {
+		&:is(:focus-visible, :active) {
 
 			.header__dropdown-btn {
 				--_color: var(--primary-color);
+
+				.icon {
+					transform: rotateX(180deg);
+				}
 			}
 
 			.header__dropdown-menu {
 				opacity: 1;
 				visibility: visible;
 			}
-
-			.icon {
-				transform: rotateX(180deg);
-			}
-		}
-	}
-
-	&__menu {
-
-		&-list {
-			display: none;
 		}
 	}
 
@@ -210,13 +198,22 @@
 		justify-content: flex-end;
 	}
 
+	&__menu {
+		display: none;
+
+		&-header,
+		&-location,
+		&-footer {
+			display: none;
+		}
+	}
+
 }
 
 .dependent-element {
 
 	&--full {
 		top: var(--header-height) !important;
-		transition: top var(--transition-duration) var(--transition-type), margin var(--transition-duration) var(--transition-type), padding var(--transition-duration) var(--transition-type);
 	}
 }
 
@@ -226,20 +223,38 @@
 
 		&__dropdown {
 
+			&-btn {
+
+				.icon {
+					transition: transform var(--transition-duration) var(--transition-type);
+				}
+			}
+
+			&-menu {
+				transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
+			}
+
 			&:hover {
 				.header__dropdown-btn {
 					--_color: var(--primary-color);
+
+					.icon {
+						transform: rotateX(180deg);
+					}
 				}
 	
 				.header__dropdown-menu {
 					opacity: 1;
 					visibility: visible;
 				}
-	
-				.icon {
-					transform: rotateX(180deg);
-				}
 			}
+		}
+	}
+
+	.dependent-element {
+
+		&--full {
+			transition: top var(--transition-duration) var(--transition-type), margin var(--transition-duration) var(--transition-type), padding var(--transition-duration) var(--transition-type);
 		}
 	}
 

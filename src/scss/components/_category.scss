@@ -19,7 +19,6 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-		transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), box-shadow var(--transition-duration) var(--transition-type);
 
 		&-image {
 			width: 240px;
@@ -35,8 +34,6 @@
 		&-title,
 		&-text {
 			max-width: 47%;
-
-			transition: color var(--transition-duration) var(--transition-type);
 		}
 
 		&-title {
@@ -116,6 +113,12 @@
 	.category {
 
 		&__link {
+			transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), box-shadow var(--transition-duration) var(--transition-type);
+
+			&-title,
+			&-text {
+				transition: color var(--transition-duration) var(--transition-type);
+			}
 
 			&--all {
 

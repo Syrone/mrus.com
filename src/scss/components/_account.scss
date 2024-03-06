@@ -170,8 +170,6 @@
 		padding-block-end: 6px;
 		text-align: right;
 
-		transition: color var(--_transition-duration) var(--_transition-type);
-
 		&:is(:focus-visible, :active) {
 			--_font-weight: 700;
 		}
@@ -189,6 +187,7 @@
 	.account-aside {
 
 		&__link {
+			transition: color var(--_transition-duration) var(--_transition-type);
 
 			&:hover {
 				--_font-weight: 700;

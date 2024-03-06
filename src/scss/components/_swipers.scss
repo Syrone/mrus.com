@@ -127,7 +127,6 @@
 
 	&-bullet {
 		border: 1px solid #D7DDE3;
-		transition: width var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
 		&-active {
 			border-color: var(--swiper-theme-color);
@@ -145,6 +144,13 @@
 			.wrapper-slider-btn {
 				--_color: var(--primary-color);
 			}
+		}
+	}
+
+	.swiper-pagination {
+
+		&-bullet {
+			transition: width var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 		}
 	}
 

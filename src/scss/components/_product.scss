@@ -29,7 +29,6 @@
 
 		&-text {
 			color: var(--text-color);
-			transition: color var(--transition-duration) var(--transition-type);
 		
 			&--replace {
 				display: none;
@@ -76,11 +75,11 @@
 			&-link {
 				--_font-size: 14px;
 				--_line-height: 1.4;
-				--_color: var(--primary-color);
+				--_color: var(--dark-color);
 				--_border: 0;
 				--_border-radius: 0;
 
-				--_color-active: var(--dark-color);
+				--_color-active: var(--primary-color);
 				
 				display: block;
 			}
@@ -199,7 +198,6 @@
 				font-size: 12px;
 				font-weight: 400;
 				color: var(--text-color);
-				transition: color var(--transition-duration) var(--transition-type);
 			}
 
 			&:is(:focus-visible, :active, .is-active) {
@@ -601,7 +599,6 @@
 
 				&-icon {
 					--_i-size: 26px;
-					transition: transform var(--transition-duration) var(--transition-type);
 				}
 			}
 
@@ -925,7 +922,6 @@
 			border: 1px solid var(--background-gray);
 			border-radius: 6px;
 			padding: 6px;
-			transition: border var(--transition-duration) var(--transition-type);
 		}
 
 		&-image {
@@ -990,7 +986,6 @@
     border-radius: 6px;
     padding: 6px;
 		box-sizing: border-box;
-    transition: border var(--transition-duration) var(--transition-type);
 	}
 
 	.swiper-slide-thumb-active {
@@ -1069,6 +1064,10 @@
 
 		&__favorite {
 
+			&-text {
+				transition: color var(--transition-duration) var(--transition-type);
+			}
+
 			&:hover {
 
 				.product__favorite-text {
@@ -1090,11 +1089,28 @@
 		&__choice {
 
 			&-btn {
+
+				&-price {
+					transition: color var(--transition-duration) var(--transition-type);
+				}
 				
 				&:hover {
 
 					.product__choice-btn-price {
 						color: #ebebeb;
+					}
+				}
+			}
+		}
+
+		&-accordion {
+
+			.accordion {
+
+				&__title {
+					
+					&-icon {
+						transition: transform var(--transition-duration) var(--transition-type);
 					}
 				}
 			}
@@ -1117,6 +1133,23 @@
 					}
 				}
 			}
+		}
+	}
+
+	.swiper__product {
+
+		&-thumb {
+
+			&-picture {
+				transition: border var(--transition-duration) var(--transition-type);
+			}
+		}
+	}
+
+	.swiper-picture-thumb {
+
+		&__picture {
+			transition: border var(--transition-duration) var(--transition-type);
 		}
 	}
 

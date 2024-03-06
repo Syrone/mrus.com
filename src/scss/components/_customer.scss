@@ -388,7 +388,6 @@
 				&-icon {
 					--_i-size: 12px;
 					flex-shrink: 0;
-					transition: transform var(--transition-duration) var(--transition-type);
 				}
 			}
 
@@ -583,6 +582,22 @@
 }
 
 @media (hover: hover) {
+
+	.accordion-page {
+
+		&__accordion {
+
+			.accordion {
+
+				&__title {
+
+					&-icon {
+						transition: transform var(--transition-duration) var(--transition-type);
+					}
+				}
+			}
+		}
+	}
 
 	.payment-page {
 

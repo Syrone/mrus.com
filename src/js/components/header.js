@@ -40,3 +40,28 @@ window.addEventListener('scroll', function() {
 		});
   }
 });
+
+
+
+const headerDropdowns = document?.querySelectorAll('.header__dropdown')
+
+if (headerDropdowns.length > 0) {
+  headerDropdowns.forEach((dropdown) => {
+    const btnClose = dropdown.querySelector('.header__dropdown-close')
+
+    dropdown.addEventListener('click', function() {
+      headerDropdowns.forEach((otherDropdown) => {
+        otherDropdown.classList.remove('is-active')
+      })
+
+      dropdown.classList.add('is-active')
+    })
+
+    if (btnClose) {
+      btnClose.addEventListener('click', function (event) {
+        event.stopPropagation();
+        dropdown.classList.remove('is-active');
+      });
+    }
+  })
+}
