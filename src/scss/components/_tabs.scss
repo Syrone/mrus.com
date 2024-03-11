@@ -52,6 +52,10 @@
 				background-color: var(--_background-color-active);
 			}
 
+			&:focus {
+				background-color: var(--_background-color-active);
+			}
+
 			&--active {
 				color: var(--_color-active);
 				background-color: var(--_background-color-active);
