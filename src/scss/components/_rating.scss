@@ -16,17 +16,6 @@
 		box-sizing: border-box;
 
 		cursor: pointer;
-
-		&:active {
-
-			.rating {
-
-				&__text,
-				&__current {
-					color: var(--primary-color);
-				}
-			}
-		}
 	}
 
 	&--readonly {
@@ -156,7 +145,7 @@
 		&--btn {
 			transition: color var(--transition-duration) var(--transition-type);
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 
 				.rating {
 

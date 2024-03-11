@@ -14,11 +14,6 @@
 		user-select: none;
 		cursor: pointer;
 
-		&:active {
-			font-weight: 700;
-			color: var(--primary-color);
-		}
-
 		&::marker {
 			display: none;
 		}
@@ -58,10 +53,6 @@
 			--_font-weight: 700;
 			--_color-active: var(--dark-color);
 		}
-
-		&:active {
-			--_color-active: var(--primary-color);
-		}
 	}
 
 	&[open] {
@@ -79,7 +70,7 @@
 
 		&__title {
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 				font-weight: 700;
 				color: var(--primary-color);
 			}
@@ -87,7 +78,7 @@
 
 		&__button {
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 				--_color-active: var(--primary-color);
 			}
 		}

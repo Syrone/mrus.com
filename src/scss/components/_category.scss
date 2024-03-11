@@ -81,7 +81,7 @@
 				}
 			}
 
-			&:is(:active, .is-active) {
+			&.is-active {
 				background-color: var(--background-gray);
 
 				.category__link {
@@ -97,7 +97,7 @@
 			}
 		}
 
-		&:is(:active, .is-active) {
+		&.is-active {
 			box-shadow: var(--box-shadow-2);
 
 			.category__link-btn {
@@ -122,7 +122,7 @@
 
 			&--all {
 
-				&:is(:hover, :focus-visible) {
+				&:is(:hover, :focus-visible, :active) {
 					background-color: var(--background-gray);
 
 					.category__link {
@@ -138,7 +138,7 @@
 				}
 			}
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 				box-shadow: var(--box-shadow-2);
 
 				.category__link-btn {

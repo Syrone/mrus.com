@@ -265,7 +265,7 @@
 			bottom: 0;
 			z-index: 1;
 
-			&:is(:focus-visible, :active, .is-active) {
+			&.is-active {
 
 				~ .payment-page__item-info {
 
@@ -605,7 +605,7 @@
 
 			&-btn {
 
-				&:hover {
+				&:is(:hover, :focus-visible, :active) {
 
 					~ .payment-page__item-info {
 

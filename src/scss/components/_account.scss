@@ -170,10 +170,6 @@
 		padding-block-end: 6px;
 		text-align: right;
 
-		&:active {
-			--_font-weight: 700;
-		}
-
 		&.is-active {
 			--_font-weight: 700;
 			
@@ -189,7 +185,7 @@
 		&__link {
 			transition: color var(--_transition-duration) var(--_transition-type);
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 				--_font-weight: 700;
 			}
 		}

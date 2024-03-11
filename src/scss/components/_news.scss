@@ -30,16 +30,6 @@
 			bottom: 0;
 			left: 0;
 			z-index: 1;
-
-			&:active {
-
-				~ .news__item-content {
-
-					.news__item-button {
-						--_color: var(--primary-color);
-					}
-				}
-			}
 		}
 
 		&-image {
@@ -108,7 +98,7 @@
 
 			&-link {
 
-				&:is(:hover, :focus-visible) {
+				&:is(:hover, :focus-visible, :active) {
 
 					~ .news__item-content {
 

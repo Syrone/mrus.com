@@ -47,12 +47,8 @@
 			padding-block-end: 30px;
 			outline: none;
 
-			&:active {
-				color: var(--_color-active);
-				background-color: var(--_background-color-active);
-			}
-
 			&:focus {
+				color: var(--_color-active);
 				background-color: var(--_background-color-active);
 			}
 
@@ -95,7 +91,7 @@
 			&-btn {
 				transition: border var(--_transition-duration) var(--_transition-type), color var(--transition-duration) var(--transition-type);
 
-				&:is(:hover, :focus) {
+				&:is(:hover, :focus, :active) {
 					color: var(--_color-active);
 					background-color: var(--_background-color-active);
 				}

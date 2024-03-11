@@ -139,22 +139,6 @@
 			white-space: nowrap;
 			text-transform: uppercase;
 		}
-
-		&:active {
-
-			.header__dropdown-btn {
-				--_color: var(--primary-color);
-
-				.icon {
-					transform: rotateX(180deg);
-				}
-			}
-
-			.header__dropdown-menu {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
 	}
 
 	&__search {
@@ -234,7 +218,7 @@
 				transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
 			}
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 				.header__dropdown-btn {
 					--_color: var(--primary-color);
 

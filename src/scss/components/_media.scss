@@ -709,20 +709,6 @@
 				white-space: unset;
 			}
 
-			&:is(:focus-visible, :active) {
-
-				.header__dropdown-menu {
-					display: flex;
-				}
-
-				.header__dropdown-btn {
-
-					.icon {
-						transform: rotate(-90deg);
-					}
-				}
-			}
-
 			&.is-active {
 
 				.header__dropdown-menu {
@@ -1310,26 +1296,6 @@
 		}
 	}
 	//** (End) Blocks **//
-
-}
-
-@media (max-width: 1024px) and (hover: hover) {
-
-	.header {
-
-		&__dropdown {
-
-			&:is(:hover, :focus-visible) {
-				
-				.header__dropdown-btn {
-					
-					.icon {
-						transform: rotate(-90deg);
-					}
-				}
-			}
-		}
-	}
 
 }
 

@@ -102,7 +102,7 @@
 
 		&__link {
 
-			&:is(:hover, :focus-visible) {
+			&:is(:hover, :focus-visible, :active) {
 
 				~ .tech__detail {
 

@@ -94,14 +94,6 @@
 		--_i-size: 12px;
 		transition: initial;
 	}
-
-	&:active {
-
-		.wrapper-slider-btn {
-			--_color: var(--primary-color);
-		}
-
-	}
 }
 
 .swiper-button-prev {
@@ -154,7 +146,7 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 
-		&:is(:hover, :focus-visible) {
+		&:is(:hover, :focus-visible, :active) {
 
 			.wrapper-slider-btn {
 				--_color: var(--primary-color);
