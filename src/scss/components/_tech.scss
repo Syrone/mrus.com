@@ -33,7 +33,7 @@
 		left: 0;
 		z-index: 1;
 
-		&:is(:focus-visible, :active) {
+		&:active {
 
 			~ .tech__detail {
 
@@ -102,7 +102,7 @@
 
 		&__link {
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 
 				~ .tech__detail {
 

@@ -9,7 +9,7 @@
 		line-height: normal;
 		color: var(--dark-color);
 
-		&:is(:focus-visible, :active, .is-active) {
+		&:is(:active, .is-active) {
 			color: var(--primary-color);
 		}
 	}
@@ -29,7 +29,7 @@
 		&__number {
 			transition: color var(--transition-duration) var(--transition-type);
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 				color: var(--primary-color);
 			}
 		}

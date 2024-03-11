@@ -6,6 +6,8 @@
 		position: relative;
 
 		.search__btn {
+			--_color-active: var(--primary-color);
+
 			width: 50px;
 			height: 100%;
 			padding: 0;
@@ -19,10 +21,6 @@
 			.icon {
 				--_i-size: 18px;
 				transition: initial;
-			}
-
-			&:is(:focus-visible, :active, .is-active) {
-				color: var(--primary-color);
 			}
 		}
 
@@ -96,21 +94,4 @@
 			--_padding-y: 4px;
 		}
 	}
-}
-
-@media (hover: hover) {
-
-	.search {
-
-		&__wrapper {
-
-			.search__btn {
-
-				&:hover {
-					color: var(--primary-color);
-				}
-			}
-		}
-	}
-
 }

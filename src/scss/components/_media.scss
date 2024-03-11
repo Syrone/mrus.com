@@ -769,6 +769,11 @@
 
 	}
 
+	.header:not(.header--full) .location__dropdown {
+		top: 0;
+		transition: transform var(--transition-duration) var(--transition-type), -webkit-transform var(--transition-duration) var(--transition-type);
+	}
+
 	.location__dropdown {
 		width: 100%;
 		max-width: 390px;
@@ -1314,7 +1319,7 @@
 
 		&__dropdown {
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 				
 				.header__dropdown-btn {
 					

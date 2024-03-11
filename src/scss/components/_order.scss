@@ -98,7 +98,7 @@
 			border-radius: 16px;
 			padding: 20px;
 
-			&:is(:focus-visible, :active) {
+			&:active {
 				background-color: var(--background-gray);
 				border-color: var(--background-gray);
 			}
@@ -139,7 +139,7 @@
 				flex-basis: calc(50% - 15px);
 				cursor: pointer;
 
-				&:is(:focus-visible, :active) {
+				&:active {
 
 					.order__choice-method-btn {
 						--_color: var(--dark-color);
@@ -179,7 +179,7 @@
 				pointer-events: none;
 			}
 
-			&:is(:focus-visible, :active) {
+			&:active {
 				background-color: var(--background-gray);
 				border-color: var(--background-gray);
 			}
@@ -511,7 +511,7 @@
 			&-checkbox {
 				transition: background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
 
-				&:hover {
+				&:is(:hover, :focus-visible) {
 					background-color: var(--background-gray);
 					border-color: var(--background-gray);
 				}
@@ -519,14 +519,14 @@
 
 			&-method {
 
-				&:hover {
+				&:is(:hover, :focus-visible) {
 					background-color: var(--background-gray);
 					border-color: var(--background-gray);
 				}
 
 				&-label {
 
-					&:hover {
+					&:is(:hover, :focus-visible) {
 
 						.order__choice-method-btn {
 							--_color: var(--dark-color);

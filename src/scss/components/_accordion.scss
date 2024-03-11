@@ -14,7 +14,7 @@
 		user-select: none;
 		cursor: pointer;
 
-		&:is(:focus-visible, :active) {
+		&:active {
 			font-weight: 700;
 			color: var(--primary-color);
 		}
@@ -59,7 +59,7 @@
 			--_color-active: var(--dark-color);
 		}
 
-		&:is(:focus-visible, :active) {
+		&:active {
 			--_color-active: var(--primary-color);
 		}
 	}
@@ -79,7 +79,7 @@
 
 		&__title {
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 				font-weight: 700;
 				color: var(--primary-color);
 			}
@@ -87,7 +87,7 @@
 
 		&__button {
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 				--_color-active: var(--primary-color);
 			}
 		}

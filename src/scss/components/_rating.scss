@@ -17,7 +17,7 @@
 
 		cursor: pointer;
 
-		&:is(:focus-visible, :active) {
+		&:active {
 
 			.rating {
 
@@ -156,7 +156,7 @@
 		&--btn {
 			transition: color var(--transition-duration) var(--transition-type);
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 
 				.rating {
 

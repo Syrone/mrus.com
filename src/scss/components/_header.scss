@@ -140,7 +140,7 @@
 			text-transform: uppercase;
 		}
 
-		&:is(:focus-visible, :active) {
+		&:active {
 
 			.header__dropdown-btn {
 				--_color: var(--primary-color);
@@ -234,7 +234,7 @@
 				transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
 			}
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 				.header__dropdown-btn {
 					--_color: var(--primary-color);
 

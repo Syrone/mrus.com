@@ -1,5 +1,6 @@
 .wrapper-slider {
 	--swiper-theme-color: var(--primary-color);
+	display: block;
 	width: 100%;
   position: relative;
 
@@ -94,7 +95,7 @@
 		transition: initial;
 	}
 
-	&:is(:focus-visible, :active) {
+	&:active {
 
 		.wrapper-slider-btn {
 			--_color: var(--primary-color);
@@ -134,12 +135,26 @@
 	}
 }
 
+.swiper-hover {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: -1;
+}
+
 @media (hover: hover) {
 
 	.swiper-button-next,
 	.swiper-button-prev {
 
-		&:hover {
+		&:is(:hover, :focus-visible) {
 
 			.wrapper-slider-btn {
 				--_color: var(--primary-color);
@@ -151,6 +166,16 @@
 
 		&-bullet {
 			transition: width var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type);
+		}
+	}
+
+	.swiper-hover {
+		z-index: 1;
+		pointer-events: auto;
+
+		> * {
+			flex: 1;
+			cursor: pointer;
 		}
 	}
 

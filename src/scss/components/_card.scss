@@ -84,7 +84,7 @@
 			color: var(--dark-color);
 		}
 
-		&:is(:focus-visible, :active) {
+		&:active {
 
 			.card__header-title {
 				color: var(--primary-color);
@@ -390,7 +390,7 @@
 		gap: 4px 16px;
 	}
 
-	&:is(:focus-visible, :active) {
+	&:active {
 
 		.card-search {
 
@@ -455,7 +455,7 @@
 				transition: color var(--transition-duration) var(--transition-type);
 			}
 
-			&:hover {
+			&:is(:hover, :focus-visible) {
 
 				.card__header-title {
 					color: var(--primary-color);
@@ -470,7 +470,7 @@
 			transition: color var(--transition-duration) var(--transition-type);
 		}
 
-		&:hover {
+		&:is(:hover, :focus-visible) {
 
 			.card-search {
 
@@ -478,6 +478,13 @@
 					color: var(--primary-color);
 				}
 			}
+		}
+	}
+
+	.swiper__card-image {
+
+		.swiper-wrapper {
+			transition: unset !important;
 		}
 	}
 

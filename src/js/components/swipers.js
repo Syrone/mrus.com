@@ -123,33 +123,81 @@ new Swiper('.swiper__tech', {
 const classCardImage = document.querySelectorAll('.swiper__card-image')
 
 if (classCardImage.length > 0) {
-  classCardImage.forEach((swiper) => {
-    const pagination = swiper.getElementsByClassName('swiper__card-image-pagination')[0];
-    new Swiper(swiper, {
-      nested: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
+  function initSwiper() {
+    classCardImage.forEach((swiper) => {
+      const swiperPagination = swiper.querySelector('.swiper__card-image-pagination');
+
+      const swiperCardImage = new Swiper(swiper, {
+        nested: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 16,
     
-      pagination: {
-        el: pagination,
-        type: 'bullets',
-        clickable: true,
-      },
+        pagination: {
+          el: swiperPagination,
+          type: 'bullets',
+          clickable: true,
+        },
     
-      breakpoints: {
-        0: {
-          spaceBetween: 10
+        breakpoints: {
+          0: {
+            spaceBetween: 10
+          },
+          768: {
+            spaceBetween: 10
+          },
+          1400: {
+            spaceBetween: 16
+          }
         },
-        768: {
-          spaceBetween: 10
+        
+        on: {
+          init: function() {
+            const swiper = this;
+            const slides = swiper.slides;
+  
+            let hoverWrapper = swiper.el.querySelector('.swiper-hover');
+  
+            if (!hoverWrapper) {
+              hoverWrapper = document.createElement('div');
+              hoverWrapper.classList.add('swiper-hover');
+              swiper.el.appendChild(hoverWrapper);
+            } else {
+              hoverWrapper.innerHTML = '';
+            }
+  
+            slides.forEach((slide, index) => {
+              const div = document.createElement('div');
+              hoverWrapper.appendChild(div);
+  
+              div.addEventListener('mouseenter', () => {
+                swiperCardImage.slideTo(index);
+                swiperPagination.querySelectorAll('.swiper-pagination-bullet')[index].click();
+              });
+            });
+          },
         },
-        1400: {
-          spaceBetween: 16
+      });
+    })
+  }
+
+  const graphModals = document.querySelectorAll('.graph-modal');
+    
+  if (graphModals.length > 0) {
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.target.classList.contains('graph-modal')) {
+          initSwiper();
         }
-      }
+      });
     });
-  })
+  
+    graphModals.forEach(function(graphModal) {
+      observer.observe(graphModal, { attributes: true, attributeFilter: ['class'] });
+    });
+  }
+  
+  initSwiper();
 }
 
 const swiperProducts = document.querySelectorAll('.swiper-wrapper-product')
@@ -157,10 +205,10 @@ const swiperProducts = document.querySelectorAll('.swiper-wrapper-product')
 if (swiperProducts.length > 0) {
   swiperProducts.forEach((wrapper) => {
     const thumbClass = wrapper.querySelector('.swiper__product-thumb'),
-          mainClass = wrapper.querySelector('.swiper__product')
+      mainClass = wrapper.querySelector('.swiper__product')
 
     const thumbNextClass = wrapper.querySelector('.swiper__product-thumb-next'),
-          thumbPrevClass = wrapper.querySelector('.swiper__product-thumb-prev')
+      thumbPrevClass = wrapper.querySelector('.swiper__product-thumb-prev')
 
     const thumbSwiper = new Swiper(thumbClass, {
       direction: 'vertical',
@@ -169,12 +217,12 @@ if (swiperProducts.length > 0) {
       spaceBetween: 12,
       freeMode: true,
       watchSlidesProgress: true,
-    
+
       navigation: {
         nextEl: thumbNextClass,
         prevEl: thumbPrevClass,
       },
-    
+
       breakpoints: {
         0: {
           direction: 'horizontal',
@@ -203,7 +251,7 @@ if (swiperProducts.length > 0) {
         },
       }
     });
-    
+
     const mainSwiper = new Swiper(mainClass, {
       grabCursor: true,
       slidesPerView: 1,
@@ -221,17 +269,17 @@ const swiperPictures = document.querySelectorAll('.swiper-wrapper-picture')
 if (swiperPictures.length > 0) {
   swiperPictures.forEach((wrapper) => {
     const thumbClass = wrapper.querySelector('.swiper-picture-thumb'),
-          mainClass = wrapper.querySelector('.swiper-picture-zoom')
+      mainClass = wrapper.querySelector('.swiper-picture-zoom')
 
     const thumbNextClass = wrapper.querySelector('.swiper-picture-thumb-next'),
-          thumbPrevClass = wrapper.querySelector('.swiper-picture-thumb-prev')
+      thumbPrevClass = wrapper.querySelector('.swiper-picture-thumb-prev')
 
     const mainNextClass = wrapper.querySelector('.swiper-picture-zoom-next'),
-          mainPrevClass = wrapper.querySelector('.swiper-picture-zoom-prev')
+      mainPrevClass = wrapper.querySelector('.swiper-picture-zoom-prev')
 
     const mainPaginationClass = wrapper.querySelector('.swiper-picture-zoom__pagination')
 
-    
+
     const thumbSwiper = new Swiper(thumbClass, {
       direction: 'vertical',
       grabCursor: true,
@@ -239,13 +287,13 @@ if (swiperPictures.length > 0) {
       spaceBetween: 12,
       freeMode: true,
       watchSlidesProgress: true,
-    
+
       navigation: {
         nextEl: thumbNextClass,
         prevEl: thumbPrevClass,
       },
     })
-    
+
     const mainSwiper = new Swiper(mainClass, {
       zoom: {
         limitToOriginalSize: true,

@@ -31,7 +31,7 @@
 			left: 0;
 			z-index: 1;
 
-			&:is(:focus-visible, :active) {
+			&:active {
 
 				~ .news__item-content {
 
@@ -108,7 +108,7 @@
 
 			&-link {
 
-				&:hover {
+				&:is(:hover, :focus-visible) {
 
 					~ .news__item-content {
 
