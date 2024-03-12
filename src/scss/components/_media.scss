@@ -1509,12 +1509,19 @@
 
 	.graph-modal {
 		--_modal-padding-x: 20px;
+		display: flex;
 
 		&__close {
 
 			&-icon {
 				--_i-size: 12px;
 			}
+		}
+
+		&__container {
+			margin: auto auto 0;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 
 		&__title {
@@ -1796,7 +1803,8 @@
 
 		&__nav {
 
-			&-btn {
+			&-btn,
+			&-btn--scroll {
 				--_font-size: 16px;
 				padding-block-end: 16px;
 			}
@@ -2388,7 +2396,8 @@
 
 			&-tabs {
 
-				.tabs__nav-btn {
+				.tabs__nav-btn,
+				.tabs__nav-btn--scroll {
 					padding-block: 16px;
 				}
 			}
@@ -2637,7 +2646,7 @@
 	}
 
 	.swiper-picture-zoom {
-		padding: var(--container-offset) var(--container-offset) 40px;
+		padding: 0 var(--container-offset);
 	}
 
 	.swiper__product {

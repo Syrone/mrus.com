@@ -296,6 +296,7 @@ if (swiperPictures.length > 0) {
 
     const mainSwiper = new Swiper(mainClass, {
       zoom: {
+        toggle: false,
         limitToOriginalSize: true,
         maxRatio: 2,
       },
@@ -317,6 +318,31 @@ if (swiperPictures.length > 0) {
       pagination: {
         el: mainPaginationClass,
       },
+
+      on: {
+        click: function() {
+          const swiper = this;
+    
+          const activeSlide = swiper.slides[swiper.activeIndex];
+    
+          const isActiveZoom = activeSlide.classList.contains('swiper-slide-zoomed');
+    
+          if (isActiveZoom) {
+            swiper.zoom.out();
+            activeSlide.classList.remove('swiper-slide-zoomed');
+          } else {
+            swiper.zoom.in();
+            activeSlide.classList.add('swiper-slide-zoomed');
+          }
+        },
+        slideChangeTransitionEnd: function() {
+          const swiper = this;
+    
+          swiper.slides.forEach((slide) => {
+            slide.classList.remove('swiper-slide-zoomed');
+          });
+        },
+      }
     })
   })
 }

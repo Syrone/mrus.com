@@ -63,6 +63,10 @@
 	&-slide {
 		display: flex;
 		flex-direction: column;
+
+		&.swiper-slide-zoomed {
+			cursor: zoom-out;
+		}
 	}
 }
 

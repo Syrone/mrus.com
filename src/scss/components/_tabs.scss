@@ -32,7 +32,8 @@
 			flex: 0;
 		}
 
-		&-btn {
+		&-btn,
+		&-btn--scroll {
 			--_font-size: 20px;
 			--_font-weight: 700;
 			--_color: #B6C0C9;
@@ -52,7 +53,8 @@
 				background-color: var(--_background-color-active);
 			}
 
-			&--active {
+			&--active,
+			&.is-active {
 				color: var(--_color-active);
 				background-color: var(--_background-color-active);
 				border-color: var(--primary-color);
