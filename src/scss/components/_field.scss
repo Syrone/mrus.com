@@ -84,6 +84,13 @@
 				color: var(--primary-color);
 				opacity: 0;
 			}
+
+			&--show {
+
+				.field__placeholder-required {
+					opacity: 1;
+				}
+			}
 		}
 
 		&:focus {

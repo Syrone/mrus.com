@@ -6,11 +6,11 @@ window.onscroll = () => {
 	if (scrollSections.length > 0) {
 		scrollSections.forEach((section) => {
 			let top = window.scrollY,
-					offset = section.offsetTop - 20,
+					offset = section.getBoundingClientRect().top + window.scrollY - 20,
 					height = section.offsetHeight,
 					id = section.getAttribute('id')
 
-			if (top >= offset && top < offset + height) {
+			if (top >= offset && top <= offset + height) {
 				if (scrollNavigations.length > 0) {
 					scrollNavigations.forEach((nav) => {
 						const scrollNavigation = document.querySelector('.nav-scroll[href*="' + id + '"]');
@@ -24,6 +24,7 @@ window.onscroll = () => {
 							nav.classList.remove('tabs__nav-btn--active');
 						}
 						nav.classList.remove('is-active')
+						
 						scrollNavigation.classList.add('is-active')
 						if (scrollNavigation.closest('.accordion-scroll')) {
 							const scrollScrollAccordion = scrollNavigation.closest('.accordion-scroll')

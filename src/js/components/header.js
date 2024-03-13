@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
   if (scrollPosition > 80) {
     header?.classList.add('header-fixed');
 
-    if (scrollPosition < prevScrollPosition) {
+    if (scrollPosition < prevScrollPosition || scrollPosition === 0) {
       header?.classList.add('header--full');
 
       if (dependentElements.length > 0) {

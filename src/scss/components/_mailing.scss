@@ -65,5 +65,12 @@
 		.custom-checkbox__field {
 			background-color: var(--background-gray);
 		}
+
+		.custom-checkbox--outline {
+
+			.custom-checkbox__field {
+				background-color: var(--background-light);
+			}
+		}
 	}
 }

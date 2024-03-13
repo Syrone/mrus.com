@@ -15,14 +15,15 @@
 
       <div class="graph-modal">
         <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-add-card">
-          <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
-            <span class="icon graph-modal__close-icon">
-              <svg>
-                <use xlink:href="img/close.svg#svg-close"></use>
-              </svg>
-            </span>
-          </button>
           <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+
             <h2 class="graph-modal__title">
               Товар добавлен в корзину!
             </h2>
@@ -535,14 +536,15 @@
         </div>
 
         <div class="graph-modal__container graph-modal--image" role="dialog" aria-modal="true" data-graph-target="modal-image-zoom">
-          <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
-            <span class="icon graph-modal__close-icon">
-              <svg>
-                <use xlink:href="img/close.svg#svg-close"></use>
-              </svg>
-            </span>
-          </button>
           <div class="graph-modal__content swiper-wrapper-picture">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+
             <div class="wrapper-slider wrapper-slider--vertical">
               <div thumbsSlider class="swiper swiper-picture-thumb">
                 <div class="swiper-wrapper">
@@ -734,25 +736,31 @@
                 </svg>
               </span>
             </button>
-            <article class="mailing">
+            <article class="mailing background-light">
               <div class="mailing__info">
                 <h2 class="mailing__info-title">
-                  Промокод на 10% скидку
+                  Подписка на изменение цены
                 </h2>
                 <p class="mailing__info-text">
-                  Подпишитесь на рассылку и узнавайте первым о новинках и новостях. Так же получите промокод с 10%
-                  скидкой на любую покупку
+                  Узнавайте о снижении цены первыми, подпишитесь и получайте уведомления на почту
                 </p>
               </div>
               <form action="#" class="mailing__form">
-                <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36"
-                  required>
-                <label class="mailing__form-checkbox custom-checkbox">
+                <div class="wrapper-field">
+                  <div class="wrapper-field__inner">
+                    <input type="email" name="email" class="mailing__form-field field" placeholder="E-mail" maxlength="36" required>
+                    <span class="field__placeholder field__placeholder--show">
+                      E-mail<span class="field__placeholder-required">*</span>
+                    </span>
+                  </div>
+                </div>
+                
+                <label class="mailing__form-checkbox custom-checkbox custom-checkbox--outline">
                   <div class="custom-checkbox__wrapper">
                     <input type="checkbox" class="custom-checkbox__field" checked required>
                     <span class="custom-checkbox__checked"></span>
                   </div>
-                  <span class="custom-checkbox__content">Я ознакомился с политикой конфиденциальности</span>
+                  <span class="custom-checkbox__content">Я даю согласие на получение информационных рассылок и согласен с условиями <a href="#" class="btn custom-checkbox__content-link">политики конфиденциальности</a></span>
                 </label>
                 <button type="submit" class="btn btn-dark btn-dark-lg mailing__form-button">
                   Подписаться
@@ -763,14 +771,15 @@
         </div>
 
         <div class="graph-modal__container graph-modal--image graph-modal--review" role="dialog" aria-modal="true" data-graph-target="modal-image-zoom--review">
-          <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
-            <span class="icon graph-modal__close-icon">
-              <svg>
-                <use xlink:href="img/close.svg#svg-close"></use>
-              </svg>
-            </span>
-          </button>
           <div class="graph-modal__content swiper-wrapper-picture">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+
             <div class="wrapper-slider wrapper-slider--vertical">
               <div thumbsSlider class="swiper swiper-picture-thumb">
                 <div class="swiper-wrapper">
@@ -950,6 +959,52 @@
 
               <div class="swiper-pagination swiper-picture-zoom__pagination"></div>
             </div>
+          </div>
+        </div>
+
+        <div class="graph-modal__container graph-modal--callback" role="dialog" aria-modal="true" data-graph-target="modal-callback">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+      
+            <h2 class="graph-modal__title">
+              Обратный звонок
+            </h2>
+
+            <form class="graph-modal__form">
+              <h3 class="graph-modal__subtitle">
+                Оператор ответит в течении 10 минут
+              </h3>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="text" class="field" name="name" placeholder="Имя" required>
+                  <span class="field__placeholder field__placeholder--show">
+                    Имя<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="tel" class="field" name="tel" placeholder="Телефон" required>
+                  <span class="field__placeholder field__placeholder--show">
+                    Телефон<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="graph-modal__buttons">
+                <button type="submit" class="btn btn-dark btn-dark-lg">
+                  Отправить
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

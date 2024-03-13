@@ -25,7 +25,25 @@
 	&__container {
 		width: 100%;
 		max-width: 1120px;
+		min-height: calc(100% - 100px);
+
+		align-items: center;
+		background-color: transparent;
+		padding: 0;
+		pointer-events: none;
+
+		&.graph-modal-open {
+			display: flex;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		background-color: var(--background-light);
+		border-radius: 16px;
 		padding: var(--_modal-padding-y) var(--_modal-padding-x);
+		pointer-events: auto;
+		position: relative;
 	}
 
 	&__title {
@@ -69,8 +87,8 @@
 	&.graph-modal__container {
 		max-width: 100%;
 		height: 100%;
+		min-height: 100%;
 		margin: 0;
-		border-radius: initial;
 	}
 
 	.graph-modal__close {
@@ -88,6 +106,7 @@
 	.graph-modal__content {
 		display: grid;
 		grid-template-columns: 220px calc(100vw - 280px);
+		border-radius: initial;
 	}
 }
 
@@ -114,13 +133,10 @@
 }
 
 .graph-modal--price {
-	--_modal-padding-y: 0;
-	--_modal-padding-x: 0;
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
 
-	min-height: calc(100vh - 100px);
-	min-height: calc(100dvh - 100px);
-	align-items: center;
-	background-color: transparent;
+	max-width: 700px;
 
 	&.graph-modal-open {
 		display: grid;
@@ -133,5 +149,133 @@
 	.graph-modal__close {
 		top: 16px;
     right: 16px;
+	}
+
+	.mailing {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		background-color: inherit;
+		padding: 0;
+
+		&__info {
+
+			&-title {
+				font-size: 22px;
+			}
+
+			&-text {
+				font-size: 14px;
+				color: var(--text-color);
+			}
+		}
+
+		&__form {
+			grid-template-columns: 1fr;
+
+			&-checkbox {
+				align-items: flex-start;
+				gap: 16px;
+				order: unset;
+			}
+
+			&-button {
+				margin-block-start: 10px;
+			}
+		}
+	}
+}
+
+.graph-modal--callback {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 22px;
+		text-align: left;
+	}
+
+	.graph-modal__subtitle {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--text-color);
+		margin-block-end: 4px;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 16px;
+	}
+
+	.graph-modal__buttons {
+		margin-block-start: 14px;
+		justify-content: flex-start;
+	}
+}
+
+.graph-modal--alert {
+	--_modal-padding-y: 30px;
+	--_modal-padding-x: 60px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 24px;
+		line-height: 1.2;
+		margin-block-end: 40px;
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--dark-color);
+	}
+
+	.graph-modal__buttons {
+		gap: 16px;
+		margin-block-start: 30px;
+
+		> * {
+			flex: 0 0 calc(50% - 8px);
+			max-width: 100%;
+		}
+	}
+}
+
+.graph-modal--payment {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__title {
+		font-size: 22px;
+		line-height: 1;
+		margin-block-end: 40px;
+		text-align: left;
+	}
+
+	.graph-modal__text {
+		font-size: 18px;
+		font-weight: 500;
+		color: var(--dark-color);
+		line-height: 1.2;
+
+		+ .graph-modal__text {
+			margin-block-start: 20px;
+		}
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		line-height: 1;
+		margin-block: 40px 30px;
+	}
+
+	.graph-modal__image {
+		display: block;
 	}
 }

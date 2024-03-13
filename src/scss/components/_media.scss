@@ -97,7 +97,7 @@
 					margin-inline: calc((var(--container-offset) * 2) * -1);
 					border-bottom: 1px solid #D7DDE3;
 					padding: 20px var(--container-offset) 0;
-					top: calc(var(--header-height) / 2.5);
+					top: calc(var(--header-height) / 2.6);
 					left: 0;
 					right: 0;
 
@@ -548,6 +548,24 @@
 			grid-template-columns: 100vw;
 		}
 	}
+
+	.header:not(.header--full) .alert--location {
+		top: auto;
+	}
+
+	.alert--location {
+		--content-width: 1340px;
+
+		position: fixed;
+		top: auto;
+		left: auto;
+		bottom: 40px;
+
+		.alert__container {
+			width: 100%;
+			padding-inline: var(--container-offset);
+		}
+	}
 	//** (End) General **//
 
 	//** (Start) Blocks **//
@@ -715,6 +733,13 @@
 					transform: initial;
 				}
 			}
+
+			&:is(:hover, :focus-visible, :active, .is-active) {
+
+				.header__dropdown-btn .icon {
+					transform: rotate(-90deg);
+				}
+			}
 		}
 
 		&__account {
@@ -829,9 +854,12 @@
 
 	.callback {
 
-		&__number,
-		&__text {
+		&__number {
 			font-size: var(--font-size);
+		}
+
+		&__btn {
+			--_font-size: var(--font-size);
 		}
 	}
 
@@ -1001,6 +1029,14 @@
 
 			.tabs__container {
 				top: var(--header-height);
+			}
+
+			.tabs__content {
+
+				.section-scroll {
+					padding-block-start: calc(var(--header-height) + 100px);
+					margin-block-start: calc((var(--header-height) + 100px) * -1);
+				}
 			}
 		}
 	}
@@ -1417,9 +1453,19 @@
 		--_font-size: 14px;
 	}
 
+	.btn-dark-lg {
+		--_font-size: 16px;
+
+		min-height: 44px;
+	}
+
 	.btn-outline {
 		--_font-size: 16px;
 		--_padding-y: 13px;
+	}
+
+	.btn-outline-secondary-lg {
+		min-height: 44px;
 	}
 
 	.btn-y-pay,
@@ -1519,7 +1565,12 @@
 		}
 
 		&__container {
+			align-items: flex-end;
 			margin: auto auto 0;
+		}
+
+		&__content {
+			margin-block-start: 40px;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 		}
@@ -1554,6 +1605,109 @@
 			top: 30px;
 			right: 30px;
 		}
+
+		.graph-modal__content {
+			margin-block-start: 0;
+		}
+	}
+
+	.graph-modal--price {
+		--_modal-padding-y: 20px;
+    --_modal-padding-x: 20px;
+
+		.graph-modal__close {
+			top: 20px;
+			right: 20px;
+
+			&-icon {
+				--_i-size: 14px;
+			}
+		}
+
+		.mailing {
+	
+			&__info {
+	
+				&-title {
+					font-size: 20px;
+					margin-block-end: 30px;
+				}
+			}
+
+			&__form {
+				gap: 20px;
+			}
+		}
+	}
+
+	.graph-modal--callback {
+		--_modal-padding-y: 20px;
+		--_modal-padding-x: 20px;
+
+		.graph-modal__close-icon {
+			--_i-size: 14px;
+		}
+
+		.graph-modal__title {
+			font-size: 20px;
+			line-height: 1;
+			margin-block: 0 30px;
+		}
+
+		.graph-modal__subtitle {
+			margin-block-end: 8px;
+		}
+
+		.graph-modal__form {
+			gap: 12px;
+		}
+
+		.graph-modal__buttons {
+			margin-block-start: 18px;
+		}
+	}
+
+	.graph-modal--alert {
+		--_modal-padding-y: 20px;
+		--_modal-padding-x: 20px;
+
+		.graph-modal__title {
+			font-size: 20px;
+			margin-block: 20px 40px;
+		}
+
+		.graph-modal__buttons {
+			gap: 12px;
+	
+			> * {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	.graph-modal--clear {
+
+		.graph-modal__buttons {
+			flex-direction: column-reverse;
+		}
+	}
+
+	.graph-modal--payment {
+		--_modal-padding-y: 20px;
+		--_modal-padding-x: 20px;
+
+		.graph-modal__title {
+			font-size: 20px;
+			margin-block-end: 30px;
+		}
+
+		.graph-modal__subtitle {
+			display: none;
+		}
+
+		.graph-modal__image {
+			margin-block-start: 30px;
+		}
 	}
 
 	.swiper-pagination {
@@ -1574,6 +1728,23 @@
 				top: 20px;
 				right: 20px;
 				transform: initial;
+			}
+		}
+	}
+
+	.alert--location {
+		bottom: 30px;
+
+		.alert__modal {
+			gap: 20px;
+			padding-inline: 16px;
+
+			&-close {
+				right: 16px;
+			}
+
+			&-title {
+				padding-inline-start: 0;
 			}
 		}
 	}
@@ -2395,6 +2566,14 @@
 			}
 
 			&-tabs {
+
+				.tabs__content {
+
+					.section-scroll {
+						padding-block-start: calc(var(--header-height) + 80px);
+						margin-block-start: calc((var(--header-height) + 80px) * -1);
+					}
+				}
 
 				.tabs__nav-btn,
 				.tabs__nav-btn--scroll {
@@ -3668,6 +3847,17 @@
 			
 			& > *:last-child {
 				grid-column: -1 / 1;
+			}
+		}
+	}
+
+	.alert--location {
+
+		.alert__modal {
+			
+			&-buttons {
+				flex-direction: column-reverse;
+				gap: 12px;
 			}
 		}
 	}

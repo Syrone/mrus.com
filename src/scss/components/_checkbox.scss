@@ -2,6 +2,24 @@
 	@include custom-checkbox
 }
 
+.custom-checkbox--outline {
+
+	.custom-checkbox__field {
+		width: 22px;
+		height: 22px;
+		border-radius: 4px;
+    border-color: #D7DDE3;
+		
+		&:invalid {
+      border-color: var(--primary-color);
+    }
+	}
+
+	.custom-checkbox__checked {
+    background-size: 12px 10px;
+	}
+}
+
 .custom-checkbox--radio {
 	gap: 16px;
 

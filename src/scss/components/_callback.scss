@@ -14,11 +14,14 @@
 		}
 	}
 
-	&__text {
-		font-size: var(--font-size-xs);
-		font-weight: 500;
-		line-height: normal;
-		color: var(--primary-color);
+	&__btn {
+		--_font-size: var(--font-size-xs);
+		--_font-weight: 500;
+		--_color: var(--primary-color);
+		--_border: 0;
+		--_border-radius: 0;
+		
+		--_color-active: var(--dark-color);
 	}
 }
 

@@ -1,6 +1,17 @@
 function showAlertModal(element) {
-	element.closest('.alert').style.display = 'block';
+	const alertContainer = element.closest('.alert');
+
+	const showAlert = element.dataset.showAlert
+
+	alertContainer.style.display = 'block';
 	element.style.display = 'flex';
+
+	if (showAlert) {
+		setTimeout(() => {
+			alertContainer.style.display = 'none';
+			element.style.display = 'none';
+		}, showAlert);
+	}
 }
 
 function closeAlertModal(element) {
@@ -11,7 +22,7 @@ function closeAlertModal(element) {
 	alertModal.style = '';
 }
 
-const closeAlertModals = document.querySelectorAll('.alert__modal-close')
+const closeAlertModals = document.querySelectorAll('.js-alert-close')
 if (closeAlertModals.length > 0) {
 	closeAlertModals.forEach((btn) => {
 		btn.addEventListener('click', () => closeAlertModal(btn));

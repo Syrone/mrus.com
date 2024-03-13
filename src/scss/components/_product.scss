@@ -450,6 +450,11 @@
 
 			.tabs__content {
 				margin-block-start: -2px;
+
+				.section-scroll {
+					padding-block-start: calc(var(--header-height) + 60px);
+					margin-block-start: calc((var(--header-height) + 60px) * -1);
+				}
 			}
 
 			.tabs__nav-btn,

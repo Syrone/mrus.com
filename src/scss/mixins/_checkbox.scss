@@ -55,5 +55,16 @@
     font-size: var(--font-size);
     font-weight: 500;
     color: var(--text-color-light);
+
+    &-link {
+      --_font-size: inherit;
+      --_font-weight: inherit;
+      --_line-height: inherit;
+      --_color: var(--primary-color);
+      --_border: 0;
+      --_border-radius: 0;
+
+      --_color-active: var(--dark-color);
+    }
   }
 }
