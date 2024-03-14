@@ -1570,9 +1570,17 @@
 		}
 
 		&__content {
+			max-height: calc(100vh - 40px);
+			max-height: calc(100dvh - 40px);
 			margin-block-start: 40px;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 
 		&__title {
@@ -1607,6 +1615,7 @@
 		}
 
 		.graph-modal__content {
+			max-height: initial;
 			margin-block-start: 0;
 		}
 	}
@@ -1710,6 +1719,59 @@
 		}
 	}
 
+	.graph-modal--review {
+		--_modal-padding-y: 20px;
+    --_modal-padding-x: 20px;
+
+		.graph-modal__close {
+			top: var(--_modal-padding-y);
+			right: var(--_modal-padding-x);
+		}
+
+		.graph-modal__header {
+
+			&-picture {
+				display: none;
+			}
+		}
+
+		.graph-modal__title {
+			font-size: 20px;
+			margin-block-start: 0;
+			padding-inline-end: 30px;
+		}
+
+		.graph-modal__subtitle {
+			font-size: 16px;
+		}
+
+		.graph-modal__rating {
+			justify-content: space-between;
+
+			&-picture {
+				display: block;
+			}
+		}
+
+		.graph-modal__form {
+
+			&-rating {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				gap: 16px;
+			}
+		}
+
+		.graph-modal__rating {
+			--_stars-gap: 12px;
+		}
+
+		.graph-modal__buttons {
+			margin-block-end: 8px;
+		}
+	}
+
 	.swiper-pagination {
 		--swiper-pagination-bullet-size: 8px;
 		--swiper-pagination-bullet-horizontal-gap: 4px;
@@ -1808,6 +1870,35 @@
 
 		&__current {
 			display: block;
+		}
+	}
+
+	.review-image {
+
+		&__list {
+			gap: 6px;
+		}
+
+		&__wrapper,
+		&__label {
+			width: 65px;
+			height: 65px;
+		}
+
+		&__wrapper {
+
+			&--label {
+				width: initial;
+				height: initial;
+				gap: 6px;
+			}
+		}
+
+		&__info {
+
+			&-title {
+				display: none;
+			}
 		}
 	}
 

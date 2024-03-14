@@ -17,4 +17,5 @@ import './components/card.js';
 import './components/about.js';
 import './components/anchor-scroll.js';
 import './components/rating.js'
+import './components/review.js'
 import './components/btn-back.js';

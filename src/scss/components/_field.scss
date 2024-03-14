@@ -164,8 +164,15 @@
 		--_padding-y: 16px;
 		--_padding-x: 20px;
 
+		display: block;
 		max-height: 360px;
 		resize: vertical;
+
+		&--input {
+			--_height: 58px;
+			
+			height: var(--_height);
+		}
 	}
 }
 

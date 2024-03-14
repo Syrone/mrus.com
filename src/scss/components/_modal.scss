@@ -77,6 +77,13 @@
 	&__interested {
 		margin-block-start: 30px;
 	}
+
+	&__agree {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1;
+		color: var(--text-color-brighter);
+	}
 	
 }
 
@@ -277,5 +284,88 @@
 
 	.graph-modal__image {
 		display: block;
+	}
+}
+
+.graph-modal--review {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__close {
+		top: 16px;
+		right: 16px;
+	}
+
+	.graph-modal__header {
+		display: flex;
+		align-items: flex-start;
+		gap: 16px;
+		margin-block-end: 30px;
+
+		&-picture {
+			width: 80px;
+			height: 80px;
+			display: block;
+			flex-shrink: 0;
+			background-color: var(--background-gray);
+			border-radius: 10px;
+			padding: 6px;
+		}
+
+		&-image {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.graph-modal__title {
+		font-size: 24px;
+		line-height: 1.2;
+		text-align: left;
+		margin-block-end: 0;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 12px;
+		
+		&-title {
+			margin-block-end: 20px;
+		}
+
+		&-rating {
+			margin-block-end: 18px;
+		}
+	}
+
+	.graph-modal__subtitle {
+		font-size: 18px;
+		line-height: 1;
+
+		&:not(.review-image__title, .graph-modal__form-title) {
+			margin-block-end: 8px;
+		}
+	}
+
+	.graph-modal__rating {
+		--_stars-size: 22px;
+		--_stars-gap: 16px;
+
+		&-picture {
+			display: none;
+		}
+	}
+
+	.graph-modal__review-image {
+		margin-block-start: 18px;
+	}
+
+	.graph-modal__buttons {
+		justify-content: flex-start;
+		margin-block-start: 18px;
 	}
 }
