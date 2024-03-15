@@ -217,6 +217,35 @@
 	}
 }
 
+.btn-link {
+	--_font-size: 14px;
+	--_font-weight: 500;
+	--_color: var(--primary-color);
+	--_border: 0;
+	--_border-radius: 0;
+	
+	--_color-active: var(--dark-color);
+}
+
+.btn-show-password {
+	--_color: var(--text-color-brighter);
+	--_border: 0;
+	--_border-radius: 0;
+	--_padding-y: 12px;
+	--_padding-x: 12px;
+
+	--_color-active: var(--dark-color);
+
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+
+	.icon {
+		--_i-size: 18px;
+	}
+}
+
 
 @media (hover: hover) {
 	

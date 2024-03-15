@@ -463,6 +463,13 @@
 		}
 	}
 
+	.account-signin {
+
+		&__form {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	.service-center {
 
 		&__info {
@@ -1232,6 +1239,20 @@
 		top: var(--header-height);
 	}
 
+	.account-signin {
+
+		&__form {
+
+			&-buttons {
+				flex-direction: column;
+			}
+
+			&-submit {
+				max-width: 100%;
+			}
+		}
+	}
+
 	.guarantee {
 
 		&__list {
@@ -1482,6 +1503,13 @@
 
 		.icon {
 			--_i-size: 10px;
+		}
+	}
+
+	.btn-show-password {
+
+		.icon {
+			--_i-size: 14px;
 		}
 	}
 
@@ -3158,6 +3186,10 @@
 		&-page {
 			margin-block-start: 0;
 
+			&--signin {
+				margin-block-start: 40px;
+			}
+
 			&__container {
 				grid-template-columns: 1fr;
 				gap: 40px;
@@ -3258,6 +3290,55 @@
 			.card__image {
 				max-width: initial;
 				height: 100px;
+			}
+		}
+	}
+
+	.account-signin {
+		padding: 20px 16px;
+
+		&__title {
+			font-size: 14px;
+			margin-block-end: 30px;
+		}
+
+		&__tabs {
+
+			.tabs__nav {
+				gap: 20px;
+
+				&-btn,
+				&-btn--scroll {
+					--_font-size: 20px;
+				}
+			}
+		}
+
+		&__form {
+
+			&-start {
+				gap: 12px;
+			}
+
+			&-end {
+				gap: 6px;
+			}
+
+			&-checkbox {
+				gap: 12px;
+	
+				.custom-checkbox__content {
+					padding-block-start: 4px;
+				}
+			}
+
+			&-buttons {
+				flex-direction: row;
+				gap: 16px;
+			}
+
+			&-submit {
+				max-width: 280px;
 			}
 		}
 	}
@@ -4191,6 +4272,20 @@
 						grid-template-columns: 1fr;
 					}
 				}
+			}
+		}
+	}
+
+	.account-signin {
+
+		&__form {
+
+			&-buttons {
+				flex-direction: column;
+			}
+
+			&-submit {
+				max-width: 100%;
 			}
 		}
 	}

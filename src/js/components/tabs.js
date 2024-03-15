@@ -39,3 +39,25 @@ const classOrderTabs = document.querySelector('[data-tabs="orderTabs"]')
 if (classOrderTabs) {
 	const productTabs = new GraphTabs('orderTabs');
 }
+
+const classAccountSignInTabs = document.querySelector('[data-tabs="accountSignin"]')
+
+if (classAccountSignInTabs) {
+	const accountSignInTabs = new GraphTabs('accountSignin');
+
+	const btnTabs = classAccountSignInTabs.querySelectorAll('.tabs__nav-btn')
+
+	if (btnTabs.length > 0) {
+		btnTabs.forEach((btn) => {
+			btn.addEventListener('click', function () {
+				btnTabs.forEach((otherBtn) => {
+					otherBtn.closest('.tabs__nav-item').classList.remove('is-active')
+				})
+
+				if (btn.classList.contains('tabs__nav-btn--active')) {
+					btn.closest('.tabs__nav-item').classList.add('is-active')
+				}
+			})
+		})
+	}
+}
