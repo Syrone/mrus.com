@@ -21,7 +21,7 @@
             <div class="account-info">
   
               <div class="account__block">
-                <form class="account-info__form order-validate">
+                <form class="account-info__form form-validate">
                   <div class="wrapper-field">
                     <h3 class="field__title">
                       Имя<span class="field__title-required">*</span>
@@ -48,7 +48,7 @@
                     <h3 class="field__title">
                       Пол<span class="field__title-required">*</span>
                     </h3>
-                    <select class="field field-select" name="gender" required>
+                    <select class="field field-select js-choices" name="gender" required>
                       <option value="">Пол</option>
                       <option value="1">М</option>
                       <option value="2">Ж</option>
@@ -81,19 +81,19 @@
                       Дата рождения<span class="field__title-required">*</span>
                     </h3>
                     <div class="wrapper-field__selects">
-                      <select class="field field-select" name="day" required>
+                      <select class="field field-select js-choices" name="day" required>
                         <option value="">дд</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="2">3</option>
                       </select>
-                      <select class="field field-select" name="month" required>
+                      <select class="field field-select js-choices" name="month" required>
                         <option value="">мм</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="2">3</option>
                       </select>
-                      <select class="field field-select" name="year" required>
+                      <select class="field field-select js-choices" name="year" required>
                         <option value="">гг</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -361,6 +361,94 @@
                 Выйти
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="graph-modal__container graph-modal--help" role="dialog" aria-modal="true" data-graph-target="modal-help">
+          <div class="graph-modal__content">
+            <button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+              <span class="icon graph-modal__close-icon">
+                <svg>
+                  <use xlink:href="img/close.svg#svg-close"></use>
+                </svg>
+              </span>
+            </button>
+      
+            <h2 class="graph-modal__title">
+              Задайте нам вопрос
+            </h2>
+      
+            <form class="graph-modal__form form-validate">
+
+              <div class="wrapper-field">
+                <select class="field field-select js-choices--outline" name="question" required>
+                  <option value="">Тема вашего вопроса?</option>
+                  <option value="1">Вопрос по заказу</option>
+                  <option value="2">Вопрос с оплатой</option>
+                  <option value="3">Вопрос возврат/обмен</option>
+                  <option value="4">Вопрос по регистрации на сайте</option>
+                  <option value="5">Другое</option>
+                </select>
+              </div>
+      
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="text" class="field" name="name" placeholder="ФИО" required>
+                  <span class="field__placeholder">
+                    ФИО<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="email" class="field" name="email" placeholder="E-mail" required>
+                  <span class="field__placeholder">
+                    E-mail<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+      
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <input type="tel" class="field" name="tel" placeholder="Телефон" required>
+                  <span class="field__placeholder">
+                    Телефон<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="wrapper-field">
+                <div class="wrapper-field__inner">
+                  <textarea class="field field-textarea" placeholder="Опишите подробнее ваш вопрос" required></textarea>
+                  <span class="field__placeholder">
+                    Опишите подробнее ваш вопрос<span class="field__placeholder-required">*</span>
+                  </span>
+                </div>
+              </div>
+
+              <label class="graph-modal__checkbox custom-checkbox custom-checkbox--outline">
+                <div class="custom-checkbox__wrapper">
+                  <input type="checkbox" class="custom-checkbox__field" checked="" required="">
+                  <span class="custom-checkbox__checked"></span>
+                </div>
+                <span class="custom-checkbox__content">Я ознакомился с <a href="#" class="btn custom-checkbox__content-link">политикой конфиденциальности</a></span>
+              </label>
+
+              <label class="graph-modal__checkbox custom-checkbox custom-checkbox--outline">
+                <div class="custom-checkbox__wrapper">
+                  <input type="checkbox" class="custom-checkbox__field" checked="" required="">
+                  <span class="custom-checkbox__checked"></span>
+                </div>
+                <span class="custom-checkbox__content">Я принимаю условия <a href="#" class="btn custom-checkbox__content-link">хранения и обработки персональных данных</a></span>
+              </label>
+      
+              <div class="graph-modal__buttons">
+                <button type="submit" class="btn btn-dark btn-dark-lg">
+                  Отправить
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

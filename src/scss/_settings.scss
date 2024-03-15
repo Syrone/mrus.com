@@ -87,6 +87,10 @@ a {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
+.required {
+  color: var(--primary-color);
+}
+
 .btn-reset {
   border: none;
   padding: 0;

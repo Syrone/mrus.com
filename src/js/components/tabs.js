@@ -1,13 +1,13 @@
 import GraphTabs from 'graph-tabs';
 
-const productTabs = document.querySelector('[data-tabs="productTabs"]'),
+const classProductTabs = document.querySelector('[data-tabs="productTabs"]'),
 			btnAllReviews = document?.getElementById('allReviews'),
 			btnAllFeature = document?.getElementById('allFeatures')
 
 const targetElements = document.querySelectorAll('[data-tabs-nav-traget]');
 
-if (productTabs) {
-	const tabs = new GraphTabs('productTabs');
+if (classProductTabs) {
+	const productTabs = new GraphTabs('productTabs');
 	
 	function handleClick(target, offset) {
 		target.click();
@@ -34,4 +34,8 @@ if (productTabs) {
 	});
 }
 
+const classOrderTabs = document.querySelector('[data-tabs="orderTabs"]')
 
+if (classOrderTabs) {
+	const productTabs = new GraphTabs('orderTabs');
+}

@@ -66,6 +66,7 @@ if (orderValidateForms.length > 0) {
 	orderValidateForms.forEach((form) => {
 		const btnSubmit = form.querySelector('button[type="submit"]');
 		const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
+		const selectChoices = form.querySelectorAll('.choices')
 
 		wrapperFields.forEach((wrapper) => {
 			const input = wrapper.querySelector('.field');
@@ -95,6 +96,18 @@ if (orderValidateForms.length > 0) {
 				}
 			});
 
+			if (selectChoices.length > 0) {
+				selectChoices.forEach((select) => {
+					const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
+					const selectedValue = select.getAttribute('data-value');
+
+					if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
+						selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
+					}
+					isValid = false;
+				})
+			}
+
 			if (isValid) {
 				form.onsubmit = function (event) {
 					event.preventDefault();
@@ -108,28 +121,28 @@ if (orderValidateForms.length > 0) {
 const radioIDSubmits = document.querySelectorAll('[data-id-submit]');
 
 function toggleIsShow() {
-  const idSubmitTarget = this.getAttribute('data-id-submit');
-  const targetElements = document.querySelectorAll('[data-id-submit-target]');
+	const idSubmitTarget = this.getAttribute('data-id-submit');
+	const targetElements = document.querySelectorAll('[data-id-submit-target]');
 
-  if (this.checked) {
-    targetElements.forEach(function(element) {
-      if (element.getAttribute('data-id-submit-target') === idSubmitTarget) {
-        element.classList.add('is-show');
-      } else {
-        element.classList.remove('is-show');
-      }
-    });
-  } else {
-    targetElements.forEach(function(element) {
-      element.classList.remove('is-show');
-    });
-  }
+	if (this.checked) {
+		targetElements.forEach(function (element) {
+			if (element.getAttribute('data-id-submit-target') === idSubmitTarget) {
+				element.classList.add('is-show');
+			} else {
+				element.classList.remove('is-show');
+			}
+		});
+	} else {
+		targetElements.forEach(function (element) {
+			element.classList.remove('is-show');
+		});
+	}
 }
 
 if (radioIDSubmits.length > 0) {
-	radioIDSubmits.forEach(function(input) {
+	radioIDSubmits.forEach(function (input) {
 		input.addEventListener('change', toggleIsShow);
-	
+
 		if (input.checked) {
 			toggleIsShow.call(input);
 		}
@@ -141,19 +154,46 @@ const formPromocode = document.querySelector('#formPromocode');
 let isSubmit = false;
 
 if (formPromocode) {
-	const formPromocodeField = formPromocode.querySelector('.field'),
+	const formPromocodeTitle = formPromocode.querySelector('.order__promocode-title'),
+		formPromocodeResult = formPromocode.querySelector('.order__promocode-result'),
+		formPromocodeField = formPromocode.querySelector('.field'),
 		iconSuccess = formPromocode.querySelector('.field-success')
+
+	const successHtml = `
+		<span>
+			Промокод успешно применен!
+		</span>
+	`
+
+	const invalidHtml = `
+		<span>
+			Срок действия промокода закончился
+		</span>
+	`
+
+	const validPromocodes = ['CODE1', 'CODE2', 'CODE3'];
 
 	formPromocode.onsubmit = function (event) {
 		event.preventDefault();
 
 		if (!(isSubmit === true)) {
-			isSubmit = true
+			const enteredPromocode = formPromocodeField.value.toUpperCase();
 
-			showAlertModal(document.querySelector('#alertSuccessPromocode'))
-			formPromocodeField.setAttribute('readonly', 'readonly');
-			formPromocodeField.setAttribute('disabled', 'disabled');
-			iconSuccess?.classList.add('is-show')
+			if (validPromocodes.includes(enteredPromocode)) {
+				isSubmit = true
+				formPromocodeField.setAttribute('readonly', 'readonly');
+				formPromocodeField.setAttribute('disabled', 'disabled');
+				iconSuccess?.classList.add('is-show')
+				formPromocodeTitle.classList.add('is-show');
+				formPromocodeResult.innerHTML = successHtml;
+				formPromocodeResult.classList.remove('is-invalid');
+				formPromocodeResult.classList.add('is-show', 'is-success');
+			} else {
+				formPromocodeTitle.classList.add('is-show');
+				formPromocodeResult.innerHTML = invalidHtml;
+				formPromocodeResult.classList.remove('is-success');
+				formPromocodeResult.classList.add('is-show', 'is-invalid');
+			}
 		}
 	}
 }

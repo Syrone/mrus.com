@@ -1772,6 +1772,41 @@
 		}
 	}
 
+	.graph-modal--help {
+		--_modal-padding-y: 20px;
+    --_modal-padding-x: 20px;
+
+		.graph-modal__close {
+			top: var(--_modal-padding-y);
+			right: var(--_modal-padding-x);
+
+			&-icon {
+				--_i-size: 14px;
+			}
+		}
+
+		.graph-modal__title {
+			font-size: 20px;
+			margin-block-start: 0;
+		}
+
+		.graph-modal__form {
+			gap: 12px;
+		}
+
+		.graph-modal__checkbox {
+			margin-block-start: 8px;
+
+			& + .graph-modal__checkbox {
+				margin-block-start: 4px;
+			}
+		}
+
+		.graph-modal__buttons {
+			margin-block-start: 18px;
+		}
+	}
+
 	.swiper-pagination {
 		--swiper-pagination-bullet-size: 8px;
 		--swiper-pagination-bullet-horizontal-gap: 4px;
@@ -3001,8 +3036,13 @@
 
 			&-method {
 				align-items: flex-start;
-				gap: 14px 12px;
+				gap: 14px;
 				padding: 14px 12px;
+
+				&-wrapper,
+				&-pictures {
+					gap: 12px;
+				}
 
 				&-buttons {
 					gap: 14px;
@@ -3106,8 +3146,7 @@
 			.field {
 
 				&-success {
-					--_i-size: 12px;
-					top: 16px;
+					--_i-size: 20px;
 					right: 12px;
 				}
 			}

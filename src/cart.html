@@ -366,11 +366,13 @@
                 Промокод
               </h4>
 
+              <div class="order__promocode-result"></div>
+
               <div class="wrapper-field__inner">
                 <input type="text" name="promocode" class="order__promocode-field field" placeholder="Введите промокод" maxlength="36" required>
                 <span class="icon field-success">
                   <svg>
-                    <use xlink:href="img/check.svg#svg-check"></use>
+                    <use xlink:href="img/check-circular.svg#svg-check-circular"></use>
                   </svg>
                 </span>
               </div>
@@ -378,23 +380,6 @@
           </aside>
         </div>
       </section>
-
-      <div class="alert">
-        <div class="alert__container container">
-          <div id="alertSuccessPromocode" class="alert__modal" data-show-alert="5000">
-            <h3 class="alert__modal-title">
-              Промокод успешно применен!
-            </h3>
-            <button type="button" class="btn alert__modal-close">
-              <span class="icon alert__modal-close-icon">
-                <svg>
-                  <use xlink:href="img/close.svg#svg-close"></use>
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
 
       <div class="graph-modal">
         <div class="graph-modal__container graph-modal--alert" role="dialog" aria-modal="true" data-graph-target="modal-benefit">

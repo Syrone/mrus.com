@@ -369,3 +369,34 @@
 		margin-block-start: 18px;
 	}
 }
+
+.graph-modal--help {
+	--_modal-padding-y: 40px;
+	--_modal-padding-x: 40px;
+
+	max-width: 700px;
+
+	.graph-modal__close {
+		top: 16px;
+		right: 16px;
+	}
+
+	.graph-modal__title {
+		font-size: 22px;
+		text-align: left;
+	}
+
+	.graph-modal__form {
+		display: grid;
+		gap: 16px;
+	}
+
+	.graph-modal__checkbox {
+		margin-block-start: 4px;
+	}
+
+	.graph-modal__buttons {
+		justify-content: flex-start;
+		margin-block-start: 14px;
+	}
+}

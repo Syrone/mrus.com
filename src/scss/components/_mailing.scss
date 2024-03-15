@@ -69,7 +69,11 @@
 		.custom-checkbox--outline {
 
 			.custom-checkbox__field {
-				background-color: var(--background-light);
+				background-color: var(--background-gray);
+
+				&:invalid {
+					background-color: var(--background-light);
+				}
 			}
 		}
 	}

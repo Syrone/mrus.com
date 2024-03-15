@@ -160,12 +160,12 @@
 	}
 
 	&-textarea {
-		--_height: 120px;
 		--_padding-y: 16px;
 		--_padding-x: 20px;
 
-		display: block;
 		max-height: 360px;
+		height: 120px;
+		display: block;
 		resize: vertical;
 
 		&--input {

@@ -1,12 +1,4 @@
-import GraphModal from 'graph-modal';
-
-const modal = new GraphModal();
-
-const modalBenefit = document.querySelector('[data-graph-target="modal-benefit"]');
-
-if (modalBenefit) {
-  modal.open("modal-benefit");
-}
+const formValidate = document.querySelectorAll('.form-validate')
 
 function showAlertModal(element) {
 	const alertContainer = element.closest('.alert');
@@ -24,10 +16,8 @@ function showAlertModal(element) {
 	}
 }
 
-const reviewValidate = document?.querySelectorAll('.review-validate')
-
-if (reviewValidate.length > 0) {
-	reviewValidate.forEach((form) => {
+if (formValidate.length > 0) {
+	formValidate.forEach((form) => {
 		const btnSubmit = form.querySelector('button[type="submit"]');
 		const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
 		const selectChoices = form.querySelectorAll('.choices')
@@ -42,22 +32,10 @@ if (reviewValidate.length > 0) {
 			});
 		});
 
-		if (selectChoices.length > 0) {
-			selectChoices.forEach((select) => {
-				const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
-				const selectedValue = select.getAttribute('data-value');
-
-				if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
-					selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
-				}
-				isValid = false;
-			})
-		}
-
 		btnSubmit.addEventListener('click', (event) => {
 			event.preventDefault();
 
-      let isValid = true;
+			let isValid = true;
 
 			wrapperFields.forEach((wrapper) => {
 				const input = wrapper.querySelector('.field');
@@ -65,19 +43,29 @@ if (reviewValidate.length > 0) {
 				if (input.hasAttribute('required') && input.value.trim() === '') {
 					input.value = '';
 					wrapper.classList.add('is-valid');
-          isValid = false;
+					showAlertModal(document.querySelector('#alertFormValid'))
+					isValid = false;
 				} else {
 					wrapper.classList.remove('is-valid');
 				}
 			});
 
+			if (selectChoices.length > 0) {
+				selectChoices.forEach((select) => {
+					const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
+					const selectedValue = select.getAttribute('data-value');
+	
+					if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
+						selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
+					}
+					isValid = false;
+				})
+			}
+
 			if (isValid) {
 				form.onsubmit = function (event) {
 					event.preventDefault();
 				};
-				
-        modal.close("modal-review");
-        showAlertModal(document.querySelector('#alertReviewThx'))
 			}
 		});
 	})

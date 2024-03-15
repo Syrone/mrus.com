@@ -18,4 +18,6 @@ import './components/about.js';
 import './components/anchor-scroll.js';
 import './components/rating.js'
 import './components/review.js'
+import './components/choices.js'
+import './components/form.js'
 import './components/btn-back.js';
