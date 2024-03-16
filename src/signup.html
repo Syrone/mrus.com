@@ -23,47 +23,40 @@
             </h3>
 
             <ul class="account-signin__nav list-reset">
-              <li class="account-signin__nav-item">
-                <a href="./signup.html" class="btn account-signin__nav-btn">
+              <li class="account-signin__nav-item is-active">
+                <a href="./signup.html" class="btn account-signin__nav-btn account-signin__nav-btn--active">
                   Регистрация
                 </a>
               </li>
-              <li class="account-signin__nav-item is-active">
-                <a href="./signin.html" class="btn account-signin__nav-btn account-signin__nav-btn--active">
+              <li class="account-signin__nav-item">
+                <a href="./signin.html" class="btn account-signin__nav-btn">
                   Вход
                 </a>
               </li>
             </ul>
-            <form action="./signin-code.html" class="account-signin__form form-validate js-signin-phone is-show">
+            <form class="account-signin__form form-validate">
               <div class="account-signin__form-start">
                 <div class="wrapper-field">
                   <div class="wrapper-field__inner">
-                    <input type="tel" class="field" name="email" placeholder="Телефон" required>
+                    <input type="text" class="field" name="name" placeholder="Имя" required>
                     <span class="field__placeholder">
-                      Телефон<span class="field__placeholder-required">*</span>
+                      Имя<span class="field__placeholder-required">*</span>
                     </span>
                   </div>
                 </div>
-              </div>
-
-              <div class="account-signin__form-buttons">
-                <button type="submit" class="btn btn-dark btn-dark-lg account-signin__form-submit">
-                  Получить код
-                </button>
-
-                <button type="button" class="btn account-signin__form-btn js-signin-btn-email">
-                  Войти по почте
-                </button>
-              </div>
-            </form>
-
-            <form action="./account.html" class="account-signin__form form-validate js-signin-email">
-              <div class="account-signin__form-start">
                 <div class="wrapper-field">
                   <div class="wrapper-field__inner">
                     <input type="email" class="field" name="email" placeholder="E-mail" required>
                     <span class="field__placeholder">
                       E-mail<span class="field__placeholder-required">*</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="wrapper-field">
+                  <div class="wrapper-field__inner">
+                    <input type="tel" class="field" name="email" placeholder="Телефон" required>
+                    <span class="field__placeholder">
+                      Телефон<span class="field__placeholder-required">*</span>
                     </span>
                   </div>
                 </div>
@@ -82,20 +75,35 @@
                     </button>
                   </div>
                 </div>
-                <div class="wrapper-buttons">
-                  <a href="./signin-password.html" class="btn btn-link">
-                    Забыли пароль?
-                  </a>
-                </div>
+              </div>
+
+              <div class="account-signin__form-end">
+                <label class="account-signin__form-checkbox custom-checkbox custom-checkbox--outline">
+                  <div class="custom-checkbox__wrapper">
+                    <input type="checkbox" class="custom-checkbox__field" checked="" required="">
+                    <span class="custom-checkbox__checked"></span>
+                  </div>
+                  <span class="custom-checkbox__content">Я ознакомился с <a href="#" class="btn custom-checkbox__content-link">политикой конфиденциальности</a></span>
+                </label>
+                <label class="account-signin__form-checkbox custom-checkbox custom-checkbox--outline">
+                  <div class="custom-checkbox__wrapper">
+                    <input type="checkbox" class="custom-checkbox__field" checked="" required="">
+                    <span class="custom-checkbox__checked"></span>
+                  </div>
+                  <span class="custom-checkbox__content">Я принимаю условия <a href="#" class="btn custom-checkbox__content-link">хранения и обработки персональных данных</a></span>
+                </label>
+                <label class="account-signin__form-checkbox custom-checkbox custom-checkbox--outline">
+                  <div class="custom-checkbox__wrapper">
+                    <input type="checkbox" class="custom-checkbox__field">
+                    <span class="custom-checkbox__checked"></span>
+                  </div>
+                  <span class="custom-checkbox__content">Я согласен с получение информации о персональных скидках и акциях</span>
+                </label>
               </div>
 
               <div class="account-signin__form-buttons">
                 <button type="submit" class="btn btn-dark btn-dark-lg account-signin__form-submit">
-                  Получить код
-                </button>
-
-                <button type="button" class="btn account-signin__form-btn js-signin-btn-phone">
-                  Войти по номеру телефона
+                  Зарегистрироваться
                 </button>
               </div>
             </form>

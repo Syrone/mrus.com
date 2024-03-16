@@ -241,12 +241,12 @@
     <div class="header__bottom">
       <nav data-da="#headerMenuMain,1024,first" class="header__nav">
         <ul class="header__bottom-menu list-reset">
-          <li>
+          <li class="header__bottom-menu-item">
             <a href="./catalog.html" class="btn header__bottom-menu-link">
               Каталог
             </a>
           </li>
-          <li class="header__dropdown">
+          <li class="header__bottom-menu-item header__dropdown">
             <button class="btn header__dropdown-btn">
               Покупателям
               <span class="icon">
@@ -319,7 +319,7 @@
               </div>
             </div>
           </li>
-          <li class="header__dropdown">
+          <li class="header__bottom-menu-item header__dropdown">
             <button class="btn header__dropdown-btn">
               Бренды
               <span class="icon">
@@ -387,19 +387,27 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="header__bottom-menu-item">
             <a href="./about.html" class="btn header__bottom-menu-link">
               О нас
             </a>
           </li>
-          <li>
+          <li class="header__bottom-menu-item">
             <a href="./contacts.html" class="btn header__bottom-menu-link">
               Контакты
             </a>
           </li>
-          <li>
+          <li class="header__bottom-menu-item">
             <a href="./news.html" class="btn header__bottom-menu-link">
               Новости
+            </a>
+          </li>
+          <li class="header__bottom-menu-item header__bottom-menu-item--table">
+            <a href="./favorite.html" class="btn header__bottom-menu-link">
+              Избранное
+              <span class="account__current header__bottom-menu-link--current">
+                22
+              </span>
             </a>
           </li>
         </ul>
@@ -627,6 +635,13 @@
           </span>
         </a>
       </div>
+      <ul class="header__menu-signin list-reset">
+        <li class="header__menu-signin-item">
+          <a href="./signin.html" class="btn header__menu-signin-link">
+            Войти
+          </a>
+        </li>
+      </ul>
       <div id="headerMenuMain" class="header__menu-main"></div>
       <div class="header__menu-location">
         <button type="button" class="btn js-location location">

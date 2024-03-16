@@ -614,8 +614,12 @@
 				align-items: flex-start;
 				gap: 20px;
 
-				li {
+				&-item {
 					width: 100%;
+	
+					&--table {
+						display: block;
+					}
 				}
 
 				&-link {
@@ -623,6 +627,10 @@
 
 					width: 100%;
 					justify-content: space-between;
+
+					&--current {
+						position: static;
+					}
 				}
 			}
 		}
@@ -646,6 +654,7 @@
 			z-index: 20;
 
 			&-header,
+			&-signin,
 			&-main,
 			&-location,
 			&-footer {
@@ -673,6 +682,29 @@
 					line-height: 1;
 					color: var(--dark-color);
 					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+
+			&-signin {
+				display: grid;
+				gap: 20px;
+
+				&-item {
+					width: 100%;
+				}
+
+				&-link {
+					--_font-size: var(--font-size-xs);
+					--_font-weight: 700;
+					--_color: var(--dark-color);
+					--_border: 0;
+					--_border-radius: initial;
+					--_padding-y: 8px;
+					--_padding-y: 0;
+					
+					width: 100%;
+					justify-content: space-between;
 					text-transform: uppercase;
 				}
 			}
@@ -3297,31 +3329,40 @@
 	.account-signin {
 		padding: 20px 16px;
 
-		&__title {
-			font-size: 14px;
+		&__back,
+		&__subtitle {
 			margin-block-end: 30px;
 		}
 
-		&__tabs {
+		&__title {
+			font-size: 20px;
+		}
 
-			.tabs__nav {
-				gap: 20px;
+		&__subtitle {
+			font-size: 14px;
+		}
 
-				&-btn,
-				&-btn--scroll {
-					--_font-size: 20px;
-				}
+		&__nav {
+			gap: 20px;
+
+			&-btn {
+				--_font-size: 20px;
 			}
 		}
 
 		&__form {
 
+			&-full,
 			&-start {
 				gap: 12px;
 			}
 
 			&-end {
 				gap: 6px;
+			}
+
+			&-text {
+				margin-block-start: 18px;
 			}
 
 			&-checkbox {
@@ -3340,6 +3381,13 @@
 			&-submit {
 				max-width: 280px;
 			}
+		}
+	}
+
+	.repeat-code {
+
+		&__text {
+			padding: 14px 20px;
 		}
 	}
 

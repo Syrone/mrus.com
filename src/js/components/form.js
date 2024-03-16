@@ -105,20 +105,69 @@ if (passwordFields.length > 0) {
 
 const formSigninPhone = document.querySelector('.js-signin-phone'),
 	formSigninEmail = document.querySelector('.js-signin-email'),
-	btnSigninPhone = document.querySelector('.js-signin-btn-phone'),
-	btnSigninEmail = document.querySelector('.js-signin-btn-email')
+	btnSigninPhone = document.querySelectorAll('.js-signin-btn-phone'),
+	btnSigninEmail = document.querySelectorAll('.js-signin-btn-email')
 
-if (formSigninPhone && formSigninEmail && btnSigninPhone && btnSigninEmail) {
-	function signinPhone() {
-		formSigninEmail.classList.remove('is-show')
-		formSigninPhone.classList.add('is-show')
-	}
+const lastActiveSignin = localStorage.getItem('lastActiveSignin');
 
-	function signinEmail() {
-		formSigninPhone.classList.remove('is-show')
-		formSigninEmail.classList.add('is-show')
-	}
+function signinPhone() {
+	formSigninEmail?.classList.remove('is-show')
+	formSigninPhone?.classList.add('is-show')
 
-	btnSigninPhone.addEventListener('click', signinPhone)
-	btnSigninEmail.addEventListener('click', signinEmail)
+	localStorage.setItem('lastActiveSignin', 'signinPhone');
 }
+
+function signinEmail() {
+	formSigninPhone?.classList.remove('is-show')
+	formSigninEmail?.classList.add('is-show')
+
+	localStorage.setItem('lastActiveSignin', 'signinEmail');
+}
+
+if (lastActiveSignin === 'signinPhone') {
+	signinPhone();
+} else if (lastActiveSignin === 'signinEmail') {
+	signinEmail();
+}
+
+btnSigninPhone?.forEach((btn) => { btn.addEventListener('click', signinPhone) })
+btnSigninEmail?.forEach((btn) => { btn.addEventListener('click', signinEmail) })
+
+const repeatCodes = document.querySelectorAll('.js-repeat-code');
+
+repeatCodes?.forEach((wrapper) => {
+	const text = wrapper.querySelector('.js-repeat-code-text');
+	const btn = wrapper.querySelector('.js-repeat-code-btn');
+	const timer = wrapper.querySelector('.js-repeat-code-timer');
+
+	let timeLeft = 0.15 * 60;
+	let interval;
+
+	function updateTimer() {
+		const minutes = Math.floor(timeLeft / 60);
+		const seconds = timeLeft % 60;
+
+		timer.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+		if (timeLeft === 0) {
+			clearInterval(interval);
+			text.classList.remove('is-show');
+			btn.classList.add('is-show');
+		} else {
+			timeLeft--;
+		}
+	}
+
+	updateTimer();
+
+	interval = setInterval(updateTimer, 1000);
+
+	btn.addEventListener('click', () => {
+		clearInterval(interval);
+		timeLeft = 0.15 * 60;
+		updateTimer();
+		interval = setInterval(updateTimer, 1000);
+		btn.classList.remove('is-show');
+		text.classList.add('is-show');
+	});
+});

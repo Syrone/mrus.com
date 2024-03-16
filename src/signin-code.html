@@ -18,85 +18,57 @@
           </div>
 
           <div class="account-signin">
-            <h3 class="account-signin__subtitle">
-              Зарегистрируйтесь или авторизуйтесь.
+            <button type="button" class="btn btn-back account-signin__back">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/arrow-down-left.svg#svg-arrow-down-left"></use>
+                </svg>
+              </span>
+              Вернуться Назад
+            </button>
+
+            <h3 class="account-signin__title">
+              Введите код
             </h3>
 
-            <ul class="account-signin__nav list-reset">
-              <li class="account-signin__nav-item">
-                <a href="./signup.html" class="btn account-signin__nav-btn">
-                  Регистрация
-                </a>
-              </li>
-              <li class="account-signin__nav-item is-active">
-                <a href="./signin.html" class="btn account-signin__nav-btn account-signin__nav-btn--active">
-                  Вход
-                </a>
-              </li>
-            </ul>
-            <form action="./signin-code.html" class="account-signin__form form-validate js-signin-phone is-show">
+            <p class="account-signin__text">
+              На номер телефона <span class="text-primary">+79002224455</span> выслан код подтверждения. Введите его в поле ниже для завершения авторизации.
+            </p>
+
+            <form action="./account.html" class="account-signin__form form-validate">
               <div class="account-signin__form-start">
                 <div class="wrapper-field">
                   <div class="wrapper-field__inner">
-                    <input type="tel" class="field" name="email" placeholder="Телефон" required>
+                    <input type="text" class="field" name="code" placeholder="Введите код" required>
                     <span class="field__placeholder">
-                      Телефон<span class="field__placeholder-required">*</span>
+                      Введите код<span class="field__placeholder-required">*</span>
                     </span>
                   </div>
                 </div>
               </div>
 
+              <div class="repeat-code js-repeat-code">
+                <p class="repeat-code__text js-repeat-code-text is-show">
+                  Отправить код повторно можно будет через <span class="js-repeat-code-timer"></span>
+                </p>
+                <button type="button" class="btn repeat-code__btn js-repeat-code-btn">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/repeat.svg#svg-repeat"></use>
+                    </svg>
+                  </span>
+                  Отправить код повторно
+                </button>
+              </div>
+
               <div class="account-signin__form-buttons">
                 <button type="submit" class="btn btn-dark btn-dark-lg account-signin__form-submit">
-                  Получить код
+                  Подтвердить
                 </button>
 
-                <button type="button" class="btn account-signin__form-btn js-signin-btn-email">
+                <a href="./signin.html" class="btn account-signin__form-btn js-signin-btn-email">
                   Войти по почте
-                </button>
-              </div>
-            </form>
-
-            <form action="./account.html" class="account-signin__form form-validate js-signin-email">
-              <div class="account-signin__form-start">
-                <div class="wrapper-field">
-                  <div class="wrapper-field__inner">
-                    <input type="email" class="field" name="email" placeholder="E-mail" required>
-                    <span class="field__placeholder">
-                      E-mail<span class="field__placeholder-required">*</span>
-                    </span>
-                  </div>
-                </div>
-                <div class="wrapper-field wrapper-field--password">
-                  <div class="wrapper-field__inner">
-                    <input type="password" class="field" name="email" placeholder="Пароль" required>
-                    <span class="field__placeholder">
-                      Пароль<span class="field__placeholder-required">*</span>
-                    </span>
-                    <button type="button" class="btn btn-show-password js-show-password">
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="img/hide.svg#svg-hide"></use>
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="wrapper-buttons">
-                  <a href="./signin-password.html" class="btn btn-link">
-                    Забыли пароль?
-                  </a>
-                </div>
-              </div>
-
-              <div class="account-signin__form-buttons">
-                <button type="submit" class="btn btn-dark btn-dark-lg account-signin__form-submit">
-                  Получить код
-                </button>
-
-                <button type="button" class="btn account-signin__form-btn js-signin-btn-phone">
-                  Войти по номеру телефона
-                </button>
+                </a>
               </div>
             </form>
           </div>

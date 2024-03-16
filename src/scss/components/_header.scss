@@ -77,6 +77,14 @@
 			align-items: center;
 			gap: 60px;
 
+			&-item {
+				flex-shrink: 0;
+	
+				&--table {
+					display: none;
+				}
+			}
+
 			&-link {
 				--_font-size: var(--font-size-xs);
 				--_font-weight: 700;
@@ -186,6 +194,7 @@
 		display: none;
 
 		&-header,
+		&-signin,
 		&-location,
 		&-footer {
 			display: none;
