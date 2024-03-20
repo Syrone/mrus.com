@@ -29,11 +29,7 @@ new Swiper('.swiper__card', {
   slidesPerView: 4,
   spaceBetween: 16,
 
-  // loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  loop: true,
 
   navigation: {
     nextEl: '.swiper__card-next',
@@ -66,10 +62,6 @@ new Swiper('.swiper__interested', {
   spaceBetween: 16,
 
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
 
   navigation: {
     nextEl: '.swiper__interested-next',
@@ -98,10 +90,6 @@ new Swiper('.swiper__tech', {
   spaceBetween: 16,
 
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
 
   navigation: {
     nextEl: '.swiper__tech-next',
@@ -145,11 +133,15 @@ if (classCardImage.length > 0) {
     classCardImage.forEach((swiper) => {
       const swiperPagination = swiper.querySelector('.swiper__card-image-pagination');
 
+      let isTouchScreen = window.matchMedia('(hover: none)').matches;
+
       const swiperCardImage = new Swiper(swiper, {
         nested: true,
         grabCursor: true,
         slidesPerView: 1,
         spaceBetween: 16,
+
+        loop: isTouchScreen,
     
         pagination: {
           el: swiperPagination,

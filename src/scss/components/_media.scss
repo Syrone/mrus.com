@@ -1657,9 +1657,9 @@
 		}
 
 		&__content {
-			max-height: calc(100vh - 40px);
-			max-height: calc(100dvh - 40px);
-			margin-block-start: 40px;
+			max-height: calc(100vh - (var(--dynamic-header-height, 65px) + 20px));
+			max-height: calc(100dvh - (var(--dynamic-header-height, 65px) + 20px));
+			margin-block-start: calc(var(--dynamic-header-height, 65px) + 20px);
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 			overflow-x: hidden;
