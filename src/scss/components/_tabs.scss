@@ -49,8 +49,8 @@
 			outline: none;
 
 			&:focus {
-				color: var(--_color-active);
-				background-color: var(--_background-color-active);
+				color: var(--_color);
+				background-color: var(--_background-color);
 			}
 
 			&--active,
@@ -77,6 +77,14 @@
 			overflow: visible;
 			opacity: 1;
 		}
+
+		&:not(.tabs__panel--active) {
+
+			.section-scroll {
+				height: 0px !important;
+				padding: 0 !important;
+			}
+		}
 	}
 }
 
@@ -89,7 +97,7 @@
 			&-btn {
 				transition: border var(--_transition-duration) var(--_transition-type), color var(--transition-duration) var(--transition-type);
 
-				&:is(:hover, :focus, :active) {
+				&:is(:hover, :focus-visible, :active) {
 					color: var(--_color-active);
 					background-color: var(--_background-color-active);
 				}

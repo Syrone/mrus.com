@@ -85,7 +85,6 @@
 
 			&-aside {
 				display: contents;
-				margin-block-start: -20px;
 				position: static;
 
 				&-list {
@@ -641,7 +640,7 @@
 
 		&__menu {
 			width: 100%;
-			max-width: 390px;
+			max-width: 100%;
 			height: 100%;
 			display: flex;
 			flex-direction: column;
@@ -706,6 +705,12 @@
 					width: 100%;
 					justify-content: space-between;
 					text-transform: uppercase;
+
+					.icon {
+						--_i-color: var(--text-color-brighter);
+
+						transition: color var(--_transition-duration) var(--_transition-type);
+					}
 				}
 			}
 
@@ -735,7 +740,7 @@
 			&-menu {
 				width: 100%;
 				height: 100%;
-				max-width: 390px;
+				max-width: 100%;
 				min-width: initial;
 
 				display: flex;
@@ -826,7 +831,7 @@
 
 	.location__dropdown {
 		width: 100%;
-		max-width: 390px;
+		max-width: 100%;
 		height: 100%;
 		display: flex;
 		border: 0;
@@ -1070,12 +1075,9 @@
 				top: var(--header-height);
 			}
 
-			.tabs__content {
-
-				.section-scroll {
-					padding-block-start: calc(var(--header-height) + 100px);
-					margin-block-start: calc((var(--header-height) + 100px) * -1);
-				}
+			.tabs__nav-btn,
+			.tabs__nav-btn--scroll {
+				padding-block: 16px;
 			}
 		}
 	}
@@ -1388,6 +1390,26 @@
 
 }
 
+@media (max-width: 1024px) and (hover: hover) {
+
+	.header {
+
+		&__menu {
+
+			&-signin {
+
+				&-link:is(:hover, :focus-visible, :active) {
+
+					.icon {
+						--_i-color: var(--primary-color);
+					}
+				}
+			}
+		}
+	}
+
+}
+
 @media screen and (max-width: 768px) {
 
 	//** (Start) General **//
@@ -1517,6 +1539,11 @@
 		--_padding-y: 13px;
 	}
 
+	.btn-outline-primary {
+		--_padding-x: 8px;
+	}
+
+	.btn-outline-primary-lg,
 	.btn-outline-secondary-lg {
 		min-height: 44px;
 	}
@@ -2060,7 +2087,7 @@
 		
 				.btn--add,
 				.btn--goto {
-					width: calc(100% - 70px);
+					width: calc(100% - 48px);
 					order: 1;
 				}
 	
@@ -2484,11 +2511,8 @@
 
 		&__content {
 
-			&-inner {
-				
-				& + & {
-					margin-block-start: 20px;
-				}
+			&-inner:not(:last-child) {
+				padding-block-end: 20px;
 			}
 
 			&-header {
@@ -2701,11 +2725,13 @@
 				}
 			}
 
+			&-buttons {
+				margin-block-end: 10px;
+			}
+
 			&-btn {
 				--_font-size: 16px;
 				--_padding-y: 13px;
-
-				margin-block-end: 10px;
 			}
 
 			&-cashback {
@@ -2749,22 +2775,6 @@
 
 			&-text {
 				font-size: 16px;
-			}
-
-			&-tabs {
-
-				.tabs__content {
-
-					.section-scroll {
-						padding-block-start: calc(var(--header-height) + 80px);
-						margin-block-start: calc((var(--header-height) + 80px) * -1);
-					}
-				}
-
-				.tabs__nav-btn,
-				.tabs__nav-btn--scroll {
-					padding-block: 16px;
-				}
 			}
 		}
 

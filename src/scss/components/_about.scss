@@ -112,8 +112,6 @@
 
 		&-item {
 			display: block;
-			padding-block-start: calc(var(--header-height) / 2 + 140px);
-			margin-block-start: calc(((var(--header-height) + 280px) * -1) / 2);
 
 			&:nth-child(2n) {
 

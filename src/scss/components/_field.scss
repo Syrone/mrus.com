@@ -171,7 +171,15 @@
 		&--input {
 			--_height: 58px;
 			
+			max-height: 120px;
 			height: var(--_height);
+			min-height: var(--_height);
+			resize: none;
+			transition: min-height calc(var(--transition-duration) * 2) var(--transition-type);
+
+			&:focus {
+				--_height: 120px;
+			}
 		}
 	}
 }

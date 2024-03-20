@@ -371,9 +371,31 @@
 						</span>
 						Доставим 18 февраля
 					</div>
-					<button type="button" class="btn btn-dark btn-dark-lg product__detail-btn" data-graph-path="modal-add-card">
-						Добавить в корзину
-					</button>
+					<div class="product__detail-buttons" data-add-card="false">
+						<button type="button" class="btn btn-dark btn-dark-lg product__detail-btn btn--add" data-graph-path="modal-add-card">
+							Добавить в корзину
+						</button>
+						<a href="#" class="btn btn-outline-primary btn--goto">
+							Перейти в корзину
+						</a>
+						<div class="counter">
+							<button class="btn counter__minus">
+								<span class="icon counter__icon">
+									<svg>
+										<use xlink:href="img/minus.svg#svg-minus"></use>
+									</svg>
+								</span>
+							</button>
+							<input type="text" name="counter" class="counter__input" inputmode="numeric" value="1">
+							<button class="btn counter__plus">
+								<span class="icon counter__icon">
+									<svg>
+										<use xlink:href="img/plus.svg#svg-plus"></use>
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
 					<div class="product__detail-cashback">
 						<a href="#" class="card__split btn">
 							<span class="card__split-badge">
@@ -449,37 +471,37 @@
 	<div class="product__bottom">
 		<div class="tabs product__bottom-tabs" data-tabs="productTabs">
 			<div class="tabs__container dependent-element">
-				<ul class="list-reset tabs__nav">
-					<li class="tabs__nav-item">
-						<a href="#productTabModel" class="btn nav-scroll tabs__nav-btn">
+				<ul class="list-reset tabs__nav scroll-element" data-element-gap="20">
+					<li class="tabs__nav-item scroll-element-nav">
+						<button type="button" class="btn tabs__nav-btn nav-scroll" data-href="productTabModel">
 							Подробнее о модели
-						</a>
+						</button>
 					</li>
-					<li class="tabs__nav-item">
-						<a href="#productTabCharacteristics" data-tabs-nav-traget="allFeatures" class="btn nav-scroll tabs__nav-btn">
+					<li class="tabs__nav-item scroll-element-nav">
+						<button type="button" data-tabs-nav-traget="allFeatures" class="btn tabs__nav-btn nav-scroll" data-href="productTabCharacteristics">
 							Характеристики
-						</a>
+						</button>
 					</li>
-					<li class="tabs__nav-item">
-						<a href="#productArticles" class="btn nav-scroll tabs__nav-btn--scroll">
+					<li class="tabs__nav-item scroll-element-nav">
+						<button type="button" class="btn tabs__nav-btn--scroll nav-scroll" data-href="productArticles">
 							Статьи
-						</a>
+						</button>
 					</li>
-					<li class="tabs__nav-item">
-						<a href="#allReviews" class="btn nav-scroll tabs__nav-btn--scroll">
+					<li class="tabs__nav-item scroll-element-nav">
+						<button type="button" class="btn tabs__nav-btn--scroll nav-scroll" data-href="allReviews">
 							Отзывы (10)
-						</a>
+						</button>
 					</li>
-					<li class="tabs__nav-item">
-						<a href="#productIntereseting" class="btn nav-scroll tabs__nav-btn--scroll">
+					<li class="tabs__nav-item scroll-element-nav">
+						<button type="button" class="btn tabs__nav-btn--scroll nav-scroll" data-href="productIntereseting">
 							Рекомендуемые товары
-						</a>
+						</button>
 					</li>
 				</ul>
 			</div>
 			<div class="tabs__content">
 				<div class="tabs__panel">
-					<div id="productTabModel" class="section-scroll">
+					<div id="productTabModel" class="section-scroll" data-scroll-gap="50,80">
 						<div class="product-model">
 							<style>
 								.product-model {
@@ -649,7 +671,7 @@
 					</div>
 				</div>
 				<div class="tabs__panel">
-					<div id="productTabCharacteristics" class="section-scroll">
+					<div id="productTabCharacteristics" class="section-scroll" data-scroll-gap="50,80">
 						<div class="product-accordion__container">
 							<details class="product-accordion accordion" open>
 								<summary class="accordion__title">
@@ -912,7 +934,7 @@
 				</div>
 				
 				<div class="product-articles__container">
-					<div id="productArticles" class="section-scroll">
+					<div id="productArticles" class="section-scroll" data-scroll-gap="80,120">
 						<div class="container">
 							<div class="product-articles">
 								<h3 class="product__bottom-title">
@@ -1005,7 +1027,7 @@
 				</div>
 	
 				<div class="product-reviews__container">
-					<div id="allReviews" class="section-scroll">
+					<div id="allReviews" class="section-scroll" data-scroll-gap="80,120">
 						<div class="container">
 							<div class="product-reviews__header">
 								<h3 class="product__bottom-title product-reviews__title">
@@ -1408,7 +1430,7 @@
 				</div>
 	
 				<div class="product-interesting__container">
-					<div id="productIntereseting" class="section-scroll">
+					<div id="productIntereseting" class="section-scroll" data-scroll-gap="80,120">
 						<div class="container">
 							<h3 class="product__bottom-title">
 								Вас могут заинтересовать

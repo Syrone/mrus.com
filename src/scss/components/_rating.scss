@@ -86,7 +86,8 @@
 				}
 			}
 
-			&.is-active {
+			&.is-active,
+			&.is-hover {
 
 				~ .rating__stars-label::before,
 				&::before {

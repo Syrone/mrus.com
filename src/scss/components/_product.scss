@@ -343,9 +343,15 @@
 			}
 		}
 
+		&-buttons {
+			width: 100%;
+			display: flex;
+			gap: 8px;
+			margin-block-end: 30px;
+		}
+
 		&-btn {
 			width: 100%;
-			margin-block-end: 30px;
 		}
 
 		&-cashback {
@@ -450,11 +456,6 @@
 
 			.tabs__content {
 				margin-block-start: -2px;
-
-				.section-scroll {
-					padding-block-start: calc(var(--header-height) + 60px);
-					margin-block-start: calc((var(--header-height) + 60px) * -1);
-				}
 			}
 
 			.tabs__nav-btn,

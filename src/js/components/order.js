@@ -152,6 +152,7 @@ if (radioIDSubmits.length > 0) {
 const formPromocode = document.querySelector('#formPromocode');
 
 let isSubmit = false;
+let isFieldFocused = false;
 
 if (formPromocode) {
 	const formPromocodeTitle = formPromocode.querySelector('.order__promocode-title'),
@@ -173,9 +174,7 @@ if (formPromocode) {
 
 	const validPromocodes = ['CODE1', 'CODE2', 'CODE3'];
 
-	formPromocode.onsubmit = function (event) {
-		event.preventDefault();
-
+	function checkPromocode() {
 		if (!(isSubmit === true)) {
 			const enteredPromocode = formPromocodeField.value.toUpperCase();
 
@@ -195,5 +194,15 @@ if (formPromocode) {
 				formPromocodeResult.classList.add('is-show', 'is-invalid');
 			}
 		}
+	}
+
+	formPromocodeField.addEventListener('blur', function () {
+		checkPromocode()
+	});
+
+	formPromocode.onsubmit = function (event) {
+		event.preventDefault();
+
+		checkPromocode()
 	}
 }

@@ -7,8 +7,16 @@ if (rating.length > 0) {
 		if (labels.length > 0) {
 			labels.forEach((label) => {
 				const input = label.querySelector('.rating__stars-input');
-			
-				label.addEventListener('click', function() {
+
+				label.addEventListener('mouseenter', function () {
+					label.classList.add('is-hover');
+				});
+
+				label.addEventListener('mouseleave', function () {
+					label.classList.remove('is-hover');
+				});
+
+				label.addEventListener('click', function () {
 					labels.forEach((otherLabel) => {
 						if (otherLabel !== label) {
 							otherLabel.classList.remove('is-active');

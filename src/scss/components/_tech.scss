@@ -32,16 +32,6 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-
-		&:active {
-
-			~ .tech__detail {
-
-				.tech__detail-btn {
-					--_color: var(--primary-color);
-				}
-			}
-		}
 	}
 
 	&__detail {

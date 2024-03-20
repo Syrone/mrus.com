@@ -1,31 +1,39 @@
 import { getHeaderHeight } from '../functions/header-height';
 
 const header = document?.querySelector('.header');
+const headerBottom = document?.querySelector('.header__bottom');
 const dependentElements = document.querySelectorAll('.dependent-element')
 let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+let dynamicHeaderHeight = header.offsetHeight
+
+document.documentElement.style.setProperty('--dynamic-header-height', `${dynamicHeaderHeight}px`);
 
 window.addEventListener('scroll', function() {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
   if (scrollPosition > 80) {
+    let dynamicHeaderHeight = window.innerWidth >= 1024 ? headerBottom.offsetHeight : header.offsetHeight;
+
+    document.documentElement.style.setProperty('--dynamic-header-height', `${dynamicHeaderHeight}px`);
+
     header?.classList.add('header-fixed');
 
     if (scrollPosition < prevScrollPosition || scrollPosition === 0) {
+      let dynamicHeaderHeight = header.offsetHeight;
+      
+      document.documentElement.style.setProperty('--dynamic-header-height', `${dynamicHeaderHeight}px`);
+      
       header?.classList.add('header--full');
 
-      if (dependentElements.length > 0) {
-        dependentElements.forEach((item) => {
-          item.classList.add('dependent-element--full')
-        })
-      }
+      dependentElements?.forEach((item) => {
+        item.classList.add('dependent-element--full')
+      })
     } else {
       header?.classList.remove('header--full');
 
-      if (dependentElements.length > 0) {
-        dependentElements.forEach((item) => {
-          item.classList.remove('dependent-element--full')
-        })
-      }
+      dependentElements?.forEach((item) => {
+        item.classList.remove('dependent-element--full')
+      })
     }
   
     prevScrollPosition = scrollPosition;
@@ -35,6 +43,7 @@ window.addEventListener('scroll', function() {
   } else {
     header?.classList.remove('header-fixed');
 		document.documentElement.style.setProperty('--header-height', '0');
+    document.documentElement.style.setProperty('--dynamic-header-height', `${dynamicHeaderHeight}px`);
 		window.addEventListener('resize', function() {
 			document.documentElement.style.setProperty('--header-height', '0');
 		});

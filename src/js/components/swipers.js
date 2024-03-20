@@ -2,10 +2,10 @@ import Swiper, { Navigation, Pagination, Thumbs, Autoplay, Zoom } from 'swiper';
 Swiper.use([Navigation, Pagination, Thumbs, Autoplay, Zoom]);
 new Swiper('.swiper__hero', {
   grabCursor: true,
-  loop: true,
   slidesPerView: 1,
   spaceBetween: 16,
-
+  
+  loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -28,6 +28,12 @@ new Swiper('.swiper__card', {
   grabCursor: true,
   slidesPerView: 4,
   spaceBetween: 16,
+
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
 
   navigation: {
     nextEl: '.swiper__card-next',
@@ -59,6 +65,12 @@ new Swiper('.swiper__interested', {
   slidesPerView: 3,
   spaceBetween: 16,
 
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
   navigation: {
     nextEl: '.swiper__interested-next',
     prevEl: '.swiper__interested-prev',
@@ -84,6 +96,12 @@ new Swiper('.swiper__tech', {
   grabCursor: true,
   slidesPerView: 3,
   spaceBetween: 16,
+
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
   navigation: {
     nextEl: '.swiper__tech-next',
@@ -174,6 +192,11 @@ if (classCardImage.length > 0) {
                 swiperCardImage.slideTo(index);
                 swiperPagination.querySelectorAll('.swiper-pagination-bullet')[index].click();
               });
+            });
+
+            swiper.el.addEventListener('mouseleave', () => {
+              swiperCardImage.slideTo(0);
+              swiperPagination.querySelectorAll('.swiper-pagination-bullet')[0].click();
             });
           },
         },

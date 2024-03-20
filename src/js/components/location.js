@@ -49,8 +49,17 @@ if (locations.length > 0) {
 	})
 }
 
-if (alertLocation) {
-	const alertLocationInner = document.querySelector('#alertLocation')
-	alertLocation.style.display = 'block';
-	alertLocationInner.style.display = 'flex';
+if (alertLocation && !localStorage.getItem('alertClosed')) {
+  const alertLocationInner = document.querySelector('#alertLocation');
+	const alertCloseButton = alertLocation.querySelectorAll('.js-alert-close');
+  alertLocation.style.display = 'block';
+  alertLocationInner.style.display = 'flex';
+	
+	alertCloseButton?.forEach((alertClose) => {
+		alertClose.addEventListener('click', function() {
+			localStorage.setItem('alertClosed', 'true');
+			alertLocation.style.display = '';
+  		alertLocationInner.style.display = '';
+		});
+	})
 }

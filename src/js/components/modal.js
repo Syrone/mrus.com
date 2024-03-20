@@ -3,9 +3,26 @@ import GraphModal from 'graph-modal';
 const modal = new GraphModal();
 
 const modalBenefit = document.querySelector('[data-graph-target="modal-benefit"]');
+const intervalDuration = 5 * 60;
 
 if (modalBenefit) {
-  modal.open("modal-benefit");
+  const closeBtns = modalBenefit.querySelectorAll('.js-modal-close');
+  const localStorageKey = 'modalBenefitShown';
+  const localStorageValue = localStorage.getItem(localStorageKey);
+  const lastCloseTime = localStorage.getItem('modalBenefitLastCloseTime');
+  const currentTime = new Date().getTime();
+  const elapsedTime = currentTime - lastCloseTime;
+
+  if (!localStorageValue || (localStorageValue && elapsedTime >= intervalDuration)) {
+    modal.open("modal-benefit");
+  }
+
+  closeBtns?.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      localStorage.setItem(localStorageKey, 'true');
+      localStorage.setItem('modalBenefitLastCloseTime', currentTime);
+    });
+  });
 }
 
 function showAlertModal(element) {

@@ -20,13 +20,6 @@ if ( accordion.length > 0 ) {
 			anchorLink.addEventListener('click', function(event) {
 				event.preventDefault();
 		
-				const targetElementId = this.getAttribute('href').substring(1);
-				const targetElement = document.getElementById(targetElementId);
-		
-				if (targetElement) {
-					targetElement.scrollIntoView({ behavior: 'smooth' });
-				}
-		
 				if (e.open) {
 					e.open = false;
 				} else {
