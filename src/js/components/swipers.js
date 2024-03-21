@@ -119,7 +119,7 @@ new Swiper('.swiper__tech', {
       slidesPerView: 3,
       spaceBetween: 16
     },
-    2560: {
+    1920: {
       slidesPerView: 3,
       spaceBetween: 24
     },
