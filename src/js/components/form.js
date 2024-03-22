@@ -1,3 +1,7 @@
+import GraphModal from 'graph-modal';
+
+const modal = new GraphModal();
+
 const formValidate = document.querySelectorAll('.form-validate')
 
 function showAlertModal(element) {
@@ -16,65 +20,125 @@ function showAlertModal(element) {
 	}
 }
 
-if (formValidate.length > 0) {
-	formValidate.forEach((form) => {
-		const btnSubmit = form.querySelector('button[type="submit"]');
-		const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
-		const selectChoices = form.querySelectorAll('.choices')
+formValidate?.forEach((form) => {
+	const submitWatchPrice = form.querySelector('.js-watch-price-form button[type="submit"]');
+	const submitCallback = form.querySelector('.js-callback-form button[type="submit"]')
 
+	const wrapperFields = form.querySelectorAll('.wrapper-field__inner');
+	const selectChoices = form.querySelectorAll('.choices');
+	const checkboxs = form.querySelectorAll('.custom-checkbox')
+
+	let isValid;
+
+	form.setAttribute('novalidate', true);
+
+	wrapperFields.forEach((wrapper) => {
+		const input = wrapper.querySelector('.field');
+
+		input.addEventListener('input', () => {
+			if (input.value.trim() !== '') {
+				wrapper.classList.remove('is-valid');
+				isValid = true;
+			}
+		});
+	});
+
+	function formValidation() {
 		wrapperFields.forEach((wrapper) => {
 			const input = wrapper.querySelector('.field');
 
-			input.addEventListener('input', () => {
-				if (input.value.trim() !== '') {
-					wrapper.classList.remove('is-valid');
-				}
-			});
+			if (input.hasAttribute('required') && input.value.trim() === '') {
+				input.value = '';
+				wrapper.classList.add('is-valid');
+				if (document.querySelector('#alertFormValid')) showAlertModal(document.querySelector('#alertFormValid'))
+				isValid = false;
+			} else {
+				wrapper.classList.remove('is-valid');
+			}
 		});
 
-		btnSubmit.addEventListener('click', (event) => {
-			event.preventDefault();
+		selectChoices?.forEach((select) => {
+			const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
+			const selectedValue = select.getAttribute('data-value');
 
-			let isValid = true;
-
-			wrapperFields.forEach((wrapper) => {
-				const input = wrapper.querySelector('.field');
-
-				if (input.hasAttribute('required') && input.value.trim() === '') {
-					input.value = '';
-					wrapper.classList.add('is-valid');
-					if (document.querySelector('#alertFormValid')) showAlertModal(document.querySelector('#alertFormValid'))
-					isValid = false;
-				} else {
-					wrapper.classList.remove('is-valid');
-				}
-			});
-
-			if (selectChoices.length > 0) {
-				selectChoices.forEach((select) => {
-					const selectPlaceholder = select.querySelector('.choices__list--single .choices__placeholder')
-					const selectedValue = select.getAttribute('data-value');
-
-					if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
-						selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
-					}
-					isValid = false;
-				})
+			if (!selectedValue && !selectPlaceholder.querySelector('.required')) {
+				selectPlaceholder.insertAdjacentHTML('beforeend', '<span class="required">*</span>'.trim());
 			}
+			isValid = false;
+		})
 
+		checkboxs?.forEach((checkbox) => {
+			const input = checkbox.querySelector('input[type="checkbox"]')
+			
+			if (input.hasAttribute('required') && !input.checked) {
+				isValid = false;
+			}
+		})
+	}
+
+	submitWatchPrice?.addEventListener('click', () => {
+		form.onsubmit = function (event) {
+			event.preventDefault();
+	
+			isValid = true;
+	
+			formValidation()
+	
 			if (isValid) {
 				const action = form.getAttribute('action');
+	
 				if (action) {
 					window.location.href = action;
 				} else {
-					form.onsubmit = function (event) {
-						event.preventDefault();
-					};
+					if (document.querySelector('[data-graph-target="modal-watch-price"]') && document.querySelector('[data-graph-target="modal-watch-price"]').classList.contains('graph-modal-open')) {
+						modal.close("modal-watch-price");
+					}
+
+					document.querySelectorAll('[data-graph-path="modal-watch-price"')?.forEach((btn) => {
+						btn.removeAttribute('data-graph-path');
+						btn.classList.add('text-color')
+						btn.textContent = 'Вы подписаны на отслеживание'
+					})
+
+					if (document.querySelector('[data-graph-target="modal-price-thanks"]')) {
+						modal.open("modal-price-thanks");
+					}
 				}
 			}
-		});
+		}
 	})
-}
+
+	submitCallback?.addEventListener('click', () => {
+		form.onsubmit = function (event) {
+			event.preventDefault();
+	
+			isValid = true;
+	
+			formValidation()
+	
+			if (isValid) {
+				const action = form.getAttribute('action');
+	
+				if (action) {
+					window.location.href = action;
+				} else {
+					if (document.querySelector('[data-graph-target="modal-callback"]') && document.querySelector('[data-graph-target="modal-callback"]').classList.contains('graph-modal-open')) {
+						modal.close("modal-callback");
+					}
+
+					if (document.querySelector('[data-graph-target="modal-callback-maintenance"]') && document.querySelector('[data-graph-target="modal-callback-maintenance"]').classList.contains('graph-modal-open')) {
+						modal.close("modal-callback-maintenance");
+					}
+
+					if (document.querySelector('[data-graph-target="modal-callback-thanks"]')) {
+						modal.open("modal-callback-thanks");
+					}
+				}
+			}
+		}
+	})
+
+})
 
 const passwordFields = document.querySelectorAll('.wrapper-field--password');
 

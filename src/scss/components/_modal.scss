@@ -400,3 +400,33 @@
 		margin-block-start: 14px;
 	}
 }
+
+.graph-modal--thanks {
+
+	max-width: 700px;
+
+	.mailing {
+		grid-template-columns: 1fr;
+		padding: 10px 0 30px;
+		text-align: center;
+
+		&__info {
+
+			&-image {
+				display: flex;
+				justify-content: center;
+				margin-block-end: 30px;
+			}
+
+			&-icon {
+				--_i-size: 34px;
+
+				padding: 2px;
+			}
+
+			&-title {
+				font-size: 24px;
+			}
+		}
+	}
+}

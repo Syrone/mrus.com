@@ -1894,6 +1894,33 @@
 		}
 	}
 
+	.graph-modal--thanks {
+
+		.mailing {
+			padding: 0;
+
+			&__info {
+
+				&-image,
+				&-title {
+					margin-block-end: 20px;
+				}
+
+				&-icon {
+					--_i-size: 24px;
+				}
+
+				&-title {
+					font-size: 20px;
+				}
+
+				&-text {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
 	.swiper-pagination {
 		--swiper-pagination-bullet-size: 8px;
 		--swiper-pagination-bullet-horizontal-gap: 4px;
