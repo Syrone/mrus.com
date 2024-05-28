@@ -26,6 +26,8 @@
 	&__list {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+    align-content: start;
 		gap: 16px;
 
 		&-item {
