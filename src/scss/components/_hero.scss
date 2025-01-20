@@ -12,11 +12,36 @@
 }
 
 .hero {
-	background-color: var(--primary-color);
-	background-repeat: no-repeat;
-	background-position: center; 
-	background-size: cover;
+	position: relative;
+	z-index: 1;
 
+	&__bg {
+		background-color: var(--primary-color);
+		background-repeat: no-repeat;
+		background-position: center; 
+		background-size: cover;
+		pointer-events: none;
+		user-select: none;
+		z-index: -1;
+
+		&--desktop {
+			display: none;
+
+			@media (min-width: 992px) {
+				display: block;
+			}
+		}
+
+		&--mobile {
+			display: block;
+
+			@media (min-width: 992px) {
+				display: none;
+			}
+		}
+	}
+
+	&__bg,
 	&__container {
 		position: absolute;
 		top: 0;

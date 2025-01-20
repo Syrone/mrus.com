@@ -4069,12 +4069,38 @@ p + p {
 }
 
 .hero {
+  position: relative;
+  z-index: 1;
+}
+.hero__bg {
   background-color: var(--primary-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: -1;
 }
-.hero__container {
+.hero__bg--desktop {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hero__bg--desktop {
+    display: block;
+  }
+}
+.hero__bg--mobile {
+  display: block;
+}
+@media (min-width: 992px) {
+  .hero__bg--mobile {
+    display: none;
+  }
+}
+.hero__bg, .hero__container {
   position: absolute;
   top: 0;
   right: 0;
